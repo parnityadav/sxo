@@ -11,90 +11,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "pingStatus",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "max_check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "snmp_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "False",
-          "scope": "local",
-          "name": "Enrichment",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Device Unreachable",
-          "scope": "local",
-          "name": "Flow Name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "impactingReboot",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "config_status",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF",
         "object_type": "variable_workflow"
       },
       {
@@ -115,6 +37,58 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "ssh_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "False",
+          "scope": "local",
+          "name": "Enrichment",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "pingStatus",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "config_status",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
           "name": "icmp_output",
           "type": "datatype.string",
           "is_required": false,
@@ -128,38 +102,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "snmpStatus",
+          "name": "snmp_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "ssh_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "reloadReason",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
+        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
         "object_type": "variable_workflow"
       },
       {
@@ -176,6 +124,32 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Device Unreachable",
+          "scope": "local",
+          "name": "Flow Name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "snmpStatus",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 2,
@@ -186,6 +160,32 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U4YWU5762R07cAphMPvzIC8p4PaQNokhy",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "max_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "reloadReason",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
         "object_type": "variable_workflow"
       }
     ],
@@ -1957,7 +1957,7 @@
                                     "properties": {
                                       "condition": {
                                         "left_operand": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$",
-                                        "operator": "ne",
+                                        "operator": "eq",
                                         "right_operand": "False"
                                       },
                                       "continue_on_failure": false,
@@ -3157,17 +3157,17 @@
   },
   "atomic_workflows": [
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
   ],
   "webhooks": {
     "webhook_01T0UX0AEUWFC63daRxJuSO26mhWcZtEuxe": {
