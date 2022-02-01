@@ -1,0 +1,1181 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A",
+    "name": "EIGRP Neighbor Down HSBC WF",
+    "title": "EIGRP Neighbor Down HSBC WF",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Neighbor IP",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMK3QF807N167sE8rbrm2t9xP4JUv9Eor",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "EIGRP_Neighbor_Down",
+          "scope": "static",
+          "name": "Flow_name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Neighbor_state",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMK3QF80KZK4OjvvHCzqrGDQFZ5R5UxGj",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "EIGRP Neighbor Down HSBC WF",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k",
+        "name": "VE - Input Parser",
+        "title": "VE - Input Parser",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Input Parser",
+          "input": {
+            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "{\n\"event_policy_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"ticket_id\": \"INC000000000012563\",\n\"EM7_VALUES\": {\n\"%_ext_ticket_ref\": \"INC000000000012563\",\n\"%F\": \"\",\n\"%_category_id\": \"3\",\n\"%n\": \"CMS Automations: TES: Main Automation Policy\",\n\"%_root_name\": \"\",\n\"%5\": \"None\",\n\"%4\": \"\",\n\"%7\": \"3\",\n\"%6\": \"2021-02-10 08:13:57\",\n\"%1\": \"1\",\n\"%_EM7_RESULT_%\": \"\",\n\"%_class_name\": \"ASR 9904\",\n\"%2\": \"0\",\n\"%_category_name\": \"Network.Router\",\n\"%_event_policy_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"%3\": \"20685\",\n\"%Z\": \"Syslog\",\n\"%_root_id\": \"\",\n\"%_class_id\": \"2198\",\n\"%m\": \"\",\n\"%o\": \"5\",\n\"%_parent_id\": \"\",\n\"%i\": \"\",\n\"%h\": \"200145\",\n\"%k\": \"\",\n\"%e\": \"161089\",\n\"%d\": \"2021-03-04 08:13:57\",\n\"%g\": \"FOX1729GSPJ\",\n\"%f\": \"1\",\n\"%a\": \"10.106.223.33\",\n\"%c\": \"1\",\n\"%b\": \"\",\n\"%y\": \"0\",\n\"%x\": \"200145\",\n\"%z\": \"1\",\n\"%u\": \"\",\n\"%t\": \"0\",\n\"%w\": \"ASR 9904\",\n\"%v\": \"\",\n\"%q\": \"\",\n\"%p\": \"\",\n\"%s\": \"2\",\n\"%r\": \"\",\n\"%M\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"%L\": \"\",\n\"%O\": \"Cisco CMS\",\n\"%N\": \"CMS Automations: TES: Main Action Policy\",\n\"%I\": \"Neighbor 10.106.223.252 (Tunnel0)\",\n\"%H\": \"https://10.225.103.212/em7/index.em7?exec=events\u0026q_type=aid\u0026q_arg=53955665\u0026q_sev=1\u0026q_sort=0\u0026q_oper=0\",\n\"%K\": \"0\",\n\"%J\": \"\",\n\"%E\": \"\",\n\"%D\": \"2021-03-08 08:13:57\",\n\"%G\": \"\",\n\"%_user_note\": \"New\",\n\"%A\": \"\",\n\"%C\": \"4a46b191dbbec85006ccc9fb0b961983\",\n\"%B\": \"\",\n\"%Y\": \"Neighbor 10.106.223.252 (Tunnel0)\",\n\"%X\": \"ASR9904-B.new14.local\",\n\"%_parent_name\": \"\",\n\"%U\": \"\",\n\"%T\": \"\",\n\"%W\": \"Cisco Systems\",\n\"%V\": \"\",\n\"%Q\": \"\",\n\"%P\": \"\",\n\"%S\": \"MINOR\",\n\"%R\": \"%DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\"\n},\n\"host_name\": \"\",\n\"event_message\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"em7_api_ip\": \"172.30.186.30\",\n\"host_ip\": \"10.106.223.33\",\n\"event_policy_guid\": \"41CDD9124B16F116436A843024B13485\",\n\"device_id\": \"205408\"\n}"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMK3QP3E56J6T1dm1m8VHA2NNqnJedAZU",
+        "name": "VE - Get Incident Details",
+        "title": "VE - Get Incident Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Get Incident Details",
+          "input": {
+            "variable_workflow_01T52W5N5XIQJ1ivbtvPznTai01Ki8A4bTU": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX",
+        "name": "JSONPath Query",
+        "title": "Set Incident Details",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Set Incident Details",
+          "input_json": "$activity.definition_activity_01UMK3QP3E56J6T1dm1m8VHA2NNqnJedAZU.output.variable_workflow_01T52XDPVK5X53JCOKG1VVerfRqYZ342auL$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.result[0].parent_incident",
+              "jsonpath_query_name": "parent_incident",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].assigned_to",
+              "jsonpath_query_name": "assigned_to",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].company.value",
+              "jsonpath_query_name": "company_id",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].cmdb_ci.value",
+              "jsonpath_query_name": "cmdb_ci",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].sys_id",
+              "jsonpath_query_name": "sys_id",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMK3QV2RMTT04KsAoX9rt1fgu7VmBJa2w",
+        "name": "Condition Block",
+        "title": "If parent or assignment true",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "If parent or assignment true",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01UMK3QWL70F43N3hBBgJxnuNwv6DXqpsAM",
+            "name": "Condition Branch",
+            "title": "Then",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.parent_incident$",
+                  "operator": "eq",
+                  "right_operand": ""
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.assigned_to$",
+                  "operator": "eq",
+                  "right_operand": ""
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Then",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMK3QZH0PGM05CPBK8Ri9vQtMWXwynLKA",
+                "name": "VE - Snow Incident In-Progress",
+                "title": "VE - Snow Incident In-Progress",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow Incident In-Progress",
+                  "input": {
+                    "variable_workflow_01T8JE925OO5M1gU73fDFvgPZI1fixjuGjj": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01T8JEM0WQULM2ambCHVtHhFVkhohPRNVOB": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+                    "variable_workflow_01T8JFMU3R1XV1LLRvZhVGAbp3vEmuYYGk9": "Virtual Engineer has begun analyzing this issue and will update the ticket shortly.",
+                    "variable_workflow_01T8JFV1F6GT52Hqoo25vp5QlIvRkFrOsRk": "Additional updates will follow shortly after analysis.",
+                    "variable_workflow_01T8JGZWKLG0Z4nTIixDS1v6lcz3EN4tt9h": "0",
+                    "variable_workflow_01T8JK2D5BY7A52S2TwFRVP9muZChx66EIO": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                    "variable_workflow_01T8JKESHGKPO7g5b0MuW5Bi17o7MDIHUBO": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                    "variable_workflow_01T8JKLZ5VTB27LwD38giLqmSMHGbtJLmPQ": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01UMK3R2CWMB427jdIVjMDdVhulLVy2NZoa",
+            "name": "Condition Branch",
+            "title": "else",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.parent_incident$",
+                  "operator": "mw",
+                  "right_operand": "*link*"
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.assigned_to$",
+                  "operator": "mw",
+                  "right_operand": "*link*"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "else",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMK3R4U5PKS288sBmhvHaWzyW6hpd0hHI",
+                "name": "VE - Snow update VE params",
+                "title": "VE - Snow update VE params",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow update VE params",
+                  "input": {
+                    "variable_workflow_01TB38GTCV68M3Io9wXZ620sg6X8KxZiQPb": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+                    "variable_workflow_01TB38GTCVI9V17s9Tysn0LoOnve0QXIFib": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01TB38GTCVRJ20PnSAG3R0My2zwdunDNr1u": "0",
+                    "variable_workflow_01TB3AFLN3Q6359axMEABktOSpvIAqaHfXX": "CMS Engineer engaged"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UMK3R6TIQH44076aAXk32INbgriZHiaQE",
+                "name": "Completed",
+                "title": "END",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "END",
+                  "result_message": "Success",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01UMKIHRLZ5524P2OR4VHK4dgKYTWW6Hfog",
+        "name": "Execute Python Script",
+        "title": "Parse event msg",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Parse event msg",
+          "script": "import re\n\n# fetching neighborIP name\nevent_msg = \"[$activity.VE - Input Parser.output.Event message$]\"\npattern = r\"(\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3})\"\nmatch = re.search(pattern, event_msg)\nif match:\n  neighborIP = match.group(1)\nif not neighborIP:\n  print('Failed to find neighbor IP from the Event message %M')\nneighborIP = str(neighborIP)",
+          "script_queries": [
+            {
+              "script_query": "neighborIP",
+              "script_query_name": "neighborIP",
+              "script_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMKJI5P4BHP0H3xqPjjzCEss8Zz3inD4A",
+        "name": "Set Variables",
+        "title": "Set neighbor IP",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set neighbor IP",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF807N167sE8rbrm2t9xP4JUv9Eor$",
+              "variable_value_new": "$activity.definition_activity_01UMKIHRLZ5524P2OR4VHK4dgKYTWW6Hfog.output.script_queries.neighborIP$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMKODNG7BQQ2pGhRXmoTUy5Y1zy38Cw3j",
+        "name": "JSONPath Query",
+        "title": "Command output - HardCode",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": true,
+          "display_name": "Command output - HardCode",
+          "input_json": "{\n\"command_output\":\"ISR4K_16.7.1_CME#show ip eigrp neighbors | i 10.106.223.252\\n 0 10.106.223.252 Gi0/0 10 0w0d01h12min 1 100 0 11\"\n}",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.command_output",
+              "jsonpath_query_name": "command_output",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt",
+        "name": "Execute Python Script",
+        "title": "set neighbor state",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "set neighbor state",
+          "script": "state = \"\"\nif \"[$activity.Parse event msg.output.Script Queries.neighborIP$]\" == \"[$activity.Parse command output.output.Script Queries.impacted_neighbor_ip$]\":\n  state = \"established\"\nelse:\n  state = \"not established\"",
+          "script_queries": [
+            {
+              "script_query": "state",
+              "script_query_name": "state",
+              "script_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMKUA8CIP6R31MkX5aP4UAUwnm5KANKfv",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80KZK4OjvvHCzqrGDQFZ5R5UxGj$",
+              "variable_value_new": "$activity.definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt.output.script_queries.state$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMKVI4HWEGF3UECFu4sf9skBPvH99DpHu",
+        "name": "VE - Snow add internal notes",
+        "title": "VE - Snow add internal notes",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Snow add internal notes",
+          "input": {
+            "variable_workflow_01TB2WDU4FWY70cnYhNGvgpVDVcNj9EtW3E": "0",
+            "variable_workflow_01TB2WDU4GAL53oKrE0BnPDj8sYq6HsGHi0": "--------------------------------------------------------\\r\\nNeighbor Status Pre Chronic Check:\\r\\n--------------------------------------------------------\\r\\n[code]\u003ctable\u003e\u003ctr\u003e\u003cth\u003eEIGRP Neighbor IP\u003c/th\u003e\u003ctd\u003e$activity.definition_activity_01UMKIHRLZ5524P2OR4VHK4dgKYTWW6Hfog.output.script_queries.neighborIP$\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003eEIGRP Interface\u003c/th\u003e\u003ctd\u003eA dummy value for now\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003eNeighbor Uptime\u003c/th\u003e\u003ctd\u003eDummy upyime for now.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e[/code]",
+            "variable_workflow_01TB2WDU4GK4A12BsSUEll3LBfiqc743GIu": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+            "variable_workflow_01TB2WDU4GSBY6G3FKHuOa62qYT1CDOy2ys": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMLDC7Q1JPI3JMDWzpNq4mNNRkyvhCb5Y",
+        "name": "VE - Update Other Open Incident Details",
+        "title": "VE - Update Other Open Incident Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Update Other Open Incident Details",
+          "input": {
+            "variable_workflow_01TCT9HCJ1RF80TqRBGb6jt6FjCWfrpnrWL": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
+            "variable_workflow_01TCT9HCJ25NP26JwpG495OeK5NCoN5YWWI": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+            "variable_workflow_01TCT9HCJ2JE91hYIusQN6n2d1oVfsYoQLT": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.company_id$",
+            "variable_workflow_01TCUGN5BGHAC6kJ2aVPrt6QabJGlz6HZbG": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMLEVJE3OSF4oYQxmsHSqhay42i6lw0me",
+        "name": "VE - Get/Update Chronic Details",
+        "title": "VE - Get/Update Chronic Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Get/Update Chronic Details",
+          "input": {
+            "variable_workflow_01TDL3QX5OAPA0uG19opwcVUyMmflQ8iG7B": "$activity.definition_activity_01UMK3QSNRP607Mvea8C2FmDbPYBabZAAaX.output.jsonpath_queries.company_id$",
+            "variable_workflow_01TDL3QX5OPCT4woBdO3WU1NqgZm4j4DfoY": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+            "variable_workflow_01TDL3QX5OYLV655ZPW9KPbl3wh7c6H7Z3V": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
+            "variable_workflow_01TDL3QX5P89Q5FIlFp61nSDh3lh0XF70I1": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+            "variable_workflow_01TDL8E6E0DAB0p9ER6gmlkfYBEx1micteP": "24",
+            "variable_workflow_01TDL8WJKQMWC3YO6NgHd38I0ouVXIbPRyq": "hours",
+            "variable_workflow_01TDL9HXMEJYR3P1PTpLOmI9TD0QMl80D33": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J4W6FOIZZ3uZYZ6zG27fgWTh5HSjnOG$",
+            "variable_workflow_01TDLAJEN9P1O1Z7DmWMegi0srkHu8BFR00": "$activity.definition_activity_01UMKIHRLZ5524P2OR4VHK4dgKYTWW6Hfog.output.script_queries.neighborIP$$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J3FDV8G4K7hiRvLwfY8kcRCvvkMa6XR$",
+            "variable_workflow_01TDLOGJQU18F12thiDhm7IMVBijhvqSoTy": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J4101VZO00tOfbL77JWPtyC6dppMuI5$",
+            "variable_workflow_01TDLOO9HZJPY1hF5kSDGPOrBzXG27X4qIS": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
+            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "3"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMLHZ2CUARQ3Hpb9tkSGhrjGXypgrRJOx",
+        "name": "Condition Block",
+        "title": "If events_count \u003c= 3 in last 24 hours ?",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "If events_count \u003c= 3 in last 24 hours ?",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01UMLHZ2PQF3B0vmmPGPcnogFhEN0Pzdebd",
+            "name": "Condition Branch",
+            "title": "TRUE",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$activity.definition_activity_01UMLEVJE3OSF4oYQxmsHSqhay42i6lw0me.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
+                "operator": "lte",
+                "right_operand": 3
+              },
+              "continue_on_failure": false,
+              "display_name": "TRUE",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMLIHR24XL17JNCaDrasqSB8CkbkCujSb",
+                "name": "VE - Snow add internal notes",
+                "title": "VE - Snow add internal notes",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow add internal notes",
+                  "input": {
+                    "variable_workflow_01TB2WDU4FWY70cnYhNGvgpVDVcNj9EtW3E": "5",
+                    "variable_workflow_01TB2WDU4GAL53oKrE0BnPDj8sYq6HsGHi0": "Number of previously discovered incidents: $activity.definition_activity_01UMLEVJE3OSF4oYQxmsHSqhay42i6lw0me.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
+                    "variable_workflow_01TB2WDU4GK4A12BsSUEll3LBfiqc743GIu": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01TB2WDU4GSBY6G3FKHuOa62qYT1CDOy2ys": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01UMLHZ34HQ1G41Lvj7zqdpWDpphPzUEvfn",
+            "name": "Condition Branch",
+            "title": "ELSE",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$activity.definition_activity_01UMLEVJE3OSF4oYQxmsHSqhay42i6lw0me.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
+                "operator": "gt",
+                "right_operand": 3
+              },
+              "continue_on_failure": false,
+              "display_name": "ELSE",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMLJHY569S92QvYCQaygCKx4XXygOjlW8",
+                "name": "VE - Snow Incident Escalate to delivery",
+                "title": "VE - Snow Incident Escalate to delivery",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow Incident Escalate to delivery",
+                  "input": {
+                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "Escalating to an incident team member.",
+                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "We have found a high number of similar incidents.",
+                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "Chronic Condition",
+                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UMLL9R3VKRR05PXYyJbnAqy4PgSYLmy5c",
+                "name": "Completed",
+                "title": "END",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "END",
+                  "result_message": "Success",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01UNH4954VB3A4dWlpu6kHWXuVnIULD0gkm",
+        "name": "While Loop",
+        "title": "While Loop",
+        "type": "logic.while",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "While Loop",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01UNH495R260N4g4zj3dg0Dcf8ui80OjXhS",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$activity.definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt.output.script_queries.state$",
+                "operator": "eq",
+                "right_operand": "established"
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UNH4GKP2MA41BH18igg4yJpxh4eMF7KtG",
+                "name": "Condition Block",
+                "title": "Neighbor adjacency state Established?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Neighbor adjacency state Established?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01UNH4GLL9U4P0yQTvEW8OJLSrdj6XM4sRy",
+                    "name": "Condition Branch",
+                    "title": "True",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt.output.script_queries.state$",
+                        "operator": "eq",
+                        "right_operand": ""
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "True",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UNH7UDYWKSH1NsDbV01VdPK9F98wLFljM",
+                        "name": "Execute Python Script",
+                        "title": "Reset stability_counter",
+                        "type": "python3.script",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "continue_on_failure": false,
+                          "display_name": "Reset stability_counter",
+                          "script": "stability_counter = 0",
+                          "script_queries": [
+                            {
+                              "script_query": "stability_counter",
+                              "script_query_name": "stability_counter ",
+                              "script_query_type": "integer"
+                            }
+                          ],
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01UNH4GMBD6DT01DAfe3yuGaI9Hyk6KrMJi",
+                    "name": "Condition Branch",
+                    "title": "check_counter \u003e= 3?",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                        "operator": "gte",
+                        "right_operand": 3
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "check_counter \u003e= 3?",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UNH5OOY1WZB17e9VCiPRVGXi2Cww23xFl",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01UNH5OPM0ZWZ3vIf61AjTDPbdWUFBAKnIo",
+                            "name": "Condition Branch",
+                            "title": "True",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                "operator": "gt",
+                                "right_operand": 3
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "True",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01UNH62S4EC1A3h3E3tvIQRjerhdT9VOnNV",
+                                "name": "VE - Snow Incident Escalate to delivery",
+                                "title": "VE - Snow Incident Escalate to delivery",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "VE - Snow Incident Escalate to delivery",
+                                  "input": {
+                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "Escalating to incident team member.",
+                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "The neighbor adjacency with $activity.definition_activity_01UMKIHRLZ5524P2OR4VHK4dgKYTWW6Hfog.output.script_queries.neighborIP$ is in a failed state.",
+                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "Possible Instability Detected",
+                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "target_type": "web-service.endpoint",
+                                    "use_workflow_target": true
+                                  },
+                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01UNHB78RXKYQ5kOs7gkOWbJYB1rxKQBEfI",
+                                "name": "Completed",
+                                "title": "END",
+                                "type": "logic.completed",
+                                "base_type": "activity",
+                                "properties": {
+                                  "completion_type": "succeeded",
+                                  "continue_on_failure": false,
+                                  "display_name": "END",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01UNH5OQ8UIYE0xNuokOvpu6F2pHMxgaH2A",
+                            "name": "Condition Branch",
+                            "title": "ELSE",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                "operator": "lt",
+                                "right_operand": 3
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "ELSE",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01UNHCPV45M1B4nECMFbE79GufmFTFxEa1A",
+                                "name": "Condition Block",
+                                "title": "check_counter == 0?",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "check_counter == 0?",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01UNHCPVWSTSR4y8cRYwUyoWXc83r8z5rvt",
+                                    "name": "Condition Branch",
+                                    "title": "TRUE",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                        "operator": "eq",
+                                        "right_operand": 0
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "TRUE",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UNHES705QYI6w4yMJHJGNd6A8EgmOZr37",
+                                        "name": "VE - Snow Incident On-hold",
+                                        "title": "VE - Snow Incident On-hold",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "VE - Snow Incident On-hold",
+                                          "input": {
+                                            "variable_workflow_01TB16P71EPWP7lgR88jiVoXh8OiFGYsyMM": "We have determined that the EIGRP neighbor is currently down. We will continue monitoring for a change in the neighbor status.",
+                                            "variable_workflow_01TB16P71F2LA4sbwnifa1a3OADCEPRwN2a": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                            "variable_workflow_01TB16P71FBRL7MbRe0yZCGV570pK0Rt1SG": "Additional updates will follow shortly after analysis.",
+                                            "variable_workflow_01TB16P71FKIV1suH4QLPK4ODIcdmulGRJS": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                            "variable_workflow_01TB16P71FRS71jDM5lAcytTXVTdpGRoXv7": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                            "variable_workflow_01TB16P71FZL36UPpg5piCD6WRv5zy5yVLD": "0",
+                                            "variable_workflow_01TB16P71GA5I0IIZy7ZyRQO4cjRCafK65y": "$activity.definition_activity_01UMK3QLLNTAG5C7LxtCyQPUD0592iz7s2k.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                            "variable_workflow_01TB16P71GIHG6E1zVATxTa08WAFfC994P1": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$",
+                                            "variable_workflow_01TB1H3R18VOW6fw2cYTIz1OqZCzRLfFCRu": 6
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "target_type": "web-service.endpoint",
+                                            "use_workflow_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHFU660WUP3877UQuLBUIFn3nAhnwkMd",
+                                        "name": "Set Variables",
+                                        "title": "Increment check_counter",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Increment check_counter",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                              "variable_value_new": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$ + 1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHGLJUABZD7E0vnRUm6Ez9QuLrjZSfOR",
+                                        "name": "Sleep",
+                                        "title": "Sleep 5mins",
+                                        "type": "core.sleep",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Sleep 5mins",
+                                          "skip_execution": false,
+                                          "sleep_interval": 3
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHL0U7O7WK4LaVM5UObAfGBo9g8ikoKg",
+                                        "name": "JSONPath Query",
+                                        "title": "Command output - HardCode",
+                                        "type": "corejava.jsonpathquery",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "continue_on_failure": true,
+                                          "display_name": "Command output - HardCode",
+                                          "input_json": "{\n\"command_output\":\"ISR4K_16.7.1_CME#show ip eigrp neighbors | i 10.106.223.252\\n 0 10.106.223.252 Gi0/0 10 0w0d01h12min 1 100 0 11\"\n}",
+                                          "jsonpath_queries": [
+                                            {
+                                              "jsonpath_query": "$.command_output",
+                                              "jsonpath_query_name": "command_output",
+                                              "jsonpath_query_type": "string"
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHLBV9LA6V4bTsOzWrLjopI4j8dziztK",
+                                        "name": "Execute Python Script",
+                                        "title": "set neighbor state",
+                                        "type": "python3.script",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "continue_on_failure": false,
+                                          "display_name": "set neighbor state",
+                                          "script": "state = \"\"\nif \"[$activity.Parse event msg.output.Script Queries.neighborIP$]\" == \"[$activity.Parse command output.output.Script Queries.impacted_neighbor_ip$]\":\n  state = \"established\"\nelse:\n  state = \"not established\"",
+                                          "script_queries": [
+                                            {
+                                              "script_query": "state",
+                                              "script_query_name": "state",
+                                              "script_query_type": "string"
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHLLAQUIU12iLbRft0N2G6rObAlcWm7S",
+                                        "name": "Set Variables",
+                                        "title": "Set Variables",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Set Variables",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80KZK4OjvvHCzqrGDQFZ5R5UxGj$",
+                                              "variable_value_new": "$activity.definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt.output.script_queries.state$"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01UNHCPWSA6GX54EMbp4WPr3rVeIEOzwKkK",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                        "operator": "ne",
+                                        "right_operand": 0
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Condition Branch",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UNHLY8F7VQ05QeHTacAXWVSELo0xeruVt",
+                                        "name": "Set Variables",
+                                        "title": "Increment check_counter",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Increment check_counter",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$",
+                                              "variable_value_new": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9$ + 1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHM0SYFWKW5qJhGPPPxksisJDBnI3dsZ",
+                                        "name": "Sleep",
+                                        "title": "Sleep 5mins",
+                                        "type": "core.sleep",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Sleep 5mins",
+                                          "skip_execution": false,
+                                          "sleep_interval": 3
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHM2XTSMHP28eOnwday0eczo4YSDBXmP",
+                                        "name": "JSONPath Query",
+                                        "title": "Command output - HardCode",
+                                        "type": "corejava.jsonpathquery",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "continue_on_failure": true,
+                                          "display_name": "Command output - HardCode",
+                                          "input_json": "{\n\"command_output\":\"ISR4K_16.7.1_CME#show ip eigrp neighbors | i 10.106.223.252\\n 0 10.106.223.252 Gi0/0 10 0w0d01h12min 1 100 0 11\"\n}",
+                                          "jsonpath_queries": [
+                                            {
+                                              "jsonpath_query": "$.command_output",
+                                              "jsonpath_query_name": "command_output",
+                                              "jsonpath_query_type": "string"
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHM6PN7ORB1rv4mZ2VZUqteQayakCEpv",
+                                        "name": "Execute Python Script",
+                                        "title": "set neighbor state",
+                                        "type": "python3.script",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "continue_on_failure": false,
+                                          "display_name": "set neighbor state",
+                                          "script": "state = \"\"\nif \"[$activity.Parse event msg.output.Script Queries.neighborIP$]\" == \"[$activity.Parse command output.output.Script Queries.impacted_neighbor_ip$]\":\n  state = \"established\"\nelse:\n  state = \"not established\"",
+                                          "script_queries": [
+                                            {
+                                              "script_query": "state",
+                                              "script_query_name": "state",
+                                              "script_query_type": "string"
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNHM9KRP3AE4NWd1cLPMQN1Mqjf9na3K5",
+                                        "name": "Set Variables",
+                                        "title": "Set Variables",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Set Variables",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.local.variable_workflow_01UMK3QF80KZK4OjvvHCzqrGDQFZ5R5UxGj$",
+                                              "variable_value_new": "$activity.definition_activity_01UMKTGNMNG260Q6ExwHkGAdzUtUG2W2dgt.output.script_queries.state$"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z": {
+      "unique_name": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+      "name": "Parnit_snow",
+      "title": "Parnit_snow",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+        "disable_certificate_validation": false,
+        "display_name": "Parnit_snow",
+        "host": "ciscomngsvsdev.service-now.com",
+        "ignore_proxy": false,
+        "no_runtime_user": false,
+        "path": "/api",
+        "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28": {
+      "unique_name": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+      "name": "parnit_snow_ve",
+      "title": "parnit_snow_ve",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "parnit_snow_ve"
+      }
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+  ]
+}
