@@ -7,6 +7,19 @@
     "base_type": "workflow",
     "variables": [
       {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "stability_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UNKQGQEIPHI40dgrW5EZ1AMMDDVunQmef",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -30,19 +43,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9",
         "object_type": "variable_workflow"
       },
       {
@@ -72,6 +72,19 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMK3QF80W6J303WhwiQIaa78yLRwwYmd9",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.number",
         "properties": {
           "value": 0,
@@ -82,19 +95,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01UNJD64XHWM30vcz1DQGQolsIQv7hWM0vK",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "stability_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UNKQGQEIPHI40dgrW5EZ1AMMDDVunQmef",
         "object_type": "variable_workflow"
       }
     ],
@@ -125,7 +125,7 @@
           "continue_on_failure": false,
           "display_name": "VE - Input Parser",
           "input": {
-            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "{\n\"event_policy_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"ticket_id\": \"INC000000000012563\",\n\"EM7_VALUES\": {\n\"%_ext_ticket_ref\": \"INC000000000012563\",\n\"%F\": \"\",\n\"%_category_id\": \"3\",\n\"%n\": \"CMS Automations: TES: Main Automation Policy\",\n\"%_root_name\": \"\",\n\"%5\": \"None\",\n\"%4\": \"\",\n\"%7\": \"3\",\n\"%6\": \"2021-02-10 08:13:57\",\n\"%1\": \"1\",\n\"%_EM7_RESULT_%\": \"\",\n\"%_class_name\": \"ASR 9904\",\n\"%2\": \"0\",\n\"%_category_name\": \"Network.Router\",\n\"%_event_policy_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"%3\": \"20685\",\n\"%Z\": \"Syslog\",\n\"%_root_id\": \"\",\n\"%_class_id\": \"2198\",\n\"%m\": \"\",\n\"%o\": \"5\",\n\"%_parent_id\": \"\",\n\"%i\": \"\",\n\"%h\": \"200145\",\n\"%k\": \"\",\n\"%e\": \"161089\",\n\"%d\": \"2021-03-04 08:13:57\",\n\"%g\": \"FOX1729GSPJ\",\n\"%f\": \"1\",\n\"%a\": \"10.106.223.33\",\n\"%c\": \"1\",\n\"%b\": \"\",\n\"%y\": \"0\",\n\"%x\": \"200145\",\n\"%z\": \"1\",\n\"%u\": \"\",\n\"%t\": \"0\",\n\"%w\": \"ASR 9904\",\n\"%v\": \"\",\n\"%q\": \"\",\n\"%p\": \"\",\n\"%s\": \"2\",\n\"%r\": \"\",\n\"%M\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"%L\": \"\",\n\"%O\": \"Cisco CMS\",\n\"%N\": \"CMS Automations: TES: Main Action Policy\",\n\"%I\": \"Neighbor 10.106.223.252 (Tunnel0)\",\n\"%H\": \"https://10.225.103.212/em7/index.em7?exec=events\u0026q_type=aid\u0026q_arg=53955665\u0026q_sev=1\u0026q_sort=0\u0026q_oper=0\",\n\"%K\": \"0\",\n\"%J\": \"\",\n\"%E\": \"\",\n\"%D\": \"2021-03-08 08:13:57\",\n\"%G\": \"\",\n\"%_user_note\": \"New\",\n\"%A\": \"\",\n\"%C\": \"4a46b191dbbec85006ccc9fb0b961983\",\n\"%B\": \"\",\n\"%Y\": \"Neighbor 10.106.223.252 (Tunnel0)\",\n\"%X\": \"ASR9904-B.new14.local\",\n\"%_parent_name\": \"\",\n\"%U\": \"\",\n\"%T\": \"\",\n\"%W\": \"Cisco Systems\",\n\"%V\": \"\",\n\"%Q\": \"\",\n\"%P\": \"\",\n\"%S\": \"MINOR\",\n\"%R\": \"%DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\"\n},\n\"host_name\": \"\",\n\"event_message\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"em7_api_ip\": \"172.30.186.30\",\n\"host_ip\": \"10.106.223.33\",\n\"event_policy_guid\": \"41CDD9124B16F116436A843024B13485\",\n\"device_id\": \"205408\"\n}",
+            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "{\n\"routing_id\": \"incident_automation\",\n\"device_name\": \"ISR4K_16.7.1_CME.cisco.com\",\n\"did\": \"59\",\n\"event_id\": \"313242\",\n\"ep_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"ep_guid\": \"41CDD9124B16F116436A843024B13485\",\n\"ip_address\": \"10.105.195.221\",\n\"device_description\": \"Description: Network.Router, Device Class: Cisco Systems | 4451 ISR\",\n\"event_message\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"yname\": \"10.106.223.252\",\n\"event_source\": \"em7\",\n\"incident_number\": \"INC000000000747883\",\n\"em7_values\": {\n\"%_category_id\": \"10\",\n\"%5\": \"None\",\n\"%_root_name\": \"\",\n\"%7\": \"3\",\n\"%6\": \"2022-01-13 13:01:14\",\n\"%1\": \"1\",\n\"%_ext_ticket_ref\": \"\",\n\"%2\": \"0\",\n\"%_category_name\": \"Network.Router\",\n\"%_event_policy_name\": \"CISCO: DUAL-5-NBRCHANGE-down\",\n\"%_class_id\": \"2244\",\n\"%m\": \"\",\n\"%o\": \"0\",\n\"%n\": \"CC-IM-TCA-Automation\",\n\"%i\": \"\",\n\"%h\": \"59\",\n\"%k\": \"\",\n\"%e\": \"313242\",\n\"%d\": \"2022-01-13 13:01:14\",\n\"%g\": \"FGL1750112U\",\n\"%f\": \"1\",\n\"%a\": \"10.105.195.221\",\n\"%c\": \"1\",\n\"%b\": \"\",\n\"%y\": \"0\",\n\"%x\": \"59\",\n\"%z\": \"4\",\n\"%u\": \"\",\n\"%t\": \"0\",\n\"%w\": \"ISR4451-X/K9\",\n\"%v\": \"\",\n\"%q\": \"\",\n\"%p\": \"\",\n\"%s\": \"2\",\n\"%r\": \"\",\n\"%M\": \"DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.106.223.252 (Tunnel0) is down: holding time expired\",\n\"%L\": \"\",\n\"%O\": \"System\",\n\"%N\": \"Event-Correlation-Action-Policy\",\n\"%I\": \"\",\n\"%H\": \"https://172.30.190.49/em7/index.em7?exec=events\u0026q_type=aid\u0026q_arg=313242\u0026q_sev=1\u0026q_sort=0\u0026q_oper=0\",\n\"%K\": \"0\",\n\"%J\": \"\",\n\"%E\": \"\",\n\"%D\": \"2022-01-13 13:01:14\",\n\"%G\": \"\",\n\"%F\": \"\",\n\"%A\": \"\",\n\"%C\": \"fd3a5c98dbf0d01090d081c61b9619f5\",\n\"%B\": \"\",\n\"%Y\": \"10.106.223.252\",\n\"%X\": \"ISR4K_16.7.1_CME.cisco.com\",\n\"%Z\": \"Dynamic\",\n\"%U\": \"\",\n\"%T\": \"\",\n\"%W\": \"Cisco Systems\",\n\"%V\": \"\",\n\"%Q\": \"\",\n\"%P\": \"\",\n\"%S\": \"MINOR\",\n\"%R\": \"\",\n\"%_user_note\": \"\",\n\"%_parent_id\": \"\",\n\"%4\": \"\",\n\"%_EM7_RESULT_%\": \"{\\\"output_list\\\": [72, 100, \\\"Automated\\\"]}\",\n\"%_class_name\": \"4451 ISR\",\n\"%3\": \"527\",\n\"%_root_id\": \"\",\n\"%_parent_name\": \"\"\n},\n\"ve_flow\": {\n\"em7\": [\n{\n\"EIGRP_Neighbor_Down\": {\n\"count_chronic_events\": \"3\",\n\"chronics_time\": \"3\",\n\"chronics_time_unit\": \"hours\",\n\"closed_review_timer\": \"0\",\n\"AlarmStatus_and_ActiveRemediation\": \"3\",\n\"Hold_Timer_For_Loop\": \"5\",\n\"Hold_Timer_For_Unit\": \"minutes\",\n\"Test\": \"\",\n\"Test2\": \"test data 16th dec\",\n\"bs\": \"QA Test\",\n\"bs1\": \"\",\n\"wed\": \"\"\n}\n}\n]\n}\n}",
             "variable_workflow_01UNKGSZBR7UY0m3t7dpAiq0hLUjtg4j5dV": "$workflow.definition_workflow_01UMK3QER9YQP10BLGN5jqkkN1EtsIWWD1A.static.variable_workflow_01UMK3QF7ZS7Q6UWuhxlahDZbOMtyNRhT2S$"
           },
           "runtime_user": {
@@ -6217,15 +6217,15 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc"
   ]
 }
