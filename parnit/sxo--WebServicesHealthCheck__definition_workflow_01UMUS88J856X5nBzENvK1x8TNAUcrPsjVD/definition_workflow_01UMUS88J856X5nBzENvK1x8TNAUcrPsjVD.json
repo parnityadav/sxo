@@ -1,0 +1,2600 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD",
+    "name": "Web Services Health Check WF",
+    "title": "Web Services Health Check WF",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "web_service_pass_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 2,
+          "scope": "input",
+          "name": "min_web_service_pass_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMW0W3H0Q6M0lJHrpuuxGAKsVy9BinYQF",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "note_check_counter_max",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOORYRUF2O06NvM4GcU4x8VRy07LUhtme",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Web Services Health Check",
+          "scope": "static",
+          "name": "Flow Name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 1,
+          "scope": "local",
+          "name": "note_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOOQP0O9J5U09HuCThyxR8NjdK9eyImei",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 2,
+          "scope": "input",
+          "name": "max_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMW04SG7PL91Snj4oqPy8yGSeCSPKjD9a",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "web_service_health_check",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UMY9XLT3SPR6e8KSf5ow4Hs6eIoEqL31o",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Web Services Health Check WF",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex",
+        "name": "VE - Input Parser",
+        "title": "VE - Input Parser",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Input Parser",
+          "input": {
+            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "{\n\"event_policy_name\": \"CISCO CMSCMO NW: LINEPROTO-5-UPDOWN-changed state to down\",\n\"incident_number\": \"INC000000000794613\",\n\"em7_values\": {\n\"%_ext_ticket_ref\": \"INC000000000794613\",\n\"%F\": \"\",\n\"%_category_id\": \"89\",\n\"%n\": \"CMS Automations: TES: Main Automation Policy\",\n\"%_root_name\": \"\",\n\"%5\": \"None\",\n\"%4\": \"\",\n\"%7\": \"3\",\n\"%6\": \"2021-02-04 15:22:42\",\n\"%1\": \"1\",\n\"%_EM7_RESULT_%\": \"\",\n\"%_class_name\": \"Tomcat\",\n\"%2\": \"7\",\n\"%_category_name\": \"Video.TelePresence\",\n\"%_event_policy_name\": \"CISCO CMSCMO NW: LINEPROTO-5-UPDOWN-changed state to down\",\n\"%3\": \"15379\",\n\"%Z\": \"Syslog\",\n\"%_root_id\": \"\",\n\"%_class_id\": \"4020\",\n\"%m\": \"\",\n\"%o\": \"5\",\n\"%_parent_id\": \"\",\n\"%i\": \"\",\n\"%h\": \"205008\",\n\"%k\": \"\",\n\"%e\": \"171053\",\n\"%d\": \"2021-02-04 15:22:42\",\n\"%g\": \"\",\n\"%f\": \"1\",\n\"%a\": \"10.105.195.221\",\n\"%c\": \"1\",\n\"%b\": \"\",\n\"%y\": \"3005122\",\n\"%x\": \"205008\",\n\"%z\": \"1\",\n\"%u\": \"\",\n\"%t\": \"0\",\n\"%w\": \"CTS-500\",\n\"%v\": \"Asset-10.88.85.21\",\n\"%q\": \"\",\n\"%p\": \"\",\n\"%s\": \"2\",\n\"%r\": \"\",\n\"%M\": \"%LINEPROTO-5-UPDOWN: Line protocol on Interface Gi0/0/1, changed state to down -UT Vdya - 2/2/22\",\n\"%L\": \"\",\n\"%O\": \"Cisco CMS\",\n\"%N\": \"CMS Automations: TES: Main Action Policy\",\n\"%I\": \"eth0.2105\",\n\"%H\": \"https://10.225.103.212/em7/index.em7?exec=events\u0026q_type=aid\u0026q_arg=53684511\u0026q_sev=1\u0026q_sort=0\u0026q_oper=0\",\n\"%K\": \"\",\n\"%J\": \"\",\n\"%E\": \"\",\n\"%D\": \"2021-02-04 15:22:42\",\n\"%G\": \"\",\n\"%_user_note\": \"\",\n\"%A\": \"\",\n\"%C\": \"4a46b191dbbec85006ccc9fb0b961983\",\n\"%B\": \"\",\n\"%Y\": \"Gi0/0/1\",\n\"%X\": \"ISR 4k\",\n\"%_parent_name\": \"\",\n\"%U\": \"\",\n\"%T\": \"\",\n\"%W\": \"Cisco TelePresence\",\n\"%V\": \"\",\n\"%Q\": \"\",\n\"%P\": \"\",\n\"%S\": \"MINOR\",\n\"%R\": \"%LINEPROTO-5-UPDOWN: Line protocol on Interface Gi0/0/1, changed state to down\"\n},\n\"host_name\": \"\",\n\"event_message\": \"%LINEPROTO-5-UPDOWN: Line protocol on Interface Gi0/0/1, changed state to down -UT Vdya - 2/2/22\",\n\"em7_api_ip\": \"172.30.190.3\",\n\"host_ip\": \"10.105.195.221\",\n\"ep_guid\": \"5D3A9990C3BBD6D5D173C68350E6E208\",\n\"did\": \"1\",\n\"ve_flow\": {\n\"em7\": [\n{\n\"Web Services Health Check\": {\n\"count_chronic_events\": \"3\",\n\"chronics_time\": \"3\",\n\"chronics_time_unit\": \"hours\",\n\"closed_review_timer\": \"0\",\n\"AlarmStatus_and_ActiveRemediation\": \"3\",\n\"Hold_Timer_For_Loop\": \"5\",\n\"Hold_Timer_For_Unit\": \"minutes\",\n\"Test\": \"\",\n\"Test2\": \"test data 16th dec\",\n\"bs\": \"QA Test\",\n\"bs1\": \"\",\n\"wed\": \"\"\n}\n}\n]\n}\n}",
+            "variable_workflow_01UNKGSZBR7UY0m3t7dpAiq0hLUjtg4j5dV": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMUTOMIK0J33Ojr3IPiE41kvODU2hujvz",
+        "name": "VE - Get Incident Details",
+        "title": "VE - Get Incident Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Get Incident Details",
+          "input": {
+            "variable_workflow_01T52W5N5XIQJ1ivbtvPznTai01Ki8A4bTU": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo",
+        "name": "JSONPath Query",
+        "title": "Set Variables",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "input_json": "$activity.definition_activity_01UMUTOMIK0J33Ojr3IPiE41kvODU2hujvz.output.variable_workflow_01T52XDPVK5X53JCOKG1VVerfRqYZ342auL$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.result[0].parent_incident",
+              "jsonpath_query_name": "parent_incident",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].assigned_to",
+              "jsonpath_query_name": "assigned_to",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].company.value",
+              "jsonpath_query_name": "company_id",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].cmdb_ci.value",
+              "jsonpath_query_name": "cmdb_ci",
+              "jsonpath_query_type": "string"
+            },
+            {
+              "jsonpath_query": "$.result[0].sys_id",
+              "jsonpath_query_name": "sys_id",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMUU1QQDR3W62SthnieOaxETmdtDCOL5j",
+        "name": "Condition Block",
+        "title": "If parent or assignment true",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "If parent or assignment true",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01UMUU1RO915L3cWRsosblMviCsM8Cs1dVT",
+            "name": "Condition Branch",
+            "title": "THEN",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.parent_incident$",
+                  "operator": "eq",
+                  "right_operand": ""
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.assigned_to$",
+                  "operator": "eq",
+                  "right_operand": ""
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "THEN",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMUV84HNL9Z4ZF3NHHuKHUl0kqBslYdCx",
+                "name": "Condition Block",
+                "title": "IF DEVICE CLASS IS OF TYPE CUCM",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "description": "If the Device Class of alarmed device is\n\n\"Tomcat\" or \n\"CUCM Server\" or\n\"Call Manager\" or\n\"Unity Connection Server\" or \n\"IM and Presence Server\" \n\ncontinue with the work flow.\nElse Exit work flow.",
+                  "display_name": "IF DEVICE CLASS IS OF TYPE CUCM",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01UMUV858G66Y6uL5ruuzLf2VvONSzylEME",
+                    "name": "Condition Branch",
+                    "title": "THEN",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3LFY7AZU5I8KbHO7HCKrySMlCeuOvH$",
+                        "operator": "mregex",
+                        "right_operand": "Tomcat|CUCM Server|Call Manager|Unity Connection Server|IM and Presence Server"
+                      },
+                      "continue_on_failure": false,
+                      "description": "If the Device Class of alarmed device is\n\n\"Tomcat\" or \n\"CUCM Server\" or\n\"Call Manager\" or\n\"Unity Connection Server\" or \n\"IM and Presence Server\" \n\ncontinue with the work flow.",
+                      "display_name": "THEN",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UMUYDMMFQIS2rfTWS9vQ8pIWBDd3mPsJU",
+                        "name": "VE - Snow Incident In-Progress",
+                        "title": "VE - Snow Incident In-Progress",
+                        "type": "workflow.atomic_workflow",
+                        "base_type": "subworkflow",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "VE - Snow Incident In-Progress",
+                          "input": {
+                            "variable_workflow_01T8JE925OO5M1gU73fDFvgPZI1fixjuGjj": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                            "variable_workflow_01T8JEM0WQULM2ambCHVtHhFVkhohPRNVOB": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                            "variable_workflow_01T8JFMU3R1XV1LLRvZhVGAbp3vEmuYYGk9": "Virtual Engineer has begun analyzing this issue and will update the ticket shortly.",
+                            "variable_workflow_01T8JFV1F6GT52Hqoo25vp5QlIvRkFrOsRk": "Additional updates will follow shortly after analysis.",
+                            "variable_workflow_01T8JGZWKLG0Z4nTIixDS1v6lcz3EN4tt9h": "0",
+                            "variable_workflow_01T8JK2D5BY7A52S2TwFRVP9muZChx66EIO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                            "variable_workflow_01T8JKESHGKPO7g5b0MuW5Bi17o7MDIHUBO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                            "variable_workflow_01T8JKLZ5VTB27LwD38giLqmSMHGbtJLmPQ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$"
+                          },
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "target_type": "web-service.endpoint",
+                            "use_workflow_target": true
+                          },
+                          "workflow_id": "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01UMUV86559FV27RSl1ZIMTe10zrVgdmUvM",
+                    "name": "Condition Branch",
+                    "title": "ELSE",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3LFY7AZU5I8KbHO7HCKrySMlCeuOvH$",
+                        "operator": "mregex",
+                        "right_operand": ".*"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "ELSE",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UMUWYODGBED0QLspsCFwHQFAROsJ1WFDh",
+                        "name": "VE - Snow update VE params",
+                        "title": "VE - Snow update VE params",
+                        "type": "workflow.atomic_workflow",
+                        "base_type": "subworkflow",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "VE - Snow update VE params",
+                          "input": {
+                            "variable_workflow_01TB38GTCV68M3Io9wXZ620sg6X8KxZiQPb": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                            "variable_workflow_01TB38GTCVI9V17s9Tysn0LoOnve0QXIFib": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                            "variable_workflow_01TB38GTCVRJ20PnSAG3R0My2zwdunDNr1u": "0",
+                            "variable_workflow_01TB3AFLN3Q6359axMEABktOSpvIAqaHfXX": "CMS Engineer engaged"
+                          },
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "target_type": "web-service.endpoint",
+                            "use_workflow_target": true
+                          },
+                          "workflow_id": "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s"
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01UMUX4QNA6KX6kLb2RWZ8B3KHqdqvExPSA",
+                        "name": "Completed",
+                        "title": "END",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "succeeded",
+                          "continue_on_failure": false,
+                          "display_name": "END",
+                          "result_message": "Success",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01UMUU1SH0GGV3OmzVhLYey43IxiOIRJpwm",
+            "name": "Condition Branch",
+            "title": "ELSE",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.assigned_to$",
+                  "operator": "mw",
+                  "right_operand": "*link*"
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.parent_incident$",
+                  "operator": "mw",
+                  "right_operand": "*link*"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "ELSE",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMUUKWPZRMQ5LUxokvL58TVFvTJdasXh7",
+                "name": "VE - Snow update VE params",
+                "title": "VE - Snow update VE params",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow update VE params",
+                  "input": {
+                    "variable_workflow_01TB38GTCV68M3Io9wXZ620sg6X8KxZiQPb": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                    "variable_workflow_01TB38GTCVI9V17s9Tysn0LoOnve0QXIFib": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01TB38GTCVRJ20PnSAG3R0My2zwdunDNr1u": "0",
+                    "variable_workflow_01TB3AFLN3Q6359axMEABktOSpvIAqaHfXX": "CMS Engineer engaged"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UMUUWXXE51V37ST3eThMeQpB6iSdMAQBk",
+                "name": "Completed",
+                "title": "END",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "END",
+                  "result_message": "Success",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01UMUZ1TXKQTB0K79da9HV4uc5xMaoA5bUU",
+        "name": "VE - Update Other Open Incident Details",
+        "title": "VE - Update Other Open Incident Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Update Other Open Incident Details",
+          "input": {
+            "variable_workflow_01TCT9HCJ1RF80TqRBGb6jt6FjCWfrpnrWL": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
+            "variable_workflow_01TCT9HCJ25NP26JwpG495OeK5NCoN5YWWI": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+            "variable_workflow_01TCT9HCJ2JE91hYIusQN6n2d1oVfsYoQLT": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.company_id$",
+            "variable_workflow_01TCUGN5BGHAC6kJ2aVPrt6QabJGlz6HZbG": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMUZ9CZ1WPP2iebRb3hpNkuPdatk2hvr1",
+        "name": "VE - Get/Update Chronic Details",
+        "title": "VE - Get/Update Chronic Details",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Get/Update Chronic Details",
+          "input": {
+            "variable_workflow_01TDL3QX5OAPA0uG19opwcVUyMmflQ8iG7B": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.company_id$",
+            "variable_workflow_01TDL3QX5OPCT4woBdO3WU1NqgZm4j4DfoY": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+            "variable_workflow_01TDL3QX5OYLV655ZPW9KPbl3wh7c6H7Z3V": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
+            "variable_workflow_01TDL3QX5P89Q5FIlFp61nSDh3lh0XF70I1": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+            "variable_workflow_01TDL8E6E0DAB0p9ER6gmlkfYBEx1micteP": "24",
+            "variable_workflow_01TDL8WJKQMWC3YO6NgHd38I0ouVXIbPRyq": "hours",
+            "variable_workflow_01TDL9HXMEJYR3P1PTpLOmI9TD0QMl80D33": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J4W6FOIZZ3uZYZ6zG27fgWTh5HSjnOG$",
+            "variable_workflow_01TDLAJEN9P1O1Z7DmWMegi0srkHu8BFR00": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3FDV8G4K7hiRvLwfY8kcRCvvkMa6XR$",
+            "variable_workflow_01TDLOGJQU18F12thiDhm7IMVBijhvqSoTy": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J4101VZO00tOfbL77JWPtyC6dppMuI5$",
+            "variable_workflow_01TDLOO9HZJPY1hF5kSDGPOrBzXG27X4qIS": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
+            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "3"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMUZJRMYPII4fIkGCXMT7bNHpaGvoZe9v",
+        "name": "VE - Get Incident Mode",
+        "title": "VE - Get Incident Mode",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "VE - Get Incident Mode",
+          "input": {
+            "variable_workflow_01U0PU0Y09O9G2GWbm2lQABNgasobDpafJI": "$activity.definition_activity_01UMVJCVNCRMF5P8B7TSvdm3pkoozrlvnPo.output.jsonpath_queries.company_id$",
+            "variable_workflow_01U0QC0W7D58G4hV17T8m5Rg4A3HawZ7OWQ": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UMUZGKJAFVR3M934RJTZssZnylp7P7e3O",
+        "name": "Condition Block",
+        "title": "IF EVENTS_COUNTS \u003c= 3 IN 24 HOURS",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "IF EVENTS_COUNTS \u003c= 3 IN 24 HOURS",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01UMUZGKVRRZV19xDOZ6dieqnftBzIW2GLV",
+            "name": "Condition Branch",
+            "title": "THEN",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$activity.definition_activity_01UMUZ9CZ1WPP2iebRb3hpNkuPdatk2hvr1.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
+                  "operator": "lte",
+                  "right_operand": 3
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01UMUZJRMYPII4fIkGCXMT7bNHpaGvoZe9v.output.variable_workflow_01U0QD4FYUCOX1X4cvUOmbiqFIIOGnL4e9f$",
+                  "operator": "eq",
+                  "right_operand": "yes"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "THEN",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMV23223YO56kAUggiNpLIlaj88kPFzzG",
+                "name": "While Loop",
+                "title": "While",
+                "type": "logic.while",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "While",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01UMV232FF95B3mWpEoUOTUNnDfZnO2ZSRd",
+                    "name": "Condition Branch",
+                    "title": "Check_Counter OR Web_Services_Pass_Count \u003c= Limit",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": {
+                          "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                          "operator": "lte",
+                          "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW04SG7PL91Snj4oqPy8yGSeCSPKjD9a$"
+                        },
+                        "operator": "or",
+                        "right_operand": {
+                          "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                          "operator": "lte",
+                          "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW0W3H0Q6M0lJHrpuuxGAKsVy9BinYQF$"
+                        }
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Check_Counter OR Web_Services_Pass_Count \u003c= Limit",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT",
+                        "name": "VE - Web Services Health Check Sub WF",
+                        "title": "VE - Web Services Health Check Sub WF",
+                        "type": "workflow.sub_workflow",
+                        "base_type": "subworkflow",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "VE - Web Services Health Check Sub WF",
+                          "input": {
+                            "variable_workflow_01UNLUGFKDJJC12zvxoSuBo7EXXPXIdMofJ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3LFY7AZU5I8KbHO7HCKrySMlCeuOvH$",
+                            "variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$"
+                          },
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "no_target": true
+                          },
+                          "workflow_id": "definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK"
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01UMV5MZG17HU7Q3Mqime1MCAhEBA713EsU",
+                        "name": "Condition Block",
+                        "title": "IF WEB SERVICES HEALTH CHECK PASS",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "IF WEB SERVICES HEALTH CHECK PASS",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01UMV5N08ODWY0d2EJzGAhZylV7yrW8vNXQ",
+                            "name": "Condition Branch",
+                            "title": "THEN",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                "operator": "eq",
+                                "right_operand": "pass"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "THEN",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01UOQT05OOM8T3yB1DBZ6n0jOShHjBgwakc",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOORYRUF2O06NvM4GcU4x8VRy07LUhtme$",
+                                      "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW0W3H0Q6M0lJHrpuuxGAKsVy9BinYQF$ + 1"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOOQP0O9J5U09HuCThyxR8NjdK9eyImei$",
+                                      "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$ + 1"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01UOQRF0V5X6K6bW9fOXMrgABTFgsbqT6g4",
+                                "name": "VE - Snow add internal notes",
+                                "title": "VE - Snow add internal notes",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "VE - Snow add internal notes",
+                                  "input": {
+                                    "variable_workflow_01TB2WDU4FWY70cnYhNGvgpVDVcNj9EtW3E": "0",
+                                    "variable_workflow_01TB2WDU4GAL53oKrE0BnPDj8sYq6HsGHi0": "Web Services Health Check Step $workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOOQP0O9J5U09HuCThyxR8NjdK9eyImei$ of $workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOORYRUF2O06NvM4GcU4x8VRy07LUhtme$:\\r\\n\\r\\n$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                    "variable_workflow_01TB2WDU4GK4A12BsSUEll3LBfiqc743GIu": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                    "variable_workflow_01TB2WDU4GSBY6G3FKHuOa62qYT1CDOy2ys": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "target_type": "web-service.endpoint",
+                                    "use_workflow_target": true
+                                  },
+                                  "workflow_id": "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01UMV7VVVO4841yoZfGj1oGomoWprXQ9Ipg",
+                                "name": "Condition Block",
+                                "title": "IF WEB SERVICES PASSED \u003e= MINIMUM WEB SERVICES PASSED COUNT",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "IF WEB SERVICES PASSED \u003e= MINIMUM WEB SERVICES PASSED COUNT",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01UMV7VWA7LOP6LDFJxnmAXRUJfWWOciq0V",
+                                    "name": "Condition Branch",
+                                    "title": "THEN",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                                        "operator": "gte",
+                                        "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW0W3H0Q6M0lJHrpuuxGAKsVy9BinYQF$"
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "THEN",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UMV78QJUMIZ3WzzAmskEMXEZsRiWE7mXD",
+                                        "name": "VE - Snow Incident Resolved",
+                                        "title": "VE - Snow Incident Resolved",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "VE - Snow Incident Resolved",
+                                          "input": {
+                                            "variable_workflow_01TB1L9GTJD410fqTFHDzyTAQRf30H5fwqG": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                            "variable_workflow_01TB1L9GTJO3V5zBwDwewVjV29aTNuChJwY": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                            "variable_workflow_01TB1L9GTJWIB1Lvrjn60SQVygQ4YVR8k7J": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                            "variable_workflow_01TB1L9GTK4HE0i56Y6vFFI33LlVwYXVh2N": "We are proceeding with resolution at this time.",
+                                            "variable_workflow_01TB1L9GTKCYX2UGx9gWz5hF4fLA8mGc0AI": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                            "variable_workflow_01TB1L9GTKKQX2TZJhC8gJSWUBLoeoWLbhf": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                            "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that web services on this $activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3FDV8G4K7hiRvLwfY8kcRCvvkMa6XR$ is reachable and stable.",
+                                            "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
+                                            "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$Event ID: $activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$",
+                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
+                                            "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
+                                            "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False positive",
+                                            "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
+                                            "variable_workflow_01TB21IZKX2HP4ZKeyzSqfuK7uuhLYwcvAo": "Management Infrastructure",
+                                            "variable_workflow_01TB21QB1WIGS1rJktNnvWmG09rhaikGos7": "No action taken",
+                                            "variable_workflow_01TB21XYYNHJ6381w5EtCqh8yn6f2LYRiCe": "CMS monitoring has determined that web services on $activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J3FDV8G4K7hiRvLwfY8kcRCvvkMa6XR$ are reachable and stable"
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "target_type": "web-service.endpoint",
+                                            "use_workflow_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMV7DW6XTOT5tSx3orqVOx6gUfGBf1Ebm",
+                                        "name": "Completed",
+                                        "title": "END",
+                                        "type": "logic.completed",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "completion_type": "succeeded",
+                                          "continue_on_failure": false,
+                                          "display_name": "END",
+                                          "result_message": "Success",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01UMV7VWPKRJU2CIF96M1qIy7rRpGqTEEwL",
+                                    "name": "Condition Branch",
+                                    "title": "ELSE",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                                        "operator": "lt",
+                                        "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW0W3H0Q6M0lJHrpuuxGAKsVy9BinYQF$"
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "ELSE",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UMVAYP432LX76xMWKfvWSTCuKidTo5FmU",
+                                        "name": "Condition Block",
+                                        "title": "IF WEB SERVICES PASSED COUNT = 1",
+                                        "type": "logic.if_else",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "IF WEB SERVICES PASSED COUNT = 1",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "blocks": [
+                                          {
+                                            "unique_name": "definition_activity_01UMVAYPSTXNP6LdXf64jogaXr4qiRDp1Db",
+                                            "name": "Condition Branch",
+                                            "title": "THEN",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                                                "operator": "eq",
+                                                "right_operand": 0
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "THEN",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01UMVBF4RJGMO39yMGM1rN1mZ2MkXNvw591",
+                                                "name": "VE - Snow Incident On-hold",
+                                                "title": "VE - Snow Incident On-hold",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "VE - Snow Incident On-hold",
+                                                  "input": {
+                                                    "variable_workflow_01TB16P71EPWP7lgR88jiVoXh8OiFGYsyMM": "We have determined that the Web Services Health Status is OK. We will check the Web Services Health Status on the device again in 5 mins to confirm stability.",
+                                                    "variable_workflow_01TB16P71F2LA4sbwnifa1a3OADCEPRwN2a": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                    "variable_workflow_01TB16P71FBRL7MbRe0yZCGV570pK0Rt1SG": "Additional updates will follow shortly after analysis.",
+                                                    "variable_workflow_01TB16P71FKIV1suH4QLPK4ODIcdmulGRJS": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                    "variable_workflow_01TB16P71FRS71jDM5lAcytTXVTdpGRoXv7": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                    "variable_workflow_01TB16P71FZL36UPpg5piCD6WRv5zy5yVLD": "0",
+                                                    "variable_workflow_01TB16P71GA5I0IIZy7ZyRQO4cjRCafK65y": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                    "variable_workflow_01TB16P71GIHG6E1zVATxTa08WAFfC994P1": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                                    "variable_workflow_01TB1H3R18VOW6fw2cYTIz1OqZCzRLfFCRu": 6
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "target_type": "web-service.endpoint",
+                                                    "use_workflow_target": true
+                                                  },
+                                                  "workflow_id": "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "unique_name": "definition_activity_01UMVAYQM2J685Zt5siPoh6M6IF4xctYiXB",
+                                            "name": "Condition Branch",
+                                            "title": "ELSE",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                                                "operator": "gt",
+                                                "right_operand": 0
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "ELSE",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01UN0BY4JIHOQ0yoDpUl6vKrwdvFktgUExT",
+                                                "name": "VE - Snow Incident On-hold",
+                                                "title": "VE - Snow Incident On-hold",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "VE - Snow Incident On-hold",
+                                                  "input": {
+                                                    "variable_workflow_01TB16P71EPWP7lgR88jiVoXh8OiFGYsyMM": "",
+                                                    "variable_workflow_01TB16P71F2LA4sbwnifa1a3OADCEPRwN2a": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                    "variable_workflow_01TB16P71FBRL7MbRe0yZCGV570pK0Rt1SG": "",
+                                                    "variable_workflow_01TB16P71FKIV1suH4QLPK4ODIcdmulGRJS": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                    "variable_workflow_01TB16P71FRS71jDM5lAcytTXVTdpGRoXv7": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                    "variable_workflow_01TB16P71FZL36UPpg5piCD6WRv5zy5yVLD": "0",
+                                                    "variable_workflow_01TB16P71GA5I0IIZy7ZyRQO4cjRCafK65y": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                    "variable_workflow_01TB16P71GIHG6E1zVATxTa08WAFfC994P1": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                                    "variable_workflow_01TB1H3R18VOW6fw2cYTIz1OqZCzRLfFCRu": 6
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "target_type": "web-service.endpoint",
+                                                    "use_workflow_target": true
+                                                  },
+                                                  "workflow_id": "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMVCFTGWUDQ3WM5ErQ9oeHBi8TE6HbF1A",
+                                        "name": "Set Variables",
+                                        "title": "Increment Web Services Pass Count",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Increment Web Services Pass Count",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$",
+                                              "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMW0GFHLD6Q4cnPWwQ8qOoyUCDFwW5rPb$ + 1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMVBWTGUS5G7QU2yDk8iSwASHk6onfT2m",
+                                        "name": "Sleep",
+                                        "title": "Wait",
+                                        "type": "core.sleep",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Wait",
+                                          "skip_execution": false,
+                                          "sleep_interval": 10
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UOP69Z1JM0Y4Y3uVMQaI02IOANJYxJ8Sl",
+                                        "name": "VE - Snow Incident In-Progress",
+                                        "title": "VE - Snow Incident In-Progress",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "VE - Snow Incident In-Progress",
+                                          "input": {
+                                            "variable_workflow_01T8JE925OO5M1gU73fDFvgPZI1fixjuGjj": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                            "variable_workflow_01T8JEM0WQULM2ambCHVtHhFVkhohPRNVOB": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                            "variable_workflow_01T8JFMU3R1XV1LLRvZhVGAbp3vEmuYYGk9": "",
+                                            "variable_workflow_01T8JFV1F6GT52Hqoo25vp5QlIvRkFrOsRk": "",
+                                            "variable_workflow_01T8JGZWKLG0Z4nTIixDS1v6lcz3EN4tt9h": "0",
+                                            "variable_workflow_01T8JK2D5BY7A52S2TwFRVP9muZChx66EIO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                            "variable_workflow_01T8JKESHGKPO7g5b0MuW5Bi17o7MDIHUBO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                            "variable_workflow_01T8JKLZ5VTB27LwD38giLqmSMHGbtJLmPQ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$"
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "target_type": "web-service.endpoint",
+                                            "use_workflow_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01UMV5N177MUW43tvyV5YReepeiU6BdeFHc",
+                            "name": "Condition Branch",
+                            "title": "ELSE",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                "operator": "eq",
+                                "right_operand": "fail"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "ELSE",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01UOQT25Q4E5O0flcYvRJoImdHs2B8hPAFs",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOORYRUF2O06NvM4GcU4x8VRy07LUhtme$",
+                                      "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW04SG7PL91Snj4oqPy8yGSeCSPKjD9a$ + 1"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOOQP0O9J5U09HuCThyxR8NjdK9eyImei$",
+                                      "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$ + 1"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01UOQRHD5JO8A5JjT0YK8aTLRNo0Wi0k7oe",
+                                "name": "VE - Snow add internal notes",
+                                "title": "VE - Snow add internal notes",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "VE - Snow add internal notes",
+                                  "input": {
+                                    "variable_workflow_01TB2WDU4FWY70cnYhNGvgpVDVcNj9EtW3E": "0",
+                                    "variable_workflow_01TB2WDU4GAL53oKrE0BnPDj8sYq6HsGHi0": "Web Services Health Check Step $workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOOQP0O9J5U09HuCThyxR8NjdK9eyImei$ of $workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UOORYRUF2O06NvM4GcU4x8VRy07LUhtme$:\\r\\n\\r\\n$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                    "variable_workflow_01TB2WDU4GK4A12BsSUEll3LBfiqc743GIu": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                    "variable_workflow_01TB2WDU4GSBY6G3FKHuOa62qYT1CDOy2ys": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "target_type": "web-service.endpoint",
+                                    "use_workflow_target": true
+                                  },
+                                  "workflow_id": "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01UMV98QSHIBV1dkMSW4Cwc3OFC9vxb2HJF",
+                                "name": "Condition Block",
+                                "title": "IF CHECK_COUNTER \u003e MAX_CHECK_COUNTER",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "IF CHECK_COUNTER \u003e MAX_CHECK_COUNTER",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01UMV98RE6ITD5bGDVvPvebQhIWBS0CX8gA",
+                                    "name": "Condition Branch",
+                                    "title": "THEN",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                                        "operator": "gte",
+                                        "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW04SG7PL91Snj4oqPy8yGSeCSPKjD9a$"
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "THEN",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UMV9UPGABXT6U23BApw1dAhZWEBc6YPXh",
+                                        "name": "VE - Snow Incident Escalate to delivery",
+                                        "title": "VE - Snow Incident Escalate to delivery",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "VE - Snow Incident Escalate to delivery",
+                                          "input": {
+                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "Escalating to an incident team member.",
+                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "The Web service has not recovered after a health check.",
+                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "$activity.definition_activity_01UMV47T31BPY6kGoBkcqngcxALfgnRo4AT.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "Possible Instability Detected",
+                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "target_type": "web-service.endpoint",
+                                            "use_workflow_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMV9ZYL3IWY2B5mdT1uEdvKkcN7emxrTB",
+                                        "name": "Completed",
+                                        "title": "END",
+                                        "type": "logic.completed",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "completion_type": "succeeded",
+                                          "continue_on_failure": false,
+                                          "display_name": "END",
+                                          "result_message": "Success",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01UMV98SH28BN1NBaulyjDa8rKRNSQ16tUU",
+                                    "name": "Condition Branch",
+                                    "title": "ELSE",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                                        "operator": "lt",
+                                        "right_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.input.variable_workflow_01UMW04SG7PL91Snj4oqPy8yGSeCSPKjD9a$"
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "ELSE",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01UMVETHZMRO20jdEZdElLeWBTxB6nR6fXN",
+                                        "name": "Condition Block",
+                                        "title": "IF CHECK_COUNTER = 1",
+                                        "type": "logic.if_else",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "IF CHECK_COUNTER = 1",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "blocks": [
+                                          {
+                                            "unique_name": "definition_activity_01UMVETIULV0S3DAi6smei8hNqkOtotZW3M",
+                                            "name": "Condition Branch",
+                                            "title": "THEN",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                                                "operator": "eq",
+                                                "right_operand": 0
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "THEN",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01UN0CNNSN0WO5XK2dA2Gim0cnDcNCZz5NJ",
+                                                "name": "VE - Snow Incident On-hold",
+                                                "title": "VE - Snow Incident On-hold",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "VE - Snow Incident On-hold",
+                                                  "input": {
+                                                    "variable_workflow_01TB16P71EPWP7lgR88jiVoXh8OiFGYsyMM": "We have determined that the Web Services Health Status is not OK. We will continue monitoring the Web Services Health Status on the device.",
+                                                    "variable_workflow_01TB16P71F2LA4sbwnifa1a3OADCEPRwN2a": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                    "variable_workflow_01TB16P71FBRL7MbRe0yZCGV570pK0Rt1SG": "Additional updates will follow shortly after analysis.",
+                                                    "variable_workflow_01TB16P71FKIV1suH4QLPK4ODIcdmulGRJS": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                    "variable_workflow_01TB16P71FRS71jDM5lAcytTXVTdpGRoXv7": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                    "variable_workflow_01TB16P71FZL36UPpg5piCD6WRv5zy5yVLD": "0",
+                                                    "variable_workflow_01TB16P71GA5I0IIZy7ZyRQO4cjRCafK65y": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                    "variable_workflow_01TB16P71GIHG6E1zVATxTa08WAFfC994P1": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                                    "variable_workflow_01TB1H3R18VOW6fw2cYTIz1OqZCzRLfFCRu": 6
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "target_type": "web-service.endpoint",
+                                                    "use_workflow_target": true
+                                                  },
+                                                  "workflow_id": "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "unique_name": "definition_activity_01UMVETJPBY331xwuH9TxhFQyEk4klSMazr",
+                                            "name": "Condition Branch",
+                                            "title": "ELSE",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                                                "operator": "gt",
+                                                "right_operand": 0
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "ELSE",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01UN0EE7RJZWN2OE7ILWFwKDcgNlIipBOcW",
+                                                "name": "VE - Snow Incident On-hold",
+                                                "title": "VE - Snow Incident On-hold",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "VE - Snow Incident On-hold",
+                                                  "input": {
+                                                    "variable_workflow_01TB16P71EPWP7lgR88jiVoXh8OiFGYsyMM": "",
+                                                    "variable_workflow_01TB16P71F2LA4sbwnifa1a3OADCEPRwN2a": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                    "variable_workflow_01TB16P71FBRL7MbRe0yZCGV570pK0Rt1SG": "",
+                                                    "variable_workflow_01TB16P71FKIV1suH4QLPK4ODIcdmulGRJS": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                    "variable_workflow_01TB16P71FRS71jDM5lAcytTXVTdpGRoXv7": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                    "variable_workflow_01TB16P71FZL36UPpg5piCD6WRv5zy5yVLD": "0",
+                                                    "variable_workflow_01TB16P71GA5I0IIZy7ZyRQO4cjRCafK65y": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                    "variable_workflow_01TB16P71GIHG6E1zVATxTa08WAFfC994P1": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                                    "variable_workflow_01TB1H3R18VOW6fw2cYTIz1OqZCzRLfFCRu": 6
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "target_type": "web-service.endpoint",
+                                                    "use_workflow_target": true
+                                                  },
+                                                  "workflow_id": "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMVG0S8OZE97KdAkoU6D3Jn4HQ4Knqk1l",
+                                        "name": "Set Variables",
+                                        "title": "Increment Check Counter",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Increment Check Counter",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$",
+                                              "variable_value_new": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.local.variable_workflow_01UMVZL84DMUT0BwnfZkinB73T6Og9DYhLx$ + 1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UMVGCJX5HR33stHnwg1DBgQO1SR8hOWn6",
+                                        "name": "Sleep",
+                                        "title": "Wait",
+                                        "type": "core.sleep",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Wait",
+                                          "skip_execution": false,
+                                          "sleep_interval": 10
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UOP9EKJP1T60wv3KIKvoLlcwHUQc7mvUE",
+                                        "name": "VE - Snow Incident In-Progress",
+                                        "title": "VE - Snow Incident In-Progress",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "VE - Snow Incident In-Progress",
+                                          "input": {
+                                            "variable_workflow_01T8JE925OO5M1gU73fDFvgPZI1fixjuGjj": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                            "variable_workflow_01T8JEM0WQULM2ambCHVtHhFVkhohPRNVOB": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                                            "variable_workflow_01T8JFMU3R1XV1LLRvZhVGAbp3vEmuYYGk9": "",
+                                            "variable_workflow_01T8JFV1F6GT52Hqoo25vp5QlIvRkFrOsRk": "",
+                                            "variable_workflow_01T8JGZWKLG0Z4nTIixDS1v6lcz3EN4tt9h": "0",
+                                            "variable_workflow_01T8JK2D5BY7A52S2TwFRVP9muZChx66EIO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                            "variable_workflow_01T8JKESHGKPO7g5b0MuW5Bi17o7MDIHUBO": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                            "variable_workflow_01T8JKLZ5VTB27LwD38giLqmSMHGbtJLmPQ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$"
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "target_type": "web-service.endpoint",
+                                            "use_workflow_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01UMUZGL9WET52EMi3fFSyK8AJinLNKrIaL",
+            "name": "Condition Branch",
+            "title": "ELSE",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$activity.definition_activity_01UMUZ9CZ1WPP2iebRb3hpNkuPdatk2hvr1.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
+                "operator": "gt",
+                "right_operand": 3
+              },
+              "continue_on_failure": false,
+              "display_name": "ELSE",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UMV0S28SRK80Jkx8xx1FLRfnA9v3EYsC7",
+                "name": "VE - Snow Incident Escalate to delivery",
+                "title": "VE - Snow Incident Escalate to delivery",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "VE - Snow Incident Escalate to delivery",
+                  "input": {
+                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01UMUS88J856X5nBzENvK1x8TNAUcrPsjVD.static.variable_workflow_01UMVNGE6XZA64aHmmmMI3oUXLRsN2wWTbO$",
+                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "Escalating to an incident team member.",
+                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "We have found a high number of similar incidents.",
+                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01UMUTIDI76BE6mLjazWJD34vkHAGcCXMex.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "Chronic Condition",
+                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "target_type": "web-service.endpoint",
+                    "use_workflow_target": true
+                  },
+                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UMV0WR5XL0I7O5Wo4Su5izOq5mWWWOAbU",
+                "name": "Completed",
+                "title": "END",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "END",
+                  "result_message": "Success",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z": {
+      "unique_name": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+      "name": "Parnit_snow",
+      "title": "Parnit_snow",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+        "disable_certificate_validation": false,
+        "display_name": "Parnit_snow",
+        "host": "ciscomngsvsdev.service-now.com",
+        "ignore_proxy": false,
+        "no_runtime_user": false,
+        "path": "/api",
+        "protocol": "https"
+      }
+    },
+    "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh": {
+      "unique_name": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+      "name": "suprirao-jsonplaceholder.typicode.com",
+      "title": "suprirao-jsonplaceholder.typicode.com",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01T6YTK7CMLL33qrwXYpZNa17fE3F0hePsF",
+        "disable_certificate_validation": true,
+        "display_name": "suprirao-jsonplaceholder.typicode.com",
+        "host": "jsonplaceholder.typicode.com",
+        "ignore_proxy": false,
+        "no_runtime_user": false,
+        "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28": {
+      "unique_name": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+      "name": "parnit_snow_ve",
+      "title": "parnit_snow_ve",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "parnit_snow_ve"
+      }
+    },
+    "definition_runtime_user_01T6YTK7CMLL33qrwXYpZNa17fE3F0hePsF": {
+      "unique_name": "definition_runtime_user_01T6YTK7CMLL33qrwXYpZNa17fE3F0hePsF",
+      "name": "suprirao basic-auth",
+      "title": "suprirao basic-auth",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "suprirao basic-auth"
+      }
+    }
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK",
+        "name": "VE - Web Services Health Check Sub WF",
+        "title": "VE - Web Services Health Check Sub WF",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "local",
+              "name": "vmrest_result",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UOL63OMU2GU3YG5EJz0AWxhoKYGhBvQUp",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "local",
+              "name": "uds_result",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "web_service_health_status",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "Incident Number",
+              "type": "datatype.string",
+              "is_required": true,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "local",
+              "name": "axl_result",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UOL5VF4NQLQ0PGc4ki03NkYt0ENct0Iql",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "device_class",
+              "type": "datatype.string",
+              "is_required": true,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UNLUGFKDJJC12zvxoSuBo7EXXPXIdMofJ",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "web_service_health_check_result",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "VE - Web Services Health Check Sub WF",
+          "target": {
+            "no_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01UNLSN4KDZ783ia7nFp6vL7OENpn3oIXUW",
+            "name": "Condition Block",
+            "title": "IF DEVICE_CLASS IS \"Tomcat\" or  \"CUCM Server\" or \"Call Manager\"",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "IF DEVICE_CLASS IS \"Tomcat\" or  \"CUCM Server\" or \"Call Manager\"",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01UNLSN5G13SW1oxjDJJrYm5h3xsjils4xs",
+                "name": "Condition Branch",
+                "title": "THEN",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UNLUGFKDJJC12zvxoSuBo7EXXPXIdMofJ$",
+                    "operator": "mregex",
+                    "right_operand": "Tomcat|CUCM Server|Call Manager"
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "THEN",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW",
+                    "name": "VE - Tomcat JVM Health Check",
+                    "title": "VE - Tomcat JVM Health Check",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "VE - Tomcat JVM Health Check",
+                      "input": {
+                        "variable_workflow_01UNV781WPIY96f2fEoBLHFAkdKJeaOX3tm": "/users",
+                        "variable_workflow_01UNV781WQ4I91CqpyQLOksyCSLzBEghxIg": 1,
+                        "variable_workflow_01UNV781WRBVJ6UQMmG9JDctQssT3v8ZwZn": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$",
+                        "variable_workflow_01UNV781WS3Z065BUBoubUKIuSB4S2Qzw6C": 2,
+                        "variable_workflow_01UNV781WSCMI4Lq7zwIgUmiuQwD7F3jJDl": 1,
+                        "variable_workflow_01UOAOY62PPHM2MXHqYy7Cu7i9Xzvk5XerL": 2,
+                        "variable_workflow_01UOAQH9FNEOY4HmhM7dzOjaHmbtug1SogY": 1,
+                        "variable_workflow_01UOFM7ISPQWY4g5su5X2fPogGpJo1UMihJ": 90
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "execute_on_this_target": true,
+                        "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                        "target_type": "web-service.endpoint"
+                      },
+                      "workflow_id": "definition_workflow_01UNV781P49401Ivz60z7g25mhhRUl7CX3p"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01UNLWDVHWZXJ7XmJ0PTc7l9KSPNkQgTbaX",
+                    "name": "Condition Block",
+                    "title": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01UNLWDW7RQ3F5GIxhug3gJ9IwnhXqD9E2y",
+                        "name": "Condition Branch",
+                        "title": "THEN",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "pass"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "THEN",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7",
+                            "name": "VE - Tomcat AXL Test",
+                            "title": "VE - Tomcat AXL Test",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "VE - Tomcat AXL Test",
+                              "input": {
+                                "variable_workflow_01UBQKHIUEI373v8A0j7X8MXWsWiQy0l0zj": 2,
+                                "variable_workflow_01UBUSXAE6FD04yRdAKhXUeMVj1prlD5aEl": "/users",
+                                "variable_workflow_01UBUUOXO2DH63MhW5mM7HOghPWcCf69fgf": 1,
+                                "variable_workflow_01UBUWCQP3S0K09MK7CiLYlcuQltMs8NxdS": 1,
+                                "variable_workflow_01UMUK446PJTB3JUUFcQbdqQ46UUdvDolvc": "AXL",
+                                "variable_workflow_01UMUKMJCGV4Y0OT6Q17ye7fG7kqdg6XOea": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target": true,
+                                "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01TOT6Z5KRKBZ4ukEw6sdRVrPukmtGSeRtd"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01UNLXHYEQRM82ccIJ3NqfNl5EQkU4zZVX7",
+                            "name": "Condition Block",
+                            "title": "IF AXL TEST PASSED",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "IF AXL TEST PASSED",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01UNLXHYORF1I14aV0cKr78Dg5JvXsZB3EV",
+                                "name": "Condition Branch",
+                                "title": "THEN",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "pass"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "THEN",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UNLYBQ7BVF62QNW1T8F4ytkTmmnJ85fh4",
+                                    "name": "VE - UDS Connectivity Test",
+                                    "title": "VE - UDS Connectivity Test",
+                                    "type": "workflow.atomic_workflow",
+                                    "base_type": "subworkflow",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "VE - UDS Connectivity Test",
+                                      "input": {
+                                        "variable_workflow_01UBQKHIUEI373v8A0j7X8MXWsWiQy0l0zj": 2,
+                                        "variable_workflow_01UBUSXAE6FD04yRdAKhXUeMVj1prlD5aEl": "/users",
+                                        "variable_workflow_01UBUUOXO2DH63MhW5mM7HOghPWcCf69fgf": 1,
+                                        "variable_workflow_01UBUWCQP3S0K09MK7CiLYlcuQltMs8NxdS": 1,
+                                        "variable_workflow_01UMUK446PJTB3JUUFcQbdqQ46UUdvDolvc": "UDS",
+                                        "variable_workflow_01UMUKMJCGV4Y0OT6Q17ye7fG7kqdg6XOea": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$"
+                                      },
+                                      "runtime_user": {
+                                        "target_default": true
+                                      },
+                                      "skip_execution": false,
+                                      "target": {
+                                        "execute_on_this_target": true,
+                                        "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                                        "target_type": "web-service.endpoint"
+                                      },
+                                      "workflow_id": "definition_workflow_01TOT6Z5KRKBZ4ukEw6sdRVrPukmtGSeRtd"
+                                    },
+                                    "object_type": "definition_activity"
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01UNLYRO34M5G6hRh1wceQFfBo40ED1KlY1",
+                                    "name": "Condition Block",
+                                    "title": "IF UDS TEST PASSED",
+                                    "type": "logic.if_else",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "IF UDS TEST PASSED",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "blocks": [
+                                      {
+                                        "unique_name": "definition_activity_01UNLYROULLY26IVPI6fvpgeRftJwsraeDd",
+                                        "name": "Condition Branch",
+                                        "title": "THEN",
+                                        "type": "logic.condition_block",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "condition": {
+                                            "left_operand": "$activity.definition_activity_01UNLYBQ7BVF62QNW1T8F4ytkTmmnJ85fh4.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                            "operator": "eq",
+                                            "right_operand": "pass"
+                                          },
+                                          "continue_on_failure": false,
+                                          "display_name": "THEN",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "actions": [
+                                          {
+                                            "unique_name": "definition_activity_01UNLZTEC0BTH3JbrI9uE0Al97vJzNeZkLe",
+                                            "name": "Set Variables",
+                                            "title": "Set Web Services Health Check Status",
+                                            "type": "core.set_multiple_variables",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "continue_on_failure": false,
+                                              "display_name": "Set Web Services Health Check Status",
+                                              "skip_execution": false,
+                                              "variables_to_update": [
+                                                {
+                                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                                  "variable_value_new": "pass"
+                                                },
+                                                {
+                                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                                  "variable_value_new": "Web Services Health Status - Pass\\r\\n\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n$activity.definition_activity_01UNLYBQ7BVF62QNW1T8F4ytkTmmnJ85fh4.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n"
+                                                }
+                                              ]
+                                            },
+                                            "object_type": "definition_activity"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01UNLYRPVT68O5dUxZYYLKgK5ySxHjfQMOD",
+                                        "name": "Condition Branch",
+                                        "title": "ELSE",
+                                        "type": "logic.condition_block",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "condition": {
+                                            "left_operand": "$activity.definition_activity_01UNLYBQ7BVF62QNW1T8F4ytkTmmnJ85fh4.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                            "operator": "eq",
+                                            "right_operand": "fail"
+                                          },
+                                          "continue_on_failure": false,
+                                          "display_name": "ELSE",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "actions": [
+                                          {
+                                            "unique_name": "definition_activity_01UNLZ31KLCKG4AXT88domOOr8XM5b5ntwB",
+                                            "name": "Set Variables",
+                                            "title": "Set Web Services Health Check Status",
+                                            "type": "core.set_multiple_variables",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "continue_on_failure": false,
+                                              "display_name": "Set Web Services Health Check Status",
+                                              "skip_execution": false,
+                                              "variables_to_update": [
+                                                {
+                                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                                  "variable_value_new": "fail"
+                                                },
+                                                {
+                                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                                  "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n$activity.definition_activity_01UNLYBQ7BVF62QNW1T8F4ytkTmmnJ85fh4.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n"
+                                                }
+                                              ]
+                                            },
+                                            "object_type": "definition_activity"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01UNLXHZ0OPVY5N5JWiguaIu7SbPbACk7px",
+                                "name": "Condition Branch",
+                                "title": "ELSE",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "fail"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "ELSE",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UNLYFU51BLP3WdR8WeisBfvSQ6r9QA2oC",
+                                    "name": "Set Variables",
+                                    "title": "Set Web Services Health Check Status",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Web Services Health Check Status",
+                                      "skip_execution": false,
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                          "variable_value_new": "fail"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2$",
+                                          "variable_value_new": "Tomcat UDS Test:\\r\\nHTTP Response Code - NA\\r\\n\\Response Time - NA\\r\\nResult - NA\\r\\n"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                          "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UNLXDN6TQXL3AqpU5W0N5Y5iZgSlXwWr7.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2$\\r\\n"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01UNLWDWTHZ3975QpFOzHrw8JmPhaEYbZjG",
+                        "name": "Condition Branch",
+                        "title": "ELSE",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "fail"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "ELSE",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UNLX4HN99S04MuDrJ95UeXNYHVqrzAyz1",
+                            "name": "Set Variables",
+                            "title": "Set Web Services Health Check Status",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Web Services Health Check Status",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                  "variable_value_new": "fail"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL5VF4NQLQ0PGc4ki03NkYt0ENct0Iql$",
+                                  "variable_value_new": "Tomcat AXL Test:\\r\\nHTTP Response Code - NA\\r\\nResponse Time - NA\\r\\nResult - NA\\r\\n"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2$",
+                                  "variable_value_new": "Tomcat UDS Test:\\r\\nHTTP Response Code - NA\\r\\n\\Response Time - NA\\r\\nResult - NA\\r\\n"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                  "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOL1Z5FBS0U6pgimMzqwEMlngnHOH79nW.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL5VF4NQLQ0PGc4ki03NkYt0ENct0Iql$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2$\\r\\n"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01UNLSN6PAXRD2ivGtahtm04zf3OxcPSlnp",
+                "name": "Condition Branch",
+                "title": "ELSE IF DEVICE_CLASS  IS \"IM and Presence Server\" ",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UNLUGFKDJJC12zvxoSuBo7EXXPXIdMofJ$",
+                    "operator": "eq",
+                    "right_operand": "IM and Presence Server"
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "ELSE IF DEVICE_CLASS  IS \"IM and Presence Server\" ",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB",
+                    "name": "VE - Tomcat JVM Health Check",
+                    "title": "VE - Tomcat JVM Health Check",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "VE - Tomcat JVM Health Check",
+                      "input": {
+                        "variable_workflow_01UNV781WPIY96f2fEoBLHFAkdKJeaOX3tm": "/users",
+                        "variable_workflow_01UNV781WQ4I91CqpyQLOksyCSLzBEghxIg": 1,
+                        "variable_workflow_01UNV781WRBVJ6UQMmG9JDctQssT3v8ZwZn": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$",
+                        "variable_workflow_01UNV781WS3Z065BUBoubUKIuSB4S2Qzw6C": 2,
+                        "variable_workflow_01UNV781WSCMI4Lq7zwIgUmiuQwD7F3jJDl": 1,
+                        "variable_workflow_01UOAOY62PPHM2MXHqYy7Cu7i9Xzvk5XerL": 2,
+                        "variable_workflow_01UOAQH9FNEOY4HmhM7dzOjaHmbtug1SogY": 1,
+                        "variable_workflow_01UOFM7ISPQWY4g5su5X2fPogGpJo1UMihJ": 90
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "execute_on_this_target": true,
+                        "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                        "target_type": "web-service.endpoint"
+                      },
+                      "workflow_id": "definition_workflow_01UNV781P49401Ivz60z7g25mhhRUl7CX3p"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01UOM8P4Y9LEC0qjSTt1V7YvI4UwIdMz2H2",
+                    "name": "Condition Block",
+                    "title": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01UOM8P4YAC737DyEkOruNEcVkgnwfBDFi2",
+                        "name": "Condition Branch",
+                        "title": "THEN",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "pass"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "THEN",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UOM8P4YCHTJ236YRRCAUF5k7GQSWD7cIk",
+                            "name": "VE - Tomcat AXL Test",
+                            "title": "VE - Tomcat AXL Test",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "VE - Tomcat AXL Test",
+                              "input": {
+                                "variable_workflow_01UBQKHIUEI373v8A0j7X8MXWsWiQy0l0zj": 2,
+                                "variable_workflow_01UBUSXAE6FD04yRdAKhXUeMVj1prlD5aEl": "/users",
+                                "variable_workflow_01UBUUOXO2DH63MhW5mM7HOghPWcCf69fgf": 1,
+                                "variable_workflow_01UBUWCQP3S0K09MK7CiLYlcuQltMs8NxdS": 1,
+                                "variable_workflow_01UMUK446PJTB3JUUFcQbdqQ46UUdvDolvc": "AXL",
+                                "variable_workflow_01UMUKMJCGV4Y0OT6Q17ye7fG7kqdg6XOea": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target": true,
+                                "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01TOT6Z5KRKBZ4ukEw6sdRVrPukmtGSeRtd"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01UOM8P4YJ91F4I2ic6cq83RywFs4AykpW1",
+                            "name": "Condition Block",
+                            "title": "IF AXL TEST PASSED",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "IF AXL TEST PASSED",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01UOM8P4YJV3U2lsQNsPOKxdAg6rut67auK",
+                                "name": "Condition Branch",
+                                "title": "THEN",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UOM8P4YCHTJ236YRRCAUF5k7GQSWD7cIk.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "pass"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "THEN",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UON548PDEIT1huDxUbYmm9Cki4E6oGCWx",
+                                    "name": "Set Variables",
+                                    "title": "Set Web Services Health Check Status",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Web Services Health Check Status",
+                                      "skip_execution": false,
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                          "variable_value_new": "pass"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                          "variable_value_new": "Web Services Health Status - Pass\\r\\n\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UOM8P4YCHTJ236YRRCAUF5k7GQSWD7cIk.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01UOM8P4Z119S6aljPpTIIMUB6q3EGFNNyN",
+                                "name": "Condition Branch",
+                                "title": "ELSE",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UOM8P4YCHTJ236YRRCAUF5k7GQSWD7cIk.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "fail"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "ELSE",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UOM8P4Z7LLI3ikW73Pt7yk3yGFP0UOAmg",
+                                    "name": "Set Variables",
+                                    "title": "Set Web Services Health Check Status",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Web Services Health Check Status",
+                                      "skip_execution": false,
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                          "variable_value_new": "fail"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL609ZTR1V2t7l0eOsiykBTEsIG4iXW2$",
+                                          "variable_value_new": "Tomcat UDS Test:\\r\\nHTTP Response Code - NA\\r\\n\\Response Time - NA\\r\\nResult - NA\\r\\n"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                          "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UOM8P4YCHTJ236YRRCAUF5k7GQSWD7cIk.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01UOM8P4Z881D0vgzPaymHr0uBvzOuAagQV",
+                        "name": "Condition Branch",
+                        "title": "ELSE",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "fail"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "ELSE",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UOM8P4ZAFSP0Ina1HL3V3oEPNHjaY88Nu",
+                            "name": "Set Variables",
+                            "title": "Set Web Services Health Check Status",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Web Services Health Check Status",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                  "variable_value_new": "fail"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL5VF4NQLQ0PGc4ki03NkYt0ENct0Iql$",
+                                  "variable_value_new": "Tomcat AXL Test:\\r\\nHTTP Response Code - NA\\r\\nResponse Time - NA\\r\\nResult - NA\\r\\n"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                  "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8EIZPYSM0huckRAc4VrfztBlSJU5dB.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL5VF4NQLQ0PGc4ki03NkYt0ENct0Iql$\\r\\n"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01UNLSPA3V4QF4VYk6P4rWB3m9Vt6lFHVZO",
+                "name": "Condition Branch",
+                "title": "ELSE IF DEVICE_CLASS IS \"Unity Connection Server\" ",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UNLUGFKDJJC12zvxoSuBo7EXXPXIdMofJ$",
+                    "operator": "eq",
+                    "right_operand": "Unity Connection Server"
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "ELSE IF DEVICE_CLASS IS \"Unity Connection Server\" ",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4",
+                    "name": "VE - Tomcat JVM Health Check",
+                    "title": "VE - Tomcat JVM Health Check",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "VE - Tomcat JVM Health Check",
+                      "input": {
+                        "variable_workflow_01UNV781WPIY96f2fEoBLHFAkdKJeaOX3tm": "/users",
+                        "variable_workflow_01UNV781WQ4I91CqpyQLOksyCSLzBEghxIg": 1,
+                        "variable_workflow_01UNV781WRBVJ6UQMmG9JDctQssT3v8ZwZn": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$",
+                        "variable_workflow_01UNV781WS3Z065BUBoubUKIuSB4S2Qzw6C": 2,
+                        "variable_workflow_01UNV781WSCMI4Lq7zwIgUmiuQwD7F3jJDl": 1,
+                        "variable_workflow_01UOAOY62PPHM2MXHqYy7Cu7i9Xzvk5XerL": 2,
+                        "variable_workflow_01UOAQH9FNEOY4HmhM7dzOjaHmbtug1SogY": 1,
+                        "variable_workflow_01UOFM7ISPQWY4g5su5X2fPogGpJo1UMihJ": 90
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "execute_on_this_target": true,
+                        "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                        "target_type": "web-service.endpoint"
+                      },
+                      "workflow_id": "definition_workflow_01UNV781P49401Ivz60z7g25mhhRUl7CX3p"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01UNM0CRGGL4J1Wc2mtd32GNsVKGvWOJqYn",
+                    "name": "Condition Block",
+                    "title": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "IF TOMCAT JVM HEALTH CHECK PASSED",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01UNM0CRGMVF20nunUKJrFNZqenMMdm8oRi",
+                        "name": "Condition Branch",
+                        "title": "THEN",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "pass"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "THEN",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UNM0CRGNOWU4cFzyDuMB67BomeIKwfmnk",
+                            "name": "VE - Tomcat VMREST Test",
+                            "title": "VE - Tomcat VMREST Test",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "VE - Tomcat VMREST Test",
+                              "input": {
+                                "variable_workflow_01UBQKHIUEI373v8A0j7X8MXWsWiQy0l0zj": 2,
+                                "variable_workflow_01UBUSXAE6FD04yRdAKhXUeMVj1prlD5aEl": "/users",
+                                "variable_workflow_01UBUUOXO2DH63MhW5mM7HOghPWcCf69fgf": 1,
+                                "variable_workflow_01UBUWCQP3S0K09MK7CiLYlcuQltMs8NxdS": 1,
+                                "variable_workflow_01UMUK446PJTB3JUUFcQbdqQ46UUdvDolvc": "VMREST",
+                                "variable_workflow_01UMUKMJCGV4Y0OT6Q17ye7fG7kqdg6XOea": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.input.variable_workflow_01UOKYY82EEMQ6R1fCJbreHM43JPLMi55Ss$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target": true,
+                                "target_id": "definition_target_01T6YXNZLAMYD1IETIsWWpyinewulOiQzrh",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01TOT6Z5KRKBZ4ukEw6sdRVrPukmtGSeRtd"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01UNM0CRGQ27M5vuomBJRgyukTJDFWHkEZ3",
+                            "name": "Condition Block",
+                            "title": "IF VMREST TEST PASSED",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "IF VMREST TEST PASSED",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01UNM0CRGWLDX5lqYHeYE8JMv6Dssi9lFVJ",
+                                "name": "Condition Branch",
+                                "title": "THEN",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UNM0CRGNOWU4cFzyDuMB67BomeIKwfmnk.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "pass"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "THEN",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UONG2FE2IDO02FoVRKcwK3A9s0jfYhYov",
+                                    "name": "Set Variables",
+                                    "title": "Set Web Services Health Check Status",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Web Services Health Check Status",
+                                      "skip_execution": false,
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                          "variable_value_new": "pass"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                          "variable_value_new": "Web Services Health Status - Pass\\r\\n\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$activity.definition_activity_01UNM0CRGNOWU4cFzyDuMB67BomeIKwfmnk.output.variable_workflow_01UNUYPTBJ28Q7IE0lQLk9wnH6X1DoO8rpQ$\\r\\n"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01UNM0CRHB4OW7R3EvOld3jlZtNweLI2Kxs",
+                                "name": "Condition Branch",
+                                "title": "ELSE",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$activity.definition_activity_01UNM0CRGNOWU4cFzyDuMB67BomeIKwfmnk.output.variable_workflow_01UNM8K8T5G9I25wHxW7zlUUXumJmtTo4cA$",
+                                    "operator": "eq",
+                                    "right_operand": "fail"
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "ELSE",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01UONFQ4D2ZBE2h7vZOreqbsOi3b9UJFxg0",
+                                    "name": "Set Variables",
+                                    "title": "Set Web Services Health Check Status",
+                                    "type": "core.set_multiple_variables",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Set Web Services Health Check Status",
+                                      "skip_execution": false,
+                                      "variables_to_update": [
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                          "variable_value_new": "fail"
+                                        },
+                                        {
+                                          "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                          "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL63OMU2GU3YG5EJz0AWxhoKYGhBvQUp$\\r\\n"
+                                        }
+                                      ]
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01UNM0CRHHY882P39xqCvt6RW5Lv9sSE0Oj",
+                        "name": "Condition Branch",
+                        "title": "ELSE",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UNV781WTE0O3djd0NoOnzhKO1nxwj63wY$",
+                            "operator": "eq",
+                            "right_operand": "fail"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "ELSE",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01UON9OSGX16N6LjVF7tXmtX0fTLiTIaZdi",
+                            "name": "Set Variables",
+                            "title": "Set Web Services Health Check Status",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Web Services Health Check Status",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UMYAZV4NH9E3YHwv4fhhnNPZzA6OxFLU4$",
+                                  "variable_value_new": "fail"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL63OMU2GU3YG5EJz0AWxhoKYGhBvQUp$",
+                                  "variable_value_new": "Tomcat VMREST Test:\\r\\nHTTP Response Code - NA\\r\\nResponse Time - NA\\r\\nResult - NA\\r\\n"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.output.variable_workflow_01UN08WNWXXFY2EiCwcrxpTcis0piYJWNFO$",
+                                  "variable_value_new": "Web Services Health Status - Fail\\r\\n\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UNV781WSLL60uowYvcDKWnDpTAZVj5fyf$\\r\\n$activity.definition_activity_01UOM8JF2KZF853fhouXucpOYIOPaQHTvy4.output.variable_workflow_01UOFK6XJDJ6D7SAmQET35xCxcCtVaPjL0Y$\\r\\n$workflow.definition_workflow_01UMUR56RZ2GK74LPwgIBYxn2KbqUepiqcK.local.variable_workflow_01UOL63OMU2GU3YG5EJz0AWxhoKYGhBvQUp$\\r\\n"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ],
+  "atomic_workflows": [
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01UNV781P49401Ivz60z7g25mhhRUl7CX3p",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
+    "definition_workflow_01TOT6Z5KRKBZ4ukEw6sdRVrPukmtGSeRtd"
+  ]
+}
