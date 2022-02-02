@@ -9,6 +9,71 @@
       {
         "schema_id": "datatype.string",
         "properties": {
+          "value": "minutes",
+          "scope": "local",
+          "name": "Hold_Timer_For_Unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB5LHKNN7H72gPak9wwxtpfu73h92kI8",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "Hold_Timer_For_Loop",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB56LKXQMC0rDZc6MMeir4bDTA5Fb2wA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB7F1X5XCO1PHCJw1k0i6aQUqnyaLbwi",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "interface_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UK14JDTT0ZD0hD9rDyyjKhCRlyQUuIAPk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "count_chronic_events",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB4RTWHS0I0PZedOznUMwvr79pgG65E7",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
           "value": "",
           "scope": "local",
           "name": "interface_statics",
@@ -22,14 +87,40 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "True",
+          "value": "days",
           "scope": "local",
-          "name": "first_time_stability_loop",
+          "name": "chronics_time_unit",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UMM3U8ATEWA0yRBhJmvmQVuBZp0Zvt6ea",
+        "unique_name": "variable_workflow_01UOB3YFJ23K57GF5q4iXDUkblb3VQP8Jw5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "chronics_time",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB3OHPC9PZ5lUErHu3ajEbbnyzv0gQGp",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 1,
+          "scope": "local",
+          "name": "loop_stability_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4",
         "object_type": "variable_workflow"
       },
       {
@@ -46,16 +137,68 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "False",
+          "scope": "local",
+          "name": "interface_status",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UK14JDTR8LY5LhLDFcpZxKL1jhT5K6CqX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "0",
+          "scope": "local",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 0,
+          "value": 3,
           "scope": "local",
-          "name": "stability_counter",
+          "name": "loop_check_counter",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78",
+        "unique_name": "variable_workflow_01UOB666Y56V51Mm57D0YPQtiTsNiI3bkl1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait timer",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOB6TDHBFXL4nznF0uvGTPRWiQHOlIakb",
         "object_type": "variable_workflow"
       },
       {
@@ -73,42 +216,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "False",
-          "scope": "local",
-          "name": "interface_status",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UK14JDTR8LY5LhLDFcpZxKL1jhT5K6CqX",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 0,
           "scope": "local",
-          "name": "interface_check_counter",
+          "name": "stability_counter",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UK14JDTT0ZD0hD9rDyyjKhCRlyQUuIAPk",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "True",
-          "scope": "local",
-          "name": "inside_stability_loop",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UMM46HF67OH0LF7ORu0Dp7BSLRPgLnhXr",
+        "unique_name": "variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78",
         "object_type": "variable_workflow"
       }
     ],
@@ -140,7 +257,7 @@
           "continue_on_failure": false,
           "display_name": "VE - Input Parser",
           "input": {
-            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "{\n\"event_policy_name\": \"CMS ACI Fault - fltEthpmIfPortDownFabric\",\n\"ticket_id\": \"INC000000000772071\",\n\"EM7_VALUES\": {\n\"%_ext_ticket_ref\": \"INC000000000772071\",\n\"%F\": \"\",\n\"%_category_id\": \"89\",\n\"%n\": \"CMS Automations: TES: Main Automation Policy\",\n\"%_root_name\": \"\",\n\"%5\": \"None\",\n\"%4\": \"\",\n\"%7\": \"3\",\n\"%6\": \"2021-02-04 15:22:42\",\n\"%1\": \"1\",\n\"%_EM7_RESULT_%\": \"\",\n\"%_class_name\": \"ISR.123\",\n\"%2\": \"7\",\n\"%_category_name\": \"Video.TelePresence\",\n\"%_event_policy_name\": \"CMS ACI Fault - fltEthpmIfPortDownFabric\",\n\"%3\": \"15379\",\n\"%Z\": \"Syslog\",\n\"%_root_id\": \"\",\n\"%_class_id\": \"4020\",\n\"%m\": \"\",\n\"%o\": \"5\",\n\"%_parent_id\": \"\",\n\"%i\": \"\",\n\"%h\": \"205008\",\n\"%k\": \"\",\n\"%e\": \"53684511\",\n\"%d\": \"2021-02-04 15:22:42\",\n\"%g\": \"\",\n\"%f\": \"1\",\n\"%a\": \"10.105.195.221\",\n\"%c\": \"1\",\n\"%b\": \"\",\n\"%y\": \"3005122\",\n\"%x\": \"205008\",\n\"%z\": \"1\",\n\"%u\": \"\",\n\"%t\": \"0\",\n\"%w\": \"CTS-500\",\n\"%v\": \"Asset-10.88.85.21\",\n\"%q\": \"\",\n\"%p\": \"\",\n\"%s\": \"2\",\n\"%r\": \"\",\n\"%M\": \"Cisco ACI Fault (minor) F1394 - topology/pod-2/node-111/sys/phys-[Gi0/0/2]/phys : Port is down, reason:notconnect(connected), used by:Fabric\",\n\"%L\": \"\",\n\"%O\": \"Verizon-UK\",\n\"%N\": \"CMS Automations: TES: Main Action Policy\",\n\"%I\": \"eth0.2105\",\n\"%H\": \"https://172.21.254.21/em7/index.em7?exec=events\u0026q_type=aid\u0026q_arg=53684511\u0026q_sev=1\u0026q_sort=0\u0026q_oper=0\",\n\"%K\": \"\",\n\"%J\": \"\",\n\"%E\": \"\",\n\"%D\": \"2021-02-04 15:22:42\",\n\"%G\": \"\",\n\"%_user_note\": \"\",\n\"%A\": \"\",\n\"%C\": \"4a46b191dbbec85006ccc9fb0b961983\",\n\"%B\": \"\",\n\"%Y\": \"\",\n\"%X\": \"SEP001DA238DDD0\",\n\"%_parent_name\": \"\",\n\"%U\": \"\",\n\"%T\": \"\",\n\"%W\": \"Cisco TelePresence\",\n\"%V\": \"\",\n\"%Q\": \"\",\n\"%P\": \"\",\n\"%S\": \"MINOR\",\n\"%R\": \"%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0/1, changed state to down\"\n},\n\"host_name\": \"\",\n\"event_message\": \"Cisco ACI Fault (minor) F1394 - topology/pod-2/node-111/sys/phys-[Gi0/0/2]/phys : Port is down, reason:notconnect(connected), used by:Fabric\",\n\"em7_api_ip\": \"172.30.190.3\",\n\"host_ip\": \"10.105.195.221\",\n\"event_policy_guid\": \"5D3A9990C3BBD6D5D173C68350E6E208\",\n\"device_id\": \"59\"\n}",
+            "variable_workflow_01T8IMAYG68VH7jas3Td5tkYC4JAZDRhGbX": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.input.variable_workflow_01UOB6TDHBFXL4nznF0uvGTPRWiQHOlIakb$",
             "variable_workflow_01UNKGSZBR7UY0m3t7dpAiq0hLUjtg4j5dV": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.static.variable_workflow_01UK14JDTRUJI4YQNGmY842HWqU4Uy7mBQH$"
           },
           "runtime_user": {
@@ -153,6 +270,175 @@
           "workflow_id": "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UOB8TIJE0OT07WgYBSFyxwsHCNhp9AOLT",
+        "name": "Group",
+        "title": "Snow Params else default value",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Snow Params else default value",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel",
+            "name": "JSONPath Query",
+            "title": "Parsing snow params",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Parsing snow params",
+              "input_json": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01UNKICXW2P6F13A3FlwNMj07LPqzrtKZPN$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$.count_chronic_events",
+                  "jsonpath_query_name": "count_chronic_events",
+                  "jsonpath_query_type": "integer"
+                },
+                {
+                  "jsonpath_query": "$.chronics_time",
+                  "jsonpath_query_name": "chronics_time",
+                  "jsonpath_query_type": "integer"
+                },
+                {
+                  "jsonpath_query": "$.chronics_time_unit",
+                  "jsonpath_query_name": "chronics_time_unit",
+                  "jsonpath_query_type": "string"
+                },
+                {
+                  "jsonpath_query": "$.closed_review_timer",
+                  "jsonpath_query_name": "closed_review_timer",
+                  "jsonpath_query_type": "integer"
+                },
+                {
+                  "jsonpath_query": "$.loop_check_counter",
+                  "jsonpath_query_name": "loop_check_counter",
+                  "jsonpath_query_type": "integer"
+                },
+                {
+                  "jsonpath_query": "$.Hold_Timer_For_Loop",
+                  "jsonpath_query_name": "Hold_Timer_For_Loop",
+                  "jsonpath_query_type": "integer"
+                },
+                {
+                  "jsonpath_query": "$.Hold_Timer_For_Unit",
+                  "jsonpath_query_name": "Hold_Timer_For_Unit",
+                  "jsonpath_query_type": "string"
+                },
+                {
+                  "jsonpath_query": "$.loop_stability_counter",
+                  "jsonpath_query_name": "loop_stability_counter",
+                  "jsonpath_query_type": "integer"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01UOBFL71OW8O0sKBny3gmW5Z8XXMnRBith",
+            "name": "Set Variables",
+            "title": "Set Snow Params",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Set Snow Params",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB3OHPC9PZ5lUErHu3ajEbbnyzv0gQGp$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.chronics_time$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB3YFJ23K57GF5q4iXDUkblb3VQP8Jw5$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.chronics_time_unit$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.closed_review_timer$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4RTWHS0I0PZedOznUMwvr79pgG65E7$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.count_chronic_events$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB56LKXQMC0rDZc6MMeir4bDTA5Fb2wA$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.Hold_Timer_For_Loop$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB5LHKNN7H72gPak9wwxtpfu73h92kI8$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.Hold_Timer_For_Unit$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB666Y56V51Mm57D0YPQtiTsNiI3bkl1$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.loop_check_counter$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4$",
+                  "variable_value_new": "$activity.definition_activity_01UOB98CPZKGE0Jr25Vlmw3XsiaCvgZHOel.output.jsonpath_queries.loop_stability_counter$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01UOBJAWPQJW26olfizznnqhDTLPxvXeeDn",
+            "name": "Execute Python Script",
+            "title": "Convert wait timer in seconds",
+            "type": "python3.script",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Convert wait timer in seconds",
+              "script": "wait_timer = $workflow.01U0KJE9UP8596PQMF9xxcX7KdIHfvJvqqB.local.01UNL031RU3O760P1Q1bZHDKPDKEZyxw7KC$\nwait_timer_unit = '$workflow.01U0KJE9UP8596PQMF9xxcX7KdIHfvJvqqB.local.01UNL0DU8ML4K4YCDkJ4d3FxQsqfFf1x1yV$'\n\nif wait_timer_unit.lower() == 'minutes':\n    wait_time = wait_timer*60\nelif wait_timer_unit.lower() == 'hours':\n    wait_time = wait_timer*60*60\nelif wait_timer_unit.lower() == 'days':\n    wait_time = wait_timer*24*60*60\nelse:\n    wait_time = wait_timer\n\nwait_time_minute = round(wait_time/60) + 1",
+              "script_queries": [
+                {
+                  "script_query": "wait_time",
+                  "script_query_name": "wait_time",
+                  "script_query_type": "integer"
+                },
+                {
+                  "script_query": "wait_time_minute",
+                  "script_query_name": "wait_time_minute",
+                  "script_query_type": "integer"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01UOBKNB1ZU3Q7exVtZEGLZo4FC824Ze5Ho",
+            "name": "Set Variables",
+            "title": "Set wait timer",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Set wait timer",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$",
+                  "variable_value_new": "$activity.definition_activity_01UOBJAWPQJW26olfizznnqhDTLPxvXeeDn.output.script_queries.wait_time$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB7F1X5XCO1PHCJw1k0i6aQUqnyaLbwi$",
+                  "variable_value_new": "$activity.definition_activity_01UOBJAWPQJW26olfizznnqhDTLPxvXeeDn.output.script_queries.wait_time_minute$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
       },
       {
         "unique_name": "definition_activity_01UK14JS7NXXT0sQszom6pgSIAyyHroTWjv",
@@ -474,13 +760,13 @@
             "variable_workflow_01TDL3QX5OPCT4woBdO3WU1NqgZm4j4DfoY": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.static.variable_workflow_01UK14JDTRUJI4YQNGmY842HWqU4Uy7mBQH$",
             "variable_workflow_01TDL3QX5OYLV655ZPW9KPbl3wh7c6H7Z3V": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
             "variable_workflow_01TDL3QX5P89Q5FIlFp61nSDh3lh0XF70I1": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-            "variable_workflow_01TDL8E6E0DAB0p9ER6gmlkfYBEx1micteP": "6",
-            "variable_workflow_01TDL8WJKQMWC3YO6NgHd38I0ouVXIbPRyq": "days",
+            "variable_workflow_01TDL8E6E0DAB0p9ER6gmlkfYBEx1micteP": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB3OHPC9PZ5lUErHu3ajEbbnyzv0gQGp$",
+            "variable_workflow_01TDL8WJKQMWC3YO6NgHd38I0ouVXIbPRyq": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB3YFJ23K57GF5q4iXDUkblb3VQP8Jw5$",
             "variable_workflow_01TDL9HXMEJYR3P1PTpLOmI9TD0QMl80D33": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01T8J4W6FOIZZ3uZYZ6zG27fgWTh5HSjnOG$",
             "variable_workflow_01TDLAJEN9P1O1Z7DmWMegi0srkHu8BFR00": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTS93M4YXCpwXzBAWzFYXUAaCPau$",
             "variable_workflow_01TDLOGJQU18F12thiDhm7IMVBijhvqSoTy": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01T8J4101VZO00tOfbL77JWPtyC6dppMuI5$",
             "variable_workflow_01TDLOO9HZJPY1hF5kSDGPOrBzXG27X4qIS": "$activity.definition_activity_01UK14JOAMMDV6R02gHIeOmw2qkXGdluijM.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
-            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "5"
+            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4RTWHS0I0PZedOznUMwvr79pgG65E7$"
           },
           "runtime_user": {
             "target_default": true
@@ -542,8 +828,8 @@
               "condition": {
                 "left_operand": {
                   "left_operand": "$activity.definition_activity_01UK14KRPX8BT3S0JkoMt5FOWmgpnPLWc5O.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
-                  "operator": "lte",
-                  "right_operand": 5
+                  "operator": "lt",
+                  "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4RTWHS0I0PZedOznUMwvr79pgG65E7$"
                 },
                 "operator": "or",
                 "right_operand": {
@@ -613,7 +899,7 @@
                                 "left_operand": {
                                   "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78$",
                                   "operator": "lte",
-                                  "right_operand": 1
+                                  "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4$"
                                 },
                                 "operator": "and",
                                 "right_operand": {
@@ -694,14 +980,14 @@
                                       {
                                         "unique_name": "definition_activity_01UMM6K1OXQGJ2kKXLPwePVVpnlg9tIy3jz",
                                         "name": "Sleep",
-                                        "title": "Wait 10 sec",
+                                        "title": "Wait Timer",
                                         "type": "core.sleep",
                                         "base_type": "activity",
                                         "properties": {
                                           "continue_on_failure": false,
-                                          "display_name": "Wait 10 sec",
+                                          "display_name": "Wait Timer",
                                           "skip_execution": false,
-                                          "sleep_interval": 10
+                                          "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                         },
                                         "object_type": "definition_activity"
                                       }
@@ -760,14 +1046,14 @@
                                       {
                                         "unique_name": "definition_activity_01UMM6K1P50MV4qO50YIP6LEHDVsa7cZNcU",
                                         "name": "Sleep",
-                                        "title": "Wait 10 sec",
+                                        "title": "Wait Timer",
                                         "type": "core.sleep",
                                         "base_type": "activity",
                                         "properties": {
                                           "continue_on_failure": false,
-                                          "display_name": "Wait 10 sec",
+                                          "display_name": "Wait Timer",
                                           "skip_execution": false,
-                                          "sleep_interval": 10
+                                          "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                         },
                                         "object_type": "definition_activity"
                                       }
@@ -902,7 +1188,7 @@
                                     "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that the interface is up.",
                                     "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
                                     "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTSNEO1wGz1zmpslJLM5AItt2nxa$",
-                                    "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
+                                    "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL$",
                                     "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                                     "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False Positive",
                                     "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
@@ -981,7 +1267,7 @@
                                         "left_operand": {
                                           "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTT0ZD0hD9rDyyjKhCRlyQUuIAPk$",
                                           "operator": "lt",
-                                          "right_operand": 3
+                                          "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB666Y56V51Mm57D0YPQtiTsNiI3bkl1$"
                                         },
                                         "operator": "and",
                                         "right_operand": {
@@ -1290,7 +1576,7 @@
                                                 "left_operand": {
                                                   "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78$",
                                                   "operator": "lte",
-                                                  "right_operand": 1
+                                                  "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4$"
                                                 },
                                                 "operator": "and",
                                                 "right_operand": {
@@ -1371,14 +1657,14 @@
                                                       {
                                                         "unique_name": "definition_activity_01UNGZDT7DWNI4pMIxigtYlzYh9pKuzAHGL",
                                                         "name": "Sleep",
-                                                        "title": "Wait 10 sec",
+                                                        "title": "Wait Timer",
                                                         "type": "core.sleep",
                                                         "base_type": "activity",
                                                         "properties": {
                                                           "continue_on_failure": false,
-                                                          "display_name": "Wait 10 sec",
+                                                          "display_name": "Wait Timer",
                                                           "skip_execution": false,
-                                                          "sleep_interval": 10
+                                                          "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                                         },
                                                         "object_type": "definition_activity"
                                                       }
@@ -1437,14 +1723,14 @@
                                                       {
                                                         "unique_name": "definition_activity_01UNGZDT7RD4V7Afer4iR8JJXEOzKGNcV82",
                                                         "name": "Sleep",
-                                                        "title": "Wait 10 sec",
+                                                        "title": "Wait Timer",
                                                         "type": "core.sleep",
                                                         "base_type": "activity",
                                                         "properties": {
                                                           "continue_on_failure": false,
-                                                          "display_name": "Wait 10 sec",
+                                                          "display_name": "Wait Timer",
                                                           "skip_execution": false,
-                                                          "sleep_interval": 10
+                                                          "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                                         },
                                                         "object_type": "definition_activity"
                                                       }
@@ -1652,7 +1938,7 @@
                                             "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that the interface is up.",
                                             "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
                                             "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTSNEO1wGz1zmpslJLM5AItt2nxa$",
-                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
+                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL$",
                                             "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                                             "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False Positive",
                                             "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
@@ -1808,7 +2094,7 @@
                                 "left_operand": {
                                   "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTT0ZD0hD9rDyyjKhCRlyQUuIAPk$",
                                   "operator": "lt",
-                                  "right_operand": 3
+                                  "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB666Y56V51Mm57D0YPQtiTsNiI3bkl1$"
                                 },
                                 "operator": "and",
                                 "right_operand": {
@@ -2098,7 +2384,7 @@
                                         "left_operand": {
                                           "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78$",
                                           "operator": "lte",
-                                          "right_operand": 1
+                                          "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4$"
                                         },
                                         "operator": "and",
                                         "right_operand": {
@@ -2387,7 +2673,7 @@
                                             "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that the interface is up.",
                                             "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
                                             "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTSNEO1wGz1zmpslJLM5AItt2nxa$",
-                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
+                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL$",
                                             "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                                             "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False Positive",
                                             "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
@@ -2466,7 +2752,7 @@
                                                 "left_operand": {
                                                   "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTT0ZD0hD9rDyyjKhCRlyQUuIAPk$",
                                                   "operator": "lt",
-                                                  "right_operand": 3
+                                                  "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB666Y56V51Mm57D0YPQtiTsNiI3bkl1$"
                                                 },
                                                 "operator": "and",
                                                 "right_operand": {
@@ -2775,7 +3061,7 @@
                                                         "left_operand": {
                                                           "left_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UMLYVWNJVJ55Wh1sc25MVkcc1obAn5d78$",
                                                           "operator": "lte",
-                                                          "right_operand": 1
+                                                          "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB6EVR7UVI3JLWnvF4uUpxSeaSeo8Kc4$"
                                                         },
                                                         "operator": "and",
                                                         "right_operand": {
@@ -2856,14 +3142,14 @@
                                                               {
                                                                 "unique_name": "definition_activity_01UNHJ2XS1CY62SvbAEdqecCsAxWW31mtMl",
                                                                 "name": "Sleep",
-                                                                "title": "Wait 10 sec",
+                                                                "title": "Wait Timer",
                                                                 "type": "core.sleep",
                                                                 "base_type": "activity",
                                                                 "properties": {
                                                                   "continue_on_failure": false,
-                                                                  "display_name": "Wait 10 sec",
+                                                                  "display_name": "Wait Timer",
                                                                   "skip_execution": false,
-                                                                  "sleep_interval": 10
+                                                                  "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                                                 },
                                                                 "object_type": "definition_activity"
                                                               }
@@ -2922,14 +3208,14 @@
                                                               {
                                                                 "unique_name": "definition_activity_01UNHJ2XSCQZC24gNDQYKcAaQcSX6jPrqP2",
                                                                 "name": "Sleep",
-                                                                "title": "Wait 10 sec",
+                                                                "title": "Wait Timer",
                                                                 "type": "core.sleep",
                                                                 "base_type": "activity",
                                                                 "properties": {
                                                                   "continue_on_failure": false,
-                                                                  "display_name": "Wait 10 sec",
+                                                                  "display_name": "Wait Timer",
                                                                   "skip_execution": false,
-                                                                  "sleep_interval": 10
+                                                                  "sleep_interval": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB75OICEMM4SLAbfDj5spyycM8BH3mlH$"
                                                                 },
                                                                 "object_type": "definition_activity"
                                                               }
@@ -3064,7 +3350,7 @@
                                                             "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that the interface is up.",
                                                             "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
                                                             "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UK14JDTSNEO1wGz1zmpslJLM5AItt2nxa$",
-                                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
+                                                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4A5IV52B2eL86AnBnizzBAV3Qc8mOL$",
                                                             "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                                                             "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False Positive",
                                                             "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
@@ -3337,8 +3623,8 @@
             "properties": {
               "condition": {
                 "left_operand": "$activity.definition_activity_01UK14KRPX8BT3S0JkoMt5FOWmgpnPLWc5O.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
-                "operator": "gt",
-                "right_operand": 5
+                "operator": "gte",
+                "right_operand": "$workflow.definition_workflow_01UK14JDANA4N1yTRkjlmQKyBe5ZLWCgcyu.local.variable_workflow_01UOB4RTWHS0I0PZedOznUMwvr79pgG65E7$"
               },
               "continue_on_failure": false,
               "display_name": "Else",
@@ -3473,17 +3759,17 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01T60QTI7U7L67btOd5RcvjaLW0TuW8hiBz",
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82"
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01T60QTI7U7L67btOd5RcvjaLW0TuW8hiBz",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
   ],
   "webhooks": {
     "webhook_01T0UX0AEUWFC63daRxJuSO26mhWcZtEuxe": {
