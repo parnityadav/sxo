@@ -7,19 +7,6 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 3,
-          "scope": "local",
-          "name": "count_chronic_events",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJYW120CI93Cn3QCPogpo3x1kefV50zy",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "0",
@@ -30,84 +17,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01USJZFMSPWJ65HYHczwulw4PZMWvzOvYRd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 15,
-          "scope": "local",
-          "name": "Hold_Timer_For_Loop",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USK0B5C2MKL26uxm2MLUqlYTLROAjZuM1",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "Hold_Timer_For_Loop_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USK0K3LQ9T971A6Yv4R1Wa5nkGtzhpFFE",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "clear",
-          "scope": "local",
-          "name": "Alarm_state",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4YT8LV0NQ24yBVPIsmZFSpQOkM4nCEIv",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait_timer",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USK8SU7XG4O1R15IBEJAdstmFOoSSP2yV",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJY6LQ5SZE5DRaLcmFOcq6njg3uqrBjK",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJZB0Q7Z7P3iRfpacI9JiMdnuupgh5Bt",
         "object_type": "variable_workflow"
       },
       {
@@ -137,16 +46,42 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "hours",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USJZB0Q7Z7P3iRfpacI9JiMdnuupgh5Bt",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 3,
           "scope": "local",
-          "name": "check_counter_threshold",
+          "name": "count_chronic_events",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USJZU8IIUF932mnEPkytFMXngZyBAtAoA",
+        "unique_name": "variable_workflow_01USJYW120CI93Cn3QCPogpo3x1kefV50zy",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "clear",
+          "scope": "local",
+          "name": "Alarm_state",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4YT8LV0NQ24yBVPIsmZFSpQOkM4nCEIv",
         "object_type": "variable_workflow"
       },
       {
@@ -163,6 +98,19 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "hours",
+          "scope": "local",
+          "name": "Hold_Timer_For_Loop_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USK0K3LQ9T971A6Yv4R1Wa5nkGtzhpFFE",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 0,
@@ -173,6 +121,58 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U4YT8LV0BGK4yjWfpvUaiaDeFNn7dh09h",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USJY6LQ5SZE5DRaLcmFOcq6njg3uqrBjK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USK8SU7XG4O1R15IBEJAdstmFOoSSP2yV",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 3,
+          "scope": "local",
+          "name": "check_counter_threshold",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USJZU8IIUF932mnEPkytFMXngZyBAtAoA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 15,
+          "scope": "local",
+          "name": "Hold_Timer_For_Loop",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USK0B5C2MKL26uxm2MLUqlYTLROAjZuM1",
         "object_type": "variable_workflow"
       }
     ],
@@ -1073,23 +1073,24 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_01UB2SJ84HHM10I2cW1KqDAM0Jis8adyy8W",
-                "name": "Execute Linux/Unix SSH Command",
-                "title": "SSH for Device Status",
-                "type": "terminal.ssh_command",
+                "unique_name": "definition_activity_01USKNUDLY1GA0A66rFaVQ5gphj8o2J82Ue",
+                "name": "JSONPath Query",
+                "title": "Command Output - HC",
+                "type": "corejava.jsonpathquery",
                 "base_type": "activity",
                 "properties": {
                   "action_timeout": 180,
-                  "command_timeout": 60,
                   "continue_on_failure": false,
-                  "display_name": "SSH for Device Status",
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": true,
-                  "target": {
-                    "use_workflow_target": true
-                  }
+                  "display_name": "Command Output - HC",
+                  "input_json": "{\n\"command_output\": \"NEXUS3064-SW06# show system resources | i Memory\\r\\nMemory usage:   4007140K total,   1544316K used,   2462824K free\\r\\nNEXUS3064-SW06#\\r\\n\"\n}",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.command_output",
+                      "jsonpath_query_name": "command_output",
+                      "jsonpath_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
                 },
                 "object_type": "definition_activity"
               },
@@ -1111,7 +1112,7 @@
                     "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4YT8P23TMV4rxpoqmUiHO2YxTlGa18fm.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
                     "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4YT8P23TMV4rxpoqmUiHO2YxTlGa18fm.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
                     "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4YT8P23TMV4rxpoqmUiHO2YxTlGa18fm.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "Technical Details:\n$activity.definition_activity_01USKNUDLY1GA0A66rFaVQ5gphj8o2J82Ue.output.jsonpath_queries.command_output$",
                     "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "Possible Instability Detected",
                     "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
                   },
@@ -1148,23 +1149,24 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_01UB2SLRTTTQI4lTCD9FNvFHmIBb8PJfTYA",
-                "name": "Execute Linux/Unix SSH Command",
-                "title": "SSH for Device Status",
-                "type": "terminal.ssh_command",
+                "unique_name": "definition_activity_01USKPHZ8IUXV1Y6Y2P63HHQb3W80A74PD1",
+                "name": "JSONPath Query",
+                "title": "Command Output - HC",
+                "type": "corejava.jsonpathquery",
                 "base_type": "activity",
                 "properties": {
                   "action_timeout": 180,
-                  "command_timeout": 60,
                   "continue_on_failure": false,
-                  "display_name": "SSH for Device Status",
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": true,
-                  "target": {
-                    "use_workflow_target": true
-                  }
+                  "display_name": "Command Output - HC",
+                  "input_json": "{\n\"command_output\": \"NEXUS3064-SW06# show system resources | i Memory\\r\\nMemory usage:   4007140K total,   1544316K used,   2462824K free\\r\\nNEXUS3064-SW06#\\r\\n\"\n}",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.command_output",
+                      "jsonpath_query_name": "command_output",
+                      "jsonpath_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
                 },
                 "object_type": "definition_activity"
               },
@@ -1186,7 +1188,7 @@
                     "variable_workflow_01TB1L9GTKKQX2TZJhC8gJSWUBLoeoWLbhf": "$activity.definition_activity_01U4YT8P23TMV4rxpoqmUiHO2YxTlGa18fm.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
                     "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that memory usage is now below the threshold.",
                     "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
-                    "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "",
+                    "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "Details:\n$activity.definition_activity_01USKPHZ8IUXV1Y6Y2P63HHQb3W80A74PD1.output.jsonpath_queries.command_output$",
                     "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "0",
                     "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                     "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "False Positive",
@@ -1253,15 +1255,15 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
     "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf"
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
   ]
 }
