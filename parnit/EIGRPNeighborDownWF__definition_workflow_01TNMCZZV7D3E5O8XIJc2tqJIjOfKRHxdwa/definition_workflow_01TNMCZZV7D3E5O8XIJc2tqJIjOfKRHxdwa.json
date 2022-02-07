@@ -7,29 +7,16 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "EIGRP_Neighbor_Down",
-          "scope": "static",
-          "name": "Flow_name",
-          "type": "datatype.string",
+          "value": 0,
+          "scope": "local",
+          "name": "check_counter",
+          "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01TNMEN15V7EP76IejTqMwjsX2JGyyRrU1e",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USIFR9AQ6YO6nFElXl7OJv2lE5tdqlruF",
+        "unique_name": "variable_workflow_01TNMFB7ZFOJJ6alpCLIbugdjjdxVLxdUsW",
         "object_type": "variable_workflow"
       },
       {
@@ -43,6 +30,58 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01USIM9FNPCTC5KfWGvodflF4g1egw4jnZK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "hours",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USIMRLCC8R64lmdpxaXYaNzEGAdzV4w1H",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Neighbor_state",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01TNMLVRY2UMZ5j09anAGiLfL0vnHvjiyxi",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Neighbor IP",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01TZZUWEF0GYH34bRfnpHnK11xkNdbEpZxO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "Hold_Timer_For_Loop",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USIOI3D2YW61ue3eSJmH4GG2buy7kunZL",
         "object_type": "variable_workflow"
       },
       {
@@ -87,58 +126,6 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01TNMFB7ZFOJJ6alpCLIbugdjjdxVLxdUsW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Neighbor IP",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01TZZUWEF0GYH34bRfnpHnK11xkNdbEpZxO",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Neighbor_state",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01TNMLVRY2UMZ5j09anAGiLfL0vnHvjiyxi",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USIMRLCC8R64lmdpxaXYaNzEGAdzV4w1H",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
           "value": 6,
           "scope": "local",
           "name": "wait_timer_minute",
@@ -165,6 +152,19 @@
       {
         "schema_id": "datatype.string",
         "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USIFR9AQ6YO6nFElXl7OJv2lE5tdqlruF",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
           "value": "minutes",
           "scope": "local",
           "name": "Hold_Timer_For_Loop_unit",
@@ -176,16 +176,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_For_Loop",
-          "type": "datatype.integer",
+          "value": "EIGRP_Neighbor_Down",
+          "scope": "static",
+          "name": "Flow_name",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USIOI3D2YW61ue3eSJmH4GG2buy7kunZL",
+        "unique_name": "variable_workflow_01TNMEN15V7EP76IejTqMwjsX2JGyyRrU1e",
         "object_type": "variable_workflow"
       }
     ],
@@ -1348,15 +1348,15 @@
     }
   },
   "atomic_workflows": [
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
     "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
     "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
   ]
 }
