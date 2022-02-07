@@ -9,32 +9,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "0",
-          "scope": "local",
-          "name": "closed_review_timer",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJZFMSPWJ65HYHczwulw4PZMWvzOvYRd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 24,
-          "scope": "local",
-          "name": "chronics_time",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJZ0YLW5ZA57Yk7ThfQotQzYRrGcfQIL",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "Memory Threshold",
           "scope": "static",
           "name": "Flow_name",
@@ -43,19 +17,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U4YT8LV0Z507fnP54JGWfvg3HtSGAs2Kj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USJZB0Q7Z7P3iRfpacI9JiMdnuupgh5Bt",
         "object_type": "variable_workflow"
       },
       {
@@ -74,14 +35,53 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "clear",
+          "value": "hours",
           "scope": "local",
-          "name": "Alarm_state",
+          "name": "chronics_time_unit",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U4YT8LV0NQ24yBVPIsmZFSpQOkM4nCEIv",
+        "unique_name": "variable_workflow_01USJZB0Q7Z7P3iRfpacI9JiMdnuupgh5Bt",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 15,
+          "scope": "local",
+          "name": "Hold_Timer_For_Loop",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USK0B5C2MKL26uxm2MLUqlYTLROAjZuM1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USK8SU7XG4O1R15IBEJAdstmFOoSSP2yV",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "0",
+          "scope": "local",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USJZFMSPWJ65HYHczwulw4PZMWvzOvYRd",
         "object_type": "variable_workflow"
       },
       {
@@ -95,19 +95,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01USK94P9OO9N1ipdeyveA4W4Klz0mQ8ogV",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "Hold_Timer_For_Loop_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USK0K3LQ9T971A6Yv4R1Wa5nkGtzhpFFE",
         "object_type": "variable_workflow"
       },
       {
@@ -126,27 +113,27 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
+          "value": "clear",
+          "scope": "local",
+          "name": "Alarm_state",
           "type": "datatype.string",
-          "is_required": true,
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USJY6LQ5SZE5DRaLcmFOcq6njg3uqrBjK",
+        "unique_name": "variable_workflow_01U4YT8LV0NQ24yBVPIsmZFSpQOkM4nCEIv",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 300,
+          "value": 24,
           "scope": "local",
-          "name": "wait_timer",
+          "name": "chronics_time",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USK8SU7XG4O1R15IBEJAdstmFOoSSP2yV",
+        "unique_name": "variable_workflow_01USJZ0YLW5ZA57Yk7ThfQotQzYRrGcfQIL",
         "object_type": "variable_workflow"
       },
       {
@@ -163,16 +150,29 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 15,
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USJY6LQ5SZE5DRaLcmFOcq6njg3uqrBjK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "hours",
           "scope": "local",
-          "name": "Hold_Timer_For_Loop",
-          "type": "datatype.integer",
+          "name": "Hold_Timer_For_Loop_unit",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USK0B5C2MKL26uxm2MLUqlYTLROAjZuM1",
+        "unique_name": "variable_workflow_01USK0K3LQ9T971A6Yv4R1Wa5nkGtzhpFFE",
         "object_type": "variable_workflow"
       }
     ],
@@ -1082,7 +1082,7 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Command Output - HC",
-                  "input_json": "{\n\"command_output\": \"NEXUS3064-SW06# show system resources | i Memory\\r\\nMemory usage:   4007140K total,   1544316K used,   2462824K free\\r\\nNEXUS3064-SW06#\\r\\n\"\n}",
+                  "input_json": "{\n\"command_output\": \"NEXUS3064-SW06# show processes memory\\r\\n\\r\\nPID    MemAlloc StkSize   RSSMem   LibMem    StackBase/Ptr      Process\\r\\n----   -------  -------  -------   -------   -------------     ---------\\r\\n    1    147456    86016   495616  1126400 bffffe80/bffff970  init\\r\\n    2         0        0        0        0        0/0         migration/0\\r\\n    3         0        0        0        0        0/0         ksoftirqd/0\\r\\n    4         0        0        0        0        0/0         desched/0\\r\\n    5         0        0        0        0        0/0         migration/1\\r\\n    6         0        0        0        0        0/0         ksoftirqd/1\\r\\n    7         0        0        0        0        0/0         desched/1\\r\\n    8         0        0        0        0        0/0         events/0\\r\\n    9         0        0        0        0        0/0         events/1\\r\\n   10         0        0        0        0        0/0         khelper\\r\\n\u003coutput truncated\u003e\"\n}",
                   "jsonpath_queries": [
                     {
                       "jsonpath_query": "$.command_output",
@@ -1255,15 +1255,15 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
-    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8"
   ]
 }
