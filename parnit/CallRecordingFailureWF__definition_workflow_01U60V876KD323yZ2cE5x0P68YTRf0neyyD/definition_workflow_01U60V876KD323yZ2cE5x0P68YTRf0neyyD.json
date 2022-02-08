@@ -9,27 +9,53 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 24,
+          "value": 0,
           "scope": "local",
-          "name": "chronics_time",
+          "name": "check_counter",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UT3IZ13362W0JY9FKIUZQedVevUfVOwYX",
+        "unique_name": "variable_workflow_01U61318EKOLP6ZyFR5GrXLEzDTPyWrOhQu",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "call_recording_failure",
+          "scope": "static",
+          "name": "flow_name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U612CTZVYUS0gFzvwY38skEpQ53zx4pu2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "minutes",
+          "scope": "local",
+          "name": "Hold_Timer_Unit_For_Loop",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 5,
           "scope": "local",
-          "name": "wait_timer_minute",
+          "name": "Hold_Timer_For_Loop",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UT3LWUCIZLW62UifE6pMEtSRGkVeg7Q3K",
+        "unique_name": "variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW",
         "object_type": "variable_workflow"
       },
       {
@@ -48,110 +74,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "hours",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3J64XS0NC1S0SBsxMyn6JzY80HiG5Wb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_For_Loop",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "minutes",
-          "scope": "local",
-          "name": "Hold_Timer_Unit_For_Loop",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3L704FUGX4jHIL5S6uwtvAsTAHbff4G",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "call_recording_failure",
-          "scope": "static",
-          "name": "flow_name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U612CTZVYUS0gFzvwY38skEpQ53zx4pu2",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U61318EKOLP6ZyFR5GrXLEzDTPyWrOhQu",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "0",
-          "scope": "local",
-          "name": "closed_review_timer",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3L00172PH6stQVjVO6PXERv8S7jsego",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait_timer",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UT3LQA4WQL63TdqnyPe2Bi4OzzhPgbpRH",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "",
           "scope": "local",
           "name": "CDR_output",
@@ -160,6 +82,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U9TK0FZCCXW3lYkjG2GCfGbCgYIfAHEPI",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "hours",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3J64XS0NC1S0SBsxMyn6JzY80HiG5Wb",
         "object_type": "variable_workflow"
       },
       {
@@ -178,6 +113,58 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
+          "value": 3,
+          "scope": "local",
+          "name": "count_chronic_events",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3JFEXDOKC7PBgqDDjJhZRbgTKVETxja",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3L704FUGX4jHIL5S6uwtvAsTAHbff4G",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "0",
+          "scope": "local",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3L00172PH6stQVjVO6PXERv8S7jsego",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3LWUCIZLW62UifE6pMEtSRGkVeg7Q3K",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
           "value": 0,
           "scope": "local",
           "name": "call_duration",
@@ -191,14 +178,27 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 3,
+          "value": 24,
           "scope": "local",
-          "name": "count_chronic_events",
+          "name": "chronics_time",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UT3JFEXDOKC7PBgqDDjJhZRbgTKVETxja",
+        "unique_name": "variable_workflow_01UT3IZ13362W0JY9FKIUZQedVevUfVOwYX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UT3LQA4WQL63TdqnyPe2Bi4OzzhPgbpRH",
         "object_type": "variable_workflow"
       }
     ],
@@ -245,171 +245,241 @@
         "object_type": "definition_activity"
       },
       {
-        "unique_name": "definition_activity_01USMA1ISQLWL1NJJIJdGnGO9RxLkcvVtK7",
-        "name": "Group",
-        "title": "Snow Params else default value",
-        "type": "logic.group",
+        "unique_name": "definition_activity_01UTXHTS1OP8T5jCqpomtkVERWCazenz8kb",
+        "name": "Condition Block",
+        "title": "VE Not Executed ?",
+        "type": "logic.if_else",
         "base_type": "activity",
         "properties": {
-          "continue_on_failure": true,
-          "display_name": "Snow Params else default value",
+          "continue_on_failure": false,
+          "display_name": "VE Not Executed ?",
           "skip_execution": false
         },
         "object_type": "definition_activity",
-        "actions": [
+        "blocks": [
           {
-            "unique_name": "definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD",
-            "name": "JSONPath Query",
-            "title": "Parsing snow params",
-            "type": "corejava.jsonpathquery",
+            "unique_name": "definition_activity_01UTXHTSTBOPF6BziFHwNVBJ7zPYTsYJgVj",
+            "name": "Condition Branch",
+            "title": "Then",
+            "type": "logic.condition_block",
             "base_type": "activity",
             "properties": {
-              "action_timeout": 180,
+              "condition": {
+                "left_operand": "$activity.definition_activity_01U615I5ZKCFN4Kwo4KRs2F6gXfM2A2RWI4.output.variable_workflow_01UQ5QCEBXB682TpLBBBfq7zbQRSqjZ1DVl$",
+                "operator": "ne",
+                "right_operand": "Yes"
+              },
               "continue_on_failure": false,
-              "display_name": "Parsing snow params",
-              "input_json": "$activity.definition_activity_01U615I5ZKCFN4Kwo4KRs2F6gXfM2A2RWI4.output.variable_workflow_01UNKICXW2P6F13A3FlwNMj07LPqzrtKZPN$",
-              "jsonpath_queries": [
-                {
-                  "jsonpath_query": "$.count_chronic_events",
-                  "jsonpath_query_name": "count_chronic_events",
-                  "jsonpath_query_type": "integer"
-                },
-                {
-                  "jsonpath_query": "$.chronics_time",
-                  "jsonpath_query_name": "chronics_time",
-                  "jsonpath_query_type": "integer"
-                },
-                {
-                  "jsonpath_query": "$.chronics_time_unit",
-                  "jsonpath_query_name": "chronics_time_unit",
-                  "jsonpath_query_type": "string"
-                },
-                {
-                  "jsonpath_query": "$.closed_review_timer",
-                  "jsonpath_query_name": "closed_review_timer",
-                  "jsonpath_query_type": "string"
-                },
-                {
-                  "jsonpath_query": "$.crf_check_counter",
-                  "jsonpath_query_name": "crf_check_counter",
-                  "jsonpath_query_type": "integer"
-                },
-                {
-                  "jsonpath_query": "$.Hold_Timer_For_Loop",
-                  "jsonpath_query_name": "Hold_Timer_For_Loop",
-                  "jsonpath_query_type": "integer"
-                },
-                {
-                  "jsonpath_query": "$.Hold_Timer_Unit_For_Loop",
-                  "jsonpath_query_name": "Hold_Timer_Unit_For_Loop",
-                  "jsonpath_query_type": "string"
-                },
-                {
-                  "jsonpath_query": "$.call_duration_threshold",
-                  "jsonpath_query_name": "call_duration_threshold",
-                  "jsonpath_query_type": "integer"
-                }
-              ],
+              "display_name": "Then",
               "skip_execution": false
             },
-            "object_type": "definition_activity"
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01USMA1ISQLWL1NJJIJdGnGO9RxLkcvVtK7",
+                "name": "Group",
+                "title": "Snow Params else default value",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": true,
+                  "display_name": "Snow Params else default value",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD",
+                    "name": "JSONPath Query",
+                    "title": "Parsing snow params",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Parsing snow params",
+                      "input_json": "$activity.definition_activity_01U615I5ZKCFN4Kwo4KRs2F6gXfM2A2RWI4.output.variable_workflow_01UNKICXW2P6F13A3FlwNMj07LPqzrtKZPN$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$.count_chronic_events",
+                          "jsonpath_query_name": "count_chronic_events",
+                          "jsonpath_query_type": "integer"
+                        },
+                        {
+                          "jsonpath_query": "$.chronics_time",
+                          "jsonpath_query_name": "chronics_time",
+                          "jsonpath_query_type": "integer"
+                        },
+                        {
+                          "jsonpath_query": "$.chronics_time_unit",
+                          "jsonpath_query_name": "chronics_time_unit",
+                          "jsonpath_query_type": "string"
+                        },
+                        {
+                          "jsonpath_query": "$.closed_review_timer",
+                          "jsonpath_query_name": "closed_review_timer",
+                          "jsonpath_query_type": "string"
+                        },
+                        {
+                          "jsonpath_query": "$.crf_check_counter",
+                          "jsonpath_query_name": "crf_check_counter",
+                          "jsonpath_query_type": "integer"
+                        },
+                        {
+                          "jsonpath_query": "$.Hold_Timer_For_Loop",
+                          "jsonpath_query_name": "Hold_Timer_For_Loop",
+                          "jsonpath_query_type": "integer"
+                        },
+                        {
+                          "jsonpath_query": "$.Hold_Timer_Unit_For_Loop",
+                          "jsonpath_query_name": "Hold_Timer_Unit_For_Loop",
+                          "jsonpath_query_type": "string"
+                        },
+                        {
+                          "jsonpath_query": "$.call_duration_threshold",
+                          "jsonpath_query_name": "call_duration_threshold",
+                          "jsonpath_query_type": "integer"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01USMAL0UIFH35CZBQfjq1uvjJpCVbHxH20",
+                    "name": "Set Variables",
+                    "title": "Set Snow Params",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Set Snow Params",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3IZ13362W0JY9FKIUZQedVevUfVOwYX$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.chronics_time$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3J64XS0NC1S0SBsxMyn6JzY80HiG5Wb$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.chronics_time_unit$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3JFEXDOKC7PBgqDDjJhZRbgTKVETxja$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.count_chronic_events$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3L00172PH6stQVjVO6PXERv8S7jsego$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.closed_review_timer$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01U613E1B0RVQ1gNTOVCbE467yAQ91eJ8O4$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.call_duration_threshold$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3K1THWP8431H4c08EJyUVejfvPRJnJr$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.crf_check_counter$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.Hold_Timer_For_Loop$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W$",
+                          "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.Hold_Timer_Unit_For_Loop$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj",
+                    "name": "Execute Python Script",
+                    "title": "Convert wait timer in seconds",
+                    "type": "python3.script",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Convert wait timer in seconds",
+                      "script": "wait_timer = $workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW$\nwait_timer_unit = '$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W$'\n\nif wait_timer_unit.lower() == 'minutes':\n    wait_time = wait_timer*60\nelif wait_timer_unit.lower() == 'hours':\n    wait_time = wait_timer*60*60\nelif wait_timer_unit.lower() == 'days':\n    wait_time = wait_timer*24*60*60\nelse:\n    wait_time = wait_timer\n\nwait_time_minute = round(wait_time/60) + 1",
+                      "script_queries": [
+                        {
+                          "script_query": "wait_time",
+                          "script_query_name": "wait_time ",
+                          "script_query_type": "integer"
+                        },
+                        {
+                          "script_query": "wait_time_minute",
+                          "script_query_name": "wait_time_minute",
+                          "script_query_type": "integer"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01USMAVW0BVO83LDmRdL1fnqT1IJOKc2qG9",
+                    "name": "Set Variables",
+                    "title": "Set wait timer",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Set wait timer",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3LQA4WQL63TdqnyPe2Bi4OzzhPgbpRH$",
+                          "variable_value_new": "$activity.definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj.output.script_queries.wait_time $"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3LWUCIZLW62UifE6pMEtSRGkVeg7Q3K$",
+                          "variable_value_new": "$activity.definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj.output.script_queries.wait_time_minute$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "unique_name": "definition_activity_01USMAL0UIFH35CZBQfjq1uvjJpCVbHxH20",
-            "name": "Set Variables",
-            "title": "Set Snow Params",
-            "type": "core.set_multiple_variables",
+            "unique_name": "definition_activity_01UTXHTTW9NPR1BPUpDKsvRoEK6IuqE1dhU",
+            "name": "Condition Branch",
+            "title": "Else",
+            "type": "logic.condition_block",
             "base_type": "activity",
             "properties": {
+              "condition": {
+                "left_operand": "$activity.definition_activity_01U615I5ZKCFN4Kwo4KRs2F6gXfM2A2RWI4.output.variable_workflow_01UQ5QCEBXB682TpLBBBfq7zbQRSqjZ1DVl$",
+                "operator": "eq",
+                "right_operand": "Yes"
+              },
               "continue_on_failure": false,
-              "display_name": "Set Snow Params",
-              "skip_execution": false,
-              "variables_to_update": [
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3IZ13362W0JY9FKIUZQedVevUfVOwYX$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.chronics_time$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3J64XS0NC1S0SBsxMyn6JzY80HiG5Wb$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.chronics_time_unit$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3JFEXDOKC7PBgqDDjJhZRbgTKVETxja$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.count_chronic_events$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3L00172PH6stQVjVO6PXERv8S7jsego$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.closed_review_timer$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01U613E1B0RVQ1gNTOVCbE467yAQ91eJ8O4$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.call_duration_threshold$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3K1THWP8431H4c08EJyUVejfvPRJnJr$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.crf_check_counter$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.Hold_Timer_For_Loop$"
-                },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W$",
-                  "variable_value_new": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.Hold_Timer_Unit_For_Loop$"
-                }
-              ]
-            },
-            "object_type": "definition_activity"
-          },
-          {
-            "unique_name": "definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj",
-            "name": "Execute Python Script",
-            "title": "Convert wait timer in seconds",
-            "type": "python3.script",
-            "base_type": "activity",
-            "properties": {
-              "action_timeout": 180,
-              "continue_on_failure": false,
-              "display_name": "Convert wait timer in seconds",
-              "script": "wait_timer = $workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KHYA1HJA2TaGO3WOEbylYuvvvZmMeW$\nwait_timer_unit = '$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3KUA7IN2Y7AoPREgP7bXgjqkSNznb2W$'\n\nif wait_timer_unit.lower() == 'minutes':\n    wait_time = wait_timer*60\nelif wait_timer_unit.lower() == 'hours':\n    wait_time = wait_timer*60*60\nelif wait_timer_unit.lower() == 'days':\n    wait_time = wait_timer*24*60*60\nelse:\n    wait_time = wait_timer\n\nwait_time_minute = round(wait_time/60) + 1",
-              "script_queries": [
-                {
-                  "script_query": "wait_time",
-                  "script_query_name": "wait_time ",
-                  "script_query_type": "integer"
-                },
-                {
-                  "script_query": "wait_time_minute",
-                  "script_query_name": "wait_time_minute",
-                  "script_query_type": "integer"
-                }
-              ],
+              "display_name": "Else",
               "skip_execution": false
             },
-            "object_type": "definition_activity"
-          },
-          {
-            "unique_name": "definition_activity_01USMAVW0BVO83LDmRdL1fnqT1IJOKc2qG9",
-            "name": "Set Variables",
-            "title": "Set wait timer",
-            "type": "core.set_multiple_variables",
-            "base_type": "activity",
-            "properties": {
-              "continue_on_failure": false,
-              "display_name": "Set wait timer",
-              "skip_execution": false,
-              "variables_to_update": [
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3LQA4WQL63TdqnyPe2Bi4OzzhPgbpRH$",
-                  "variable_value_new": "$activity.definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj.output.script_queries.wait_time $"
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01UTXIYUPGAGK2rWPVuOsKxN3raLUMbvz7u",
+                "name": "Completed",
+                "title": "END",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "END",
+                  "result_message": "Success",
+                  "skip_execution": false
                 },
-                {
-                  "variable_to_update": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3LWUCIZLW62UifE6pMEtSRGkVeg7Q3K$",
-                  "variable_value_new": "$activity.definition_activity_01USMAPS3QZ0X5jauo0Zw9Vf2WtnARiVIbj.output.script_queries.wait_time_minute$"
-                }
-              ]
-            },
-            "object_type": "definition_activity"
+                "object_type": "definition_activity"
+              }
+            ]
           }
         ]
       },
@@ -965,7 +1035,7 @@
                       "condition": {
                         "left_operand": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01U613E1B0RVQ1gNTOVCbE467yAQ91eJ8O4$",
                         "operator": "lte",
-                        "right_operand": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.call_duration_threshold$"
+                        "right_operand": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT40RMM70IP792gHxvlOPrd7pV3XxV15r$"
                       },
                       "continue_on_failure": false,
                       "display_name": "then",
@@ -992,7 +1062,7 @@
                             "variable_workflow_01TB1L9GTKU751KW6be44Zx79z17dyWBZRj": "We have determined that this Call that led to RecordingCallSetupFail Alarm lasted less than or equal to 5 seconds. As a result no further investigation is needed.",
                             "variable_workflow_01TB1L9GTL37V18IzRyUaWSwiQsYACbTcW5": "0",
                             "variable_workflow_01TB1R2T3PM803WKqR7misc67IRSwYb1acm": "$activity.definition_activity_01U7LYK4BXFHL5G7FULn5CMsZHRfuyi8drW.output.script_queries.CDR_search_output$",
-                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$activity.definition_activity_01USMAFG004R14WGoplcbWANg1ElRHA82vD.output.jsonpath_queries.closed_review_timer$",
+                            "variable_workflow_01TB1U2DZTFDT1So7m8aRRtMSsPGLras4cd": "$workflow.definition_workflow_01U60V876KD323yZ2cE5x0P68YTRf0neyyD.local.variable_workflow_01UT3L00172PH6stQVjVO6PXERv8S7jsego$",
                             "variable_workflow_01TB20T31WMTN6V2pSKk9GiSd5ee91DgdsT": "Management Infrastructure",
                             "variable_workflow_01TB20YHBI05B6KgO0v42He8GD8HCD4mltS": "Cleared before isolation",
                             "variable_workflow_01TB21AVRR0ZE5avbTcAKnYmHRssiSzkMQU": "Cisco",
@@ -1365,14 +1435,14 @@
   },
   "atomic_workflows": [
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
     "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0"
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
   ]
 }
