@@ -1,0 +1,169 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq",
+    "name": "Data Model Updation on SNOW",
+    "title": "Data Model Updation on SNOW",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "client_credentials",
+          "scope": "static",
+          "name": "grant_type",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UTFZP0QOP0R0sP7tJk1jJAZRi8Si7vg7J",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Data Model Updation on SNOW",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17",
+        "name": "HTTP Request",
+        "title": "Token Request on AMP Visibility Target",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 30,
+          "allow_auto_redirect": true,
+          "body": "grant_type=client_credentials",
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "custom_headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ],
+          "display_name": "Token Request on AMP Visibility Target",
+          "method": "POST",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m",
+        "name": "HTTP Request",
+        "title": "JWT Token Request",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 30,
+          "allow_auto_redirect": true,
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "JWT Token Request",
+          "method": "GET",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "use_workflow_target": true
+          }
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z": {
+      "unique_name": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
+      "name": "Parnit_snow",
+      "title": "Parnit_snow",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+        "disable_certificate_validation": false,
+        "display_name": "Parnit_snow",
+        "host": "ciscomngsvsdev.service-now.com",
+        "ignore_proxy": false,
+        "no_runtime_user": false,
+        "path": "/api",
+        "protocol": "https"
+      }
+    },
+    "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q": {
+      "unique_name": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q",
+      "name": "AMP visibility Target",
+      "title": "AMP visibility Target",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek",
+        "description": "Used to create a Bearer Token, which helps in creation of JWT Token",
+        "disable_certificate_validation": false,
+        "display_name": "AMP visibility Target",
+        "host": "visibility.amp.cisco.com",
+        "ignore_proxy": true,
+        "no_runtime_user": false,
+        "path": "/iroh/oauth2/token",
+        "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28": {
+      "unique_name": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
+      "name": "parnit_snow_ve",
+      "title": "parnit_snow_ve",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "parnit_snow_ve"
+      }
+    },
+    "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek": {
+      "unique_name": "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek",
+      "name": "AMP Visibility Endpoint Creds",
+      "title": "AMP Visibility Endpoint Creds",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "description": "This is used to create a bearer token, which helps in creation of JWT Token",
+        "display_name": "AMP Visibility Endpoint Creds"
+      }
+    }
+  }
+}
