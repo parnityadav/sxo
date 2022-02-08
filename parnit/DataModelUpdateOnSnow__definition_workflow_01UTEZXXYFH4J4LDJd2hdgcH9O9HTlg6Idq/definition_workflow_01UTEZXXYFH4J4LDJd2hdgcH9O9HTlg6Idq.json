@@ -57,6 +57,7 @@
           ],
           "display_name": "Token Request on AMP Visibility Target",
           "method": "POST",
+          "relative_url": "/iroh/oauth2/token",
           "runtime_user": {
             "target_default": true
           },
@@ -69,6 +70,28 @@
         "object_type": "definition_activity"
       },
       {
+        "unique_name": "definition_activity_01UTGJS8GLYBU4mFhAY3KtZNhQsAZ0pcgs1",
+        "name": "Execute Python Script",
+        "title": "Execute Python Script",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Execute Python Script",
+          "script": "output = $activity.definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17.output.response_body$\n#print(output)\naccess_token = output['access_token']\nprint(access_token)",
+          "script_queries": [
+            {
+              "script_query": "access_token",
+              "script_query_name": "access_token",
+              "script_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
         "unique_name": "definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m",
         "name": "HTTP Request",
         "title": "JWT Token Request",
@@ -77,16 +100,29 @@
         "properties": {
           "action_timeout": 30,
           "allow_auto_redirect": true,
+          "content_type": "application/json",
           "continue_on_error_status_code": false,
           "continue_on_failure": false,
+          "custom_headers": [
+            {
+              "name": "Authorization",
+              "value": "Bearer $activity.definition_activity_01UTGJS8GLYBU4mFhAY3KtZNhQsAZ0pcgs1.output.script_queries.access_token$"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            }
+          ],
           "display_name": "JWT Token Request",
-          "method": "GET",
+          "method": "POST",
+          "relative_url": "/ao/gen-jwt",
           "runtime_user": {
             "target_default": true
           },
           "skip_execution": false,
           "target": {
-            "use_workflow_target": true
+            "override_workflow_target": true,
+            "target_id": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q"
           }
         },
         "object_type": "definition_activity"
@@ -130,7 +166,6 @@
         "host": "visibility.amp.cisco.com",
         "ignore_proxy": true,
         "no_runtime_user": false,
-        "path": "/iroh/oauth2/token",
         "protocol": "https"
       }
     }
