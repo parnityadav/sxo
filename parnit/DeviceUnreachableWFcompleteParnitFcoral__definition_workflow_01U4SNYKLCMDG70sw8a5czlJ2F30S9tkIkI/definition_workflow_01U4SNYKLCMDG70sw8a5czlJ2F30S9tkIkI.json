@@ -10,19 +10,6 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
           "scope": "local",
           "name": "sshStatus",
           "type": "datatype.string",
@@ -33,42 +20,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 6,
+          "value": "",
           "scope": "local",
-          "name": "wait_timer_fail_minute",
-          "type": "datatype.integer",
+          "name": "pingStatus",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 6,
-          "scope": "local",
-          "name": "wait_timer_pass_minute",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 2,
-          "scope": "local",
-          "name": "p1_p2_max_check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4YWU5762R07cAphMPvzIC8p4PaQNokhy",
+        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
         "object_type": "variable_workflow"
       },
       {
@@ -76,25 +37,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "impactingReboot",
+          "name": "reloadReason",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
+        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 5,
+          "value": "0",
           "scope": "local",
-          "name": "count_chronic_events",
-          "type": "datatype.integer",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
+        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
         "object_type": "variable_workflow"
       },
       {
@@ -113,27 +74,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "0",
+          "value": "",
           "scope": "local",
-          "name": "closed_review_timer",
+          "name": "low_pri_device_category_list",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Device Unreachable",
-          "scope": "local",
-          "name": "Flow Name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
+        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
         "object_type": "variable_workflow"
       },
       {
@@ -154,12 +102,38 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "snmpStatus",
+          "name": "snmp_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer_pass",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
         "object_type": "variable_workflow"
       },
       {
@@ -167,25 +141,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "reloadReason",
+          "name": "impactingReboot",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
+        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
+          "value": 5,
           "scope": "local",
-          "name": "low_pri_device_category_list",
-          "type": "datatype.string",
+          "name": "Hold_Timer_Pass_test",
+          "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
+        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
         "object_type": "variable_workflow"
       },
       {
@@ -193,25 +167,12 @@
         "properties": {
           "value": 6,
           "scope": "local",
-          "name": "chronics_time",
+          "name": "wait_timer_pass_minute",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLEYSFS9AG54zrfb7eJNXvOypKc4pLqZ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "snmp_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
+        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
         "object_type": "variable_workflow"
       },
       {
@@ -232,25 +193,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "icmp_output",
+          "name": "snmpStatus",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
+        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
+          "value": 6,
           "scope": "local",
-          "name": "ssh_output",
-          "type": "datatype.string",
+          "name": "chronics_time",
+          "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
+        "unique_name": "variable_workflow_01UOLEYSFS9AG54zrfb7eJNXvOypKc4pLqZ",
         "object_type": "variable_workflow"
       },
       {
@@ -269,14 +230,66 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "minutes",
+          "value": "",
           "scope": "local",
-          "name": "Hold_Timer_Fail_test_unit",
+          "name": "ssh_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLGH5D59YB1xC4WUSMoYr4oaKcN9h5UK",
+        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "False",
+          "scope": "local",
+          "name": "Enrichment",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "count_chronic_events",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 2,
+          "scope": "local",
+          "name": "p1_p2_max_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4YWU5762R07cAphMPvzIC8p4PaQNokhy",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "loop_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
         "object_type": "variable_workflow"
       },
       {
@@ -297,38 +310,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "pingStatus",
+          "name": "icmp_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "False",
-          "scope": "local",
-          "name": "Enrichment",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
+        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 300,
+          "value": 6,
           "scope": "local",
-          "name": "wait_timer_pass",
+          "name": "wait_timer_fail_minute",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
+        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
         "object_type": "variable_workflow"
       },
       {
@@ -345,19 +345,6 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_Pass_test",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "days",
@@ -371,16 +358,29 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 0,
+          "value": "Device Unreachable",
           "scope": "local",
-          "name": "loop_check_counter",
-          "type": "datatype.integer",
+          "name": "Flow Name",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
+        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "minutes",
+          "scope": "local",
+          "name": "Hold_Timer_Fail_test_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLGH5D59YB1xC4WUSMoYr4oaKcN9h5UK",
         "object_type": "variable_workflow"
       }
     ],
@@ -2161,23 +2161,21 @@
                                                 ]
                                               },
                                               {
-                                                "unique_name": "definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh",
-                                                "name": "VE - Connectivity Test",
-                                                "title": "VE - Connectivity Test",
+                                                "unique_name": "definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU",
+                                                "name": "VE - Coral Connector",
+                                                "title": "VE - Coral Connector",
                                                 "type": "workflow.atomic_workflow",
                                                 "base_type": "subworkflow",
                                                 "properties": {
                                                   "continue_on_failure": false,
-                                                  "display_name": "VE - Connectivity Test",
+                                                  "display_name": "VE - Coral Connector",
                                                   "input": {
-                                                    "variable_workflow_01U4UX6AG2UKW06a5ewWPpwoyA1mtwm8IAd": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01U4UM6RCW8GD435BnAnuizDBcwbgCXjoDc$",
-                                                    "variable_workflow_01U4UXIQR6P5K3cJ5iUtdOU4omudnrCHj8v": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$",
-                                                    "variable_workflow_01U4UXSZYJ2Z76NZNxpgKkE61V9eA5xz6nI": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J3LFY7AZU5I8KbHO7HCKrySMlCeuOvH$",
-                                                    "variable_workflow_01U4UY17IOK8Y08gl8oFL6okNZJgmPAEazq": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
-                                                    "variable_workflow_01U4V0LB2104524kmGuUYreIdFpxydHA8aH": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                    "variable_workflow_01U4V0PHR7TDY6spSw3XYeQUcmSbPawlhxx": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                    "variable_workflow_01UOLAOZVVVT8489TAqs9L3IQjB34xxKRfN": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l$",
-                                                    "variable_workflow_01UUF6FXAH9AE2dAdszWoGRpkUmBRJifmcJ": ""
+                                                    "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"5\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
+                                                    "variable_workflow_01UTJA87IYM5N2mZMrNrnMPipBkTKca6vys": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                    "variable_workflow_01UTJAD267YYE3ZGpplTzdt3rkSrLZyo6Ml": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
+                                                    "variable_workflow_01UTJOKQKGG2F5HCLYBzk1vR5w2TmwuZa6S": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5L8NJ0SU30pyz5taVDnOxyN6YpCafT$",
+                                                    "variable_workflow_01UTJOSEJ11N47V15IzH8PSo1IWjqpM1mmc": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                    "variable_workflow_01UTK3NEE0J5I3AxVWzvxANLQRPb0AnuAnV": 20
                                                   },
                                                   "runtime_user": {
                                                     "target_default": true
@@ -2187,44 +2185,256 @@
                                                     "target_type": "web-service.endpoint",
                                                     "use_workflow_target": true
                                                   },
-                                                  "workflow_id": "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn"
+                                                  "workflow_id": "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R"
                                                 },
                                                 "object_type": "definition_activity"
                                               },
                                               {
-                                                "unique_name": "definition_activity_01U50QZCSFECX547YiunzJzPKWtTmbUZMXM",
-                                                "name": "Set Variables",
-                                                "title": "Incrementing loop check counter",
-                                                "type": "core.set_multiple_variables",
+                                                "unique_name": "definition_activity_01UUJRCVKGGL36e7lbSYiiv2JE42F1rOvuj",
+                                                "name": "Condition Block",
+                                                "title": "Received command successfully ?",
+                                                "type": "logic.if_else",
                                                 "base_type": "activity",
                                                 "properties": {
                                                   "continue_on_failure": false,
-                                                  "display_name": "Incrementing loop check counter",
-                                                  "skip_execution": false,
-                                                  "variables_to_update": [
-                                                    {
-                                                      "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$",
-                                                      "variable_value_new": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$+1"
-                                                    },
-                                                    {
-                                                      "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$",
-                                                      "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4ZE989VSKN3ECJm1sK2wXMrIvIaURDfw$"
-                                                    },
-                                                    {
-                                                      "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$",
-                                                      "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4VF5RDRA6460Vu57qIyApNjIyA1xBEd1$"
-                                                    },
-                                                    {
-                                                      "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$",
-                                                      "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4VF0LUKC9U4rvzpeVh46I0pJHHhW3awV$"
-                                                    },
-                                                    {
-                                                      "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$",
-                                                      "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U50BC5K725M3xxfmr9cWvXuGQjZELKpXj$"
-                                                    }
-                                                  ]
+                                                  "display_name": "Received command successfully ?",
+                                                  "skip_execution": false
                                                 },
-                                                "object_type": "definition_activity"
+                                                "object_type": "definition_activity",
+                                                "blocks": [
+                                                  {
+                                                    "unique_name": "definition_activity_01UUJRCVKH83E0ttdWA8a6aRKs5O1DhabPS",
+                                                    "name": "Condition Branch",
+                                                    "title": "Success",
+                                                    "type": "logic.condition_block",
+                                                    "base_type": "activity",
+                                                    "properties": {
+                                                      "condition": {
+                                                        "left_operand": {
+                                                          "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                          "operator": "eq",
+                                                          "right_operand": "SUCCESS"
+                                                        },
+                                                        "operator": "and",
+                                                        "right_operand": {
+                                                          "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
+                                                          "operator": "eq",
+                                                          "right_operand": "False"
+                                                        }
+                                                      },
+                                                      "continue_on_failure": false,
+                                                      "display_name": "Success",
+                                                      "skip_execution": false
+                                                    },
+                                                    "object_type": "definition_activity",
+                                                    "actions": [
+                                                      {
+                                                        "unique_name": "definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh",
+                                                        "name": "VE - Connectivity Test",
+                                                        "title": "VE - Connectivity Test",
+                                                        "type": "workflow.atomic_workflow",
+                                                        "base_type": "subworkflow",
+                                                        "properties": {
+                                                          "continue_on_failure": false,
+                                                          "display_name": "VE - Connectivity Test",
+                                                          "input": {
+                                                            "variable_workflow_01U4UX6AG2UKW06a5ewWPpwoyA1mtwm8IAd": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01U4UM6RCW8GD435BnAnuizDBcwbgCXjoDc$",
+                                                            "variable_workflow_01U4UXIQR6P5K3cJ5iUtdOU4omudnrCHj8v": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$",
+                                                            "variable_workflow_01U4UXSZYJ2Z76NZNxpgKkE61V9eA5xz6nI": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J3LFY7AZU5I8KbHO7HCKrySMlCeuOvH$",
+                                                            "variable_workflow_01U4UY17IOK8Y08gl8oFL6okNZJgmPAEazq": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
+                                                            "variable_workflow_01U4V0LB2104524kmGuUYreIdFpxydHA8aH": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                            "variable_workflow_01U4V0PHR7TDY6spSw3XYeQUcmSbPawlhxx": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
+                                                            "variable_workflow_01UOLAOZVVVT8489TAqs9L3IQjB34xxKRfN": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l$",
+                                                            "variable_workflow_01UUF6FXAH9AE2dAdszWoGRpkUmBRJifmcJ": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UTK0DDWWW5C0KAKyevB4TFdxEfG4vUp8a$"
+                                                          },
+                                                          "runtime_user": {
+                                                            "target_default": true
+                                                          },
+                                                          "skip_execution": false,
+                                                          "target": {
+                                                            "target_type": "web-service.endpoint",
+                                                            "use_workflow_target": true
+                                                          },
+                                                          "workflow_id": "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn"
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      },
+                                                      {
+                                                        "unique_name": "definition_activity_01U50QZCSFECX547YiunzJzPKWtTmbUZMXM",
+                                                        "name": "Set Variables",
+                                                        "title": "Incrementing loop check counter",
+                                                        "type": "core.set_multiple_variables",
+                                                        "base_type": "activity",
+                                                        "properties": {
+                                                          "continue_on_failure": false,
+                                                          "display_name": "Incrementing loop check counter",
+                                                          "skip_execution": false,
+                                                          "variables_to_update": [
+                                                            {
+                                                              "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$",
+                                                              "variable_value_new": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR$+1"
+                                                            },
+                                                            {
+                                                              "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$",
+                                                              "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4ZE989VSKN3ECJm1sK2wXMrIvIaURDfw$"
+                                                            },
+                                                            {
+                                                              "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$",
+                                                              "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4VF5RDRA6460Vu57qIyApNjIyA1xBEd1$"
+                                                            },
+                                                            {
+                                                              "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$",
+                                                              "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U4VF0LUKC9U4rvzpeVh46I0pJHHhW3awV$"
+                                                            },
+                                                            {
+                                                              "variable_to_update": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$",
+                                                              "variable_value_new": "$activity.definition_activity_01U50QQ64B4VJ1eaaNBo3qy7ZRO0CHNE3Vh.output.variable_workflow_01U50BC5K725M3xxfmr9cWvXuGQjZELKpXj$"
+                                                            }
+                                                          ]
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "unique_name": "definition_activity_01UUJRCVKSL7I0g8r3yETWqq0wHnMJDK3R7",
+                                                    "name": "Condition Branch",
+                                                    "title": "Failure",
+                                                    "type": "logic.condition_block",
+                                                    "base_type": "activity",
+                                                    "properties": {
+                                                      "condition": {
+                                                        "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                        "operator": "eq",
+                                                        "right_operand": "FAILURE"
+                                                      },
+                                                      "continue_on_failure": false,
+                                                      "display_name": "Failure",
+                                                      "skip_execution": false
+                                                    },
+                                                    "object_type": "definition_activity",
+                                                    "actions": [
+                                                      {
+                                                        "unique_name": "definition_activity_01UUJRCVKUVMB6DbKgkwI5w2HZZiTe1QCTa",
+                                                        "name": "VE - Snow Incident Escalate to delivery",
+                                                        "title": "VE - Snow Incident Escalate to delivery",
+                                                        "type": "workflow.atomic_workflow",
+                                                        "base_type": "subworkflow",
+                                                        "properties": {
+                                                          "continue_on_failure": false,
+                                                          "display_name": "VE - Snow Incident Escalate to delivery",
+                                                          "input": {
+                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
+                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "Escalating to an incident team member.",
+                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "Failed to receive response from coral.",
+                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "VE Unable to Connect to Device",
+                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                                                          },
+                                                          "runtime_user": {
+                                                            "target_default": true
+                                                          },
+                                                          "skip_execution": false,
+                                                          "target": {
+                                                            "target_type": "web-service.endpoint",
+                                                            "use_workflow_target": true
+                                                          },
+                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      },
+                                                      {
+                                                        "unique_name": "definition_activity_01UUJRCVL31026WqAjgWLH7pZon55hj79GN",
+                                                        "name": "Completed",
+                                                        "title": "END",
+                                                        "type": "logic.completed",
+                                                        "base_type": "activity",
+                                                        "properties": {
+                                                          "completion_type": "succeeded",
+                                                          "continue_on_failure": false,
+                                                          "display_name": "END",
+                                                          "result_message": "Success",
+                                                          "skip_execution": false
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "unique_name": "definition_activity_01UUJRCVL3LY44lBPosgEzpBHDYAq9gxfYK",
+                                                    "name": "Condition Branch",
+                                                    "title": "Else",
+                                                    "type": "logic.condition_block",
+                                                    "base_type": "activity",
+                                                    "properties": {
+                                                      "condition": {
+                                                        "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
+                                                        "operator": "ne",
+                                                        "right_operand": "False"
+                                                      },
+                                                      "continue_on_failure": false,
+                                                      "display_name": "Else",
+                                                      "skip_execution": false
+                                                    },
+                                                    "object_type": "definition_activity",
+                                                    "actions": [
+                                                      {
+                                                        "unique_name": "definition_activity_01UUJRCVL625Q2FLFhzHL5xO04g2GKouHR0",
+                                                        "name": "VE - Snow Incident Escalate to delivery",
+                                                        "title": "VE - Snow Incident Escalate to delivery",
+                                                        "type": "workflow.atomic_workflow",
+                                                        "base_type": "subworkflow",
+                                                        "properties": {
+                                                          "continue_on_failure": false,
+                                                          "display_name": "VE - Snow Incident Escalate to delivery",
+                                                          "input": {
+                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
+                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
+                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
+                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
+                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
+                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
+                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
+                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
+                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
+                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
+                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
+                                                          },
+                                                          "runtime_user": {
+                                                            "target_default": true
+                                                          },
+                                                          "skip_execution": false,
+                                                          "target": {
+                                                            "target_type": "web-service.endpoint",
+                                                            "use_workflow_target": true
+                                                          },
+                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      },
+                                                      {
+                                                        "unique_name": "definition_activity_01UUJRCVL8Z9J0LIrkkOkS9KUBx8Lpw0YJ6",
+                                                        "name": "Completed",
+                                                        "title": "END",
+                                                        "type": "logic.completed",
+                                                        "base_type": "activity",
+                                                        "properties": {
+                                                          "completion_type": "succeeded",
+                                                          "continue_on_failure": false,
+                                                          "display_name": "END",
+                                                          "result_message": "Success",
+                                                          "skip_execution": false
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               }
                                             ]
                                           },
@@ -4373,7 +4583,7 @@
                     "base_type": "activity",
                     "properties": {
                       "condition": {
-                        "left_operand": "$activity.definition_activity_01U4V268RQ1SB2Xo9UcS989MGFLvKkv5FCO.output.variable_workflow_01U4ZE989VSKN3ECJm1sK2wXMrIvIaURDfw$",
+                        "left_operand": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$",
                         "operator": "ne",
                         "right_operand": "False"
                       },
@@ -8024,7 +8234,7 @@
                                           "action_timeout": 180,
                                           "continue_on_failure": false,
                                           "display_name": "# methods used to validate",
-                                          "script": "import json\n# Global Variables\n\nsnmpStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$\nsshStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$\npingStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$\n\nuptime_note = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz$\nping_device_ip = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ$\ncommand_output = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc$\ncurrent_status = ''\n\ndevice_reboot_reason = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX$'\nimpactingReboot = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY$\nworkNote,escNote,resNote = (False,)*3\n\nenrichmentVar = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb$\nconfig = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\ncustomer = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$'\ndevice_name = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$'\nevent_message = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$'\nincident_number = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$'\nsshStatu = 'Pass' if sshStatus  else 'Fail'\npingStatu = 'Pass' if pingStatus  else 'Fail'\nsnmpStatu = 'Pass' if snmpStatus  else 'Fail'\nlow_device_category = $activity.definition_activity_01U5OCAIXVKYY0mAptCOZ8TPGncXq8qb1Yh.output.variable_workflow_01U5PLBGHU3TU1XC4YhHjDXYII2W8E5YGd1$\n\nif config != \"False\":\n        if sshStatus and snmpStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif sshStatus and snmpStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and impactingReboot:\n            current_status = f'We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            escNote = True\n        elif sshStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif snmpStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            #note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable.This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif \"Ping\" in config and \"Snmp\" in config and snmpStatus and pingStatus:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\"\n            resNote = True\n        elif snmpStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and impactingReboot:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable.This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif \"Snmp\" in config and snmpStatus:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with SNMP.\"\n            resNote = True\n        elif pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif \"Ping\" in config and pingStatus:\n            note = f\"Details:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with ICMP.\"\n            resNote = True\nif low_device_category:\n    cause_code = 'Cleared before isolation'\nelse:\n    cause_code = 'False Positive'\nnote = json.dumps(note).replace('\"','')\ncurrent_status = json.dumps(current_status).replace('\"','')",
+                                          "script": "import json\n# Global Variables\n\nsnmpStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$\nsshStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$\npingStatus = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$\n\nuptime_note = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz$\nping_device_ip = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ$\ncommand_output = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc$\ncurrent_status = ''\n\ndevice_reboot_reason = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX$'\nimpactingReboot = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY$\nworkNote,escNote,resNote = (False,)*3\n\nenrichmentVar = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb$\nconfig = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF$'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\ncustomer = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$'\ndevice_name = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$'\nevent_message = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$'\nincident_number = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$'\nsshStatu = 'Pass' if sshStatus  else 'Fail'\npingStatu = 'Pass' if pingStatus  else 'Fail'\nsnmpStatu = 'Pass' if snmpStatus  else 'Fail'\nlow_device_category = $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UUHCST64RWR4Jb5pu3y2Dk9Hz1uMFmjk2$\n\nif config != \"False\":\n        if sshStatus and snmpStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif sshStatus and snmpStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and snmpStatus and impactingReboot:\n            current_status = f'We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            escNote = True\n        elif sshStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif sshStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\nSSH Command Output:\\r\\n{command_output}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif snmpStatus and pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            #note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\nif device_reboot_reason:\\r\\n\\r\\r  Last Reboot By:{device_reboot_reason}\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and pingStatus and impactingReboot:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable.This was confirmed with SNMP, and ICMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif \"Ping\" in config and \"Snmp\" in config and snmpStatus and pingStatus:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with SNMP, and ICMP.\"\n            resNote = True\n        elif snmpStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with SNMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif snmpStatus and impactingReboot:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nConnectivity Test Results: \\r\\nSSH - {sshStatu}\\r\\nSNMP - {snmpStatu}\\r\\nICMP - {pingStatu}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = f'We have determined that this device is reachable.This was confirmed with SNMP but the device has undergone a reboot.\\r\\n\\r\\r  Last Reboot By: {device_reboot_reason}'\n            escNote = True\n        elif \"Snmp\" in config and snmpStatus:\n            note = f\"Details:\\r\\n\\r\\nSNMP Output:\\r\\n{uptime_note}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with SNMP.\"\n            resNote = True\n        elif pingStatus and enrichmentVar and impactingReboot:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP but the device has undergone a reboot.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif pingStatus and enrichmentVar:\n            note = f\"Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: We have determined that this device is reachable. This was confirmed with ICMP.\\r\\n\\r\\nNext Steps: Delivery Engineer to review and close the ticket.\\r\\n\\r\\nDetails:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            workNote = True\n        elif \"Ping\" in config and pingStatus:\n            note = f\"Details:\\r\\n\\r\\nICMP Output:\\r\\n{ping_device_ip}\\r\\n\\r\\nEvent ID: {event_id}\"\n            current_status = \"We have determined that this device is reachable. This was confirmed with ICMP.\"\n            resNote = True\nif low_device_category:\n    cause_code = 'Cleared before isolation'\nelse:\n    cause_code = 'False Positive'\nnote = json.dumps(note).replace('\"','')\ncurrent_status = json.dumps(current_status).replace('\"','')",
                                           "script_queries": [
                                             {
                                               "script_query": "workNote",
@@ -8723,19 +8933,19 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
     "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
     "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
     "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82"
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
   ],
   "webhooks": {
     "webhook_01T0UX0AEUWFC63daRxJuSO26mhWcZtEuxe": {
