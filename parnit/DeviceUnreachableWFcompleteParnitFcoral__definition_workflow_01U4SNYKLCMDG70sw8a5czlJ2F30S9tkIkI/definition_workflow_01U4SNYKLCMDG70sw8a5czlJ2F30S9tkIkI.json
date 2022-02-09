@@ -7,55 +7,16 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
+          "value": 5,
           "scope": "local",
-          "name": "sshStatus",
-          "type": "datatype.string",
+          "name": "Hold_Timer_Fail_test",
+          "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "pingStatus",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "reloadReason",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "0",
-          "scope": "local",
-          "name": "closed_review_timer",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
+        "unique_name": "variable_workflow_01UOLG4LMIEGX7JfhoXVqY34KaNXiJyy1mr",
         "object_type": "variable_workflow"
       },
       {
@@ -63,25 +24,51 @@
         "properties": {
           "value": 300,
           "scope": "local",
-          "name": "wait_timer_fail",
+          "name": "wait_timer_pass",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLIWBLLQYC40BAZHNtLhF5XC9h1GE35H",
+        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_fail_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "low_pri_device_category_list",
+          "scope": "input",
+          "name": "result_payload",
           "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "loop_check_counter",
+          "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
+        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
         "object_type": "variable_workflow"
       },
       {
@@ -113,66 +100,27 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait_timer_pass",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "impactingReboot",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
           "value": 5,
           "scope": "local",
-          "name": "Hold_Timer_Pass_test",
+          "name": "count_chronic_events",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
+        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 300,
           "scope": "local",
-          "name": "wait_timer_pass_minute",
+          "name": "wait_timer_fail",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
+        "unique_name": "variable_workflow_01UOLIWBLLQYC40BAZHNtLhF5XC9h1GE35H",
         "object_type": "variable_workflow"
       },
       {
@@ -180,12 +128,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "config_status",
+          "name": "low_pri_device_category_list",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF",
+        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
         "object_type": "variable_workflow"
       },
       {
@@ -193,12 +141,38 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "snmpStatus",
+          "name": "sshStatus",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "unique_name": "variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "icmp_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "ssh_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
         "object_type": "variable_workflow"
       },
       {
@@ -217,58 +191,6 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_Fail_test",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLG4LMIEGX7JfhoXVqY34KaNXiJyy1mr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "ssh_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "False",
-          "scope": "local",
-          "name": "Enrichment",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "count_chronic_events",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
           "value": 2,
           "scope": "local",
           "name": "p1_p2_max_check_counter",
@@ -280,16 +202,55 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "snmpStatus",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "minutes",
+          "scope": "local",
+          "name": "Hold_Timer_Fail_test_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLGH5D59YB1xC4WUSMoYr4oaKcN9h5UK",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 0,
+          "value": 5,
           "scope": "local",
-          "name": "loop_check_counter",
+          "name": "Hold_Timer_Pass_test",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
+        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Device Unreachable",
+          "scope": "local",
+          "name": "Flow Name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
         "object_type": "variable_workflow"
       },
       {
@@ -303,32 +264,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01UOLH2VIOB022xoVMhTPNfwILRS12eA9TA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "icmp_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 6,
-          "scope": "local",
-          "name": "wait_timer_fail_minute",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
         "object_type": "variable_workflow"
       },
       {
@@ -360,27 +295,92 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "Device Unreachable",
+          "value": "",
           "scope": "local",
-          "name": "Flow Name",
+          "name": "pingStatus",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
+        "unique_name": "variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "minutes",
+          "value": "0",
           "scope": "local",
-          "name": "Hold_Timer_Fail_test_unit",
+          "name": "closed_review_timer",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLGH5D59YB1xC4WUSMoYr4oaKcN9h5UK",
+        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "reloadReason",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "config_status",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4ZHBEJ8RS72ZSdMwYncj3DoCCjZSB5gF",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "False",
+          "scope": "local",
+          "name": "Enrichment",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_pass_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "impactingReboot",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
         "object_type": "variable_workflow"
       }
     ],
@@ -2725,7 +2725,7 @@
                           "continue_on_failure": false,
                           "display_name": "VE - Coral Connector",
                           "input": {
-                            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"5\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
+                            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"15\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
                             "variable_workflow_01UTJA87IYM5N2mZMrNrnMPipBkTKca6vys": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
                             "variable_workflow_01UTJAD267YYE3ZGpplTzdt3rkSrLZyo6Ml": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
                             "variable_workflow_01UTJOKQKGG2F5HCLYBzk1vR5w2TmwuZa6S": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5L8NJ0SU30pyz5taVDnOxyN6YpCafT$",
@@ -4922,7 +4922,7 @@
                           "continue_on_failure": false,
                           "display_name": "VE - Coral Connector",
                           "input": {
-                            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"5\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
+                            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"15\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
                             "variable_workflow_01UTJA87IYM5N2mZMrNrnMPipBkTKca6vys": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
                             "variable_workflow_01UTJAD267YYE3ZGpplTzdt3rkSrLZyo6Ml": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
                             "variable_workflow_01UTJOKQKGG2F5HCLYBzk1vR5w2TmwuZa6S": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5L8NJ0SU30pyz5taVDnOxyN6YpCafT$",
@@ -6617,7 +6617,7 @@
                                   "continue_on_failure": false,
                                   "display_name": "VE - Coral Connector",
                                   "input": {
-                                    "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"5\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
+                                    "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\"task_type\":\"Commands\",\"command_label\":\"clock_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.clock_output$\n{\"task_type\":\"Commands\",\"command_label\":\"command_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.command_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reload_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reload_output$\n{\"task_type\":\"Commands\",\"command_label\":\"reset_output\",\"command\":\"[$ac$activity.definition_activity_01UTPYL25G77N4GwSy8bysnhtokkjZpV5Sm.output.script_queries.reset_output$\n{\"task_type\":\"SNMPs\",\"snmp_method\":\"GET\",\"OID\": \"1.3.6.1.2.1.1.3.0\", \"symbolic\": \"sysUpTime\"},\n{\"task_type\":\"Pings\",\"count\":\"15\",\"size\":1024},\n{\"task_type\": \"EM7DeviceInfo\"}\n]",
                                     "variable_workflow_01UTJA87IYM5N2mZMrNrnMPipBkTKca6vys": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
                                     "variable_workflow_01UTJAD267YYE3ZGpplTzdt3rkSrLZyo6Ml": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
                                     "variable_workflow_01UTJOKQKGG2F5HCLYBzk1vR5w2TmwuZa6S": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5L8NJ0SU30pyz5taVDnOxyN6YpCafT$",
@@ -8933,19 +8933,19 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
     "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
     "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
+    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
   ],
   "webhooks": {
     "webhook_01T0UX0AEUWFC63daRxJuSO26mhWcZtEuxe": {
