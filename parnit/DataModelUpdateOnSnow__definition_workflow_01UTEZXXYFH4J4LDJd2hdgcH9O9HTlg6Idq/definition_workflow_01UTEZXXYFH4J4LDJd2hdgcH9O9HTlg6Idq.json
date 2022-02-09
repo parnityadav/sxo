@@ -100,29 +100,25 @@
         "properties": {
           "action_timeout": 30,
           "allow_auto_redirect": true,
-          "content_type": "application/json",
+          "content_type": "text/plain",
           "continue_on_error_status_code": false,
           "continue_on_failure": false,
           "custom_headers": [
             {
               "name": "Authorization",
               "value": "Bearer $activity.definition_activity_01UTGJS8GLYBU4mFhAY3KtZNhQsAZ0pcgs1.output.script_queries.access_token$"
-            },
-            {
-              "name": "Accept",
-              "value": "*/*"
             }
           ],
           "display_name": "JWT Token Request",
           "method": "POST",
-          "relative_url": "/ao/gen-jwt",
+          "relative_url": "/iroh/ao/gen-jwt",
           "runtime_user": {
             "target_default": true
           },
           "skip_execution": false,
           "target": {
             "override_workflow_target": true,
-            "target_id": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q"
+            "target_id": "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2"
           }
         },
         "object_type": "definition_activity"
@@ -166,6 +162,22 @@
         "host": "visibility.amp.cisco.com",
         "ignore_proxy": true,
         "no_runtime_user": false,
+        "protocol": "https"
+      }
+    },
+    "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2": {
+      "unique_name": "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2",
+      "name": "JWT Token Target",
+      "title": "JWT Token Target",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": false,
+        "display_name": "JWT Token Target",
+        "host": "visibility.amp.cisco.com",
+        "ignore_proxy": true,
+        "no_runtime_user": true,
         "protocol": "https"
       }
     }
