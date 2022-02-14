@@ -59,19 +59,6 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "looping counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -82,6 +69,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01UW13ZXL55BX3sVEfrUTNcHv33ldc2ncYt",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "looping counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
         "object_type": "variable_workflow"
       }
     ],
@@ -291,7 +291,7 @@
           "action_timeout": 180,
           "continue_on_failure": false,
           "display_name": "WF to its ID mapping",
-          "script": "import json\ntrue, false = True, False\nWF_ID_mapping = {}\n\nWF_list = ['BGP Neighbor Down WF', 'Call Recording Failure', 'CPU Threshold WF', 'CPU Utilization WF', 'Device Unreachable WF', 'EIGRP Neighbor Down WF', 'EIGRP Neighbor Down HSBC WF',  'Interface Bandwidth WF', 'Interface Down WF', 'Interface Down HSBC WF', 'Interface Errors WF', 'Memory Threshold WF', 'UC Service Down WF', 'Web Services Health Check WF']\n\nresponse = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UV5CPBXDVPW44yX0fZpfeGNCVcVA8k5hN$\n\nprint(f'Total length of list {len(WF_list)}')\n\n\nfor i in response:\n    if i.get('name') in WF_list:\n        WF_ID_mapping[i.get('name')] = i.get('id')\n\nWF_ID_mapping = json.dumps(WF_ID_mapping)\nMapping_length = len(WF_list)\nprint(WF_ID_mapping)",
+          "script": "import json\ntrue, false = True, False\nWF_ID_mapping = {}\n\nWF_list = ['Device Unreachable WF']\n\nresponse = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UV5CPBXDVPW44yX0fZpfeGNCVcVA8k5hN$\n\nprint(f'Total length of list {len(WF_list)}')\n\n\nfor i in response:\n    if i.get('name') in WF_list:\n        WF_ID_mapping[i.get('name')] = i.get('id')\n\nWF_ID_mapping = json.dumps(WF_ID_mapping)\nMapping_length = len(WF_list)\nprint(WF_ID_mapping)",
           "script_queries": [
             {
               "script_query": "WF_ID_mapping",
@@ -434,6 +434,106 @@
                   ]
                 },
                 "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UYR7GN8FQDH4bag5kvdmBPHv2M2Za0vMw",
+                "name": "Execute Python Script",
+                "title": "Building Data Model payload for SNOW",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Building Data Model payload for SNOW",
+                  "script": "import json\n\nfalse, true, null = False, True, None\nWF_ID_mapping = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVY8K735S2L5RmWgsmpI3D2orOdeGP1Nd$\nWF_Details = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UW13ZXL55BX3sVEfrUTNcHv33ldc2ncYt$\nWF_variable_mapping = {\n    \"Device Unreachable WF\":\n                           {\"flow_version\": \"0.0.1\",\n                            \"flow_name\": \"Device Unreachable SXO Ashish\", #Change for SXO\n                            \"description\": \"The flow for DU for SXO Testings\",\n                            \"variables\": {\n                                \"count_chronic_events\": {\n                                    \"display_name\": \"count_chronic_events\",\n                                    \"type\": \"int\",\n                                    \"default\": \"3\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"25\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"chronics_time\": {\n                                    \"display_name\": \"chronics_time\",\n                                    \"type\": \"int\",\n                                    \"default\": \"24\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"25\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"chronics_time_unit\": {\n                                    \"display_name\": \"chronics_time_unit\",\n                                    \"type\": \"string\",\n                                    \"default\": \"hours\",\n                                    \"input_type\": \"dropdown\",\n                                    \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"closed_review_timer\": {\n                                    \"display_name\": \"closed_review_timer\",\n                                    \"type\": \"int\",\n                                    \"default\": \"0\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"3600\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"p1_p2_max_check_counter\": {\n                                    \"display_name\": \"p1_p2_max_check_counter\",\n                                    \"type\": \"int\",\n                                    \"default\": \"2\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"10\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"max_check_counter\": {\n                                    \"display_name\": \"max_check_counter\",\n                                    \"type\": \"int\",\n                                    \"default\": \"5\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"10\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"Hold_Timer_Fail_test\": {\n                                    \"display_name\": \"Hold_Timer_Fail_test\",\n                                    \"type\": \"int\",\n                                    \"default\": \"5\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"60\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"Hold_Timer_Fail_test_unit\": {\n                                    \"display_name\": \"Hold_Timer_Fail_test_unit\",\n                                    \"type\": \"string\",\n                                    \"default\": \"hours\",\n                                    \"input_type\": \"dropdown\",\n                                    \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"Hold_Timer_Pass_test\": {\n                                    \"display_name\": \"Hold_Timer_Pass_test\",\n                                    \"type\": \"int\",\n                                    \"default\": \"5\",\n                                    \"input_type\": \"dropdown\",\n                                    \"min_length\": \"0\",\n                                    \"max_length\": \"60\",\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"Hold_Timer_Pass_test_unit\": {\n                                    \"display_name\": \"Hold_Timer_Pass_test_unit\",\n                                    \"type\": \"string\",\n                                    \"default\": \"hours\",\n                                    \"input_type\": \"dropdown\",\n                                    \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                },\n                                \"low_pri_device_category_list\": {\n                                    \"display_name\": \"low_pri_device_category_list\",\n                                    \"type\": \"string\",\n                                    \"default\": \"[]\",\n                                    \"input_type\": \"text\",\n                                    \"choices\": [\"video.*\"],\n                                    \"required\": True,\n                                    \"help_text\": \"Some random strings for now\"\n                                }\n                                        }\n                            }\n                       }\n\n\n\ntry:\n    wf_id = WF_Details.get('id')\n    for key, value in WF_ID_mapping.items():\n        if value == wf_id:\n            # print(f\" The WF name is : {key} \\n The WF ID is : {wf_id}\")\n            break\n        else:\n            key, value = None, None\n\n    #now we will get list of variables from our mapping\n    if key in list(WF_variable_mapping.keys()):\n        mapped_variables = list(WF_variable_mapping[key]['variables'].keys())\n        # print(f\"The Mapped variables are: {mapped_variables}\")\n\n\n    #now we will get the list of variables from SXO WF\n    variable_list = []\n    for i in WF_Details.get('variables'):\n        variable_list.append(i.get('properties').get('name'))\n    # print(f\"The variable list from SXO WF : {variable_list}\")\n\n    for variable in mapped_variables:\n        if variable in variable_list:\n            validation_flag = True\n        else:\n            validation_flag = False\n    # print(f\"validation_flag: {validation_flag}\\n\")\n\n\n    #Since WF has all the parameters from our mapping, we are proceeding to build payload and send it out to SNOW.\n    snow_payload = []\n\n    #build Data Model\n    data_model = []\n    for i in list(WF_variable_mapping[key]['variables'].items()):\n        # print(i,'\\n')\n        variable_body = {\n            \"name\": i[0]\n        }\n        for j in i[1]:\n            # print(j, i[1][j])\n            variable_body[j] = i[1][j]\n\n        # print(variable_body, '\\n')\n        #variable_body = json.dumps(variable_body)\n        data_model.append(variable_body)\n\n    #build the body for payload\n    body  = {\n        \"workflow_version\": WF_variable_mapping[key]['flow_version'],\n        \"workflow_name\": WF_variable_mapping[key]['flow_name'],\n        \"bpmn_flow_url\": \"https://securex-ao.us.security.cisco.com/orch-ui/workflow/01UTEZXXMKV2C3GwclESbN8L6tNDlEdOMPM/\",\n        \"workflow_source\": \"Coral\",\n        \"short_description\": WF_variable_mapping[key]['description'],\n        \"data_model\": data_model\n             }  \n\n    # body = json.dumps(body)\n    snow_payload.append(body)\n    snow_payload = json.dumps(snow_payload)\n\n    print(snow_payload)\nexcept:\n    snow_payload = None\n    print(f\" The WF name is : {key} \\n The WF ID is : {wf_id} \\n BYPASSING THIS WF\")",
+                  "script_queries": [
+                    {
+                      "script_query": "snow_payload",
+                      "script_query_name": "snow_payload",
+                      "script_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01UYRIG2J6DCP5JhZTYJB0stns439iDi8FN",
+                "name": "Condition Block",
+                "title": "payload body built?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "payload body built?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01UYRIG35KL2U18CtVXbabfHc4E0215eJsa",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01UYR7GN8FQDH4bag5kvdmBPHv2M2Za0vMw.output.script_queries.snow_payload$",
+                        "operator": "ne",
+                        "right_operand": "None"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Condition Branch",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01UYREWTL544G0Z0q0K6YKDsOKDHfiW9430",
+                        "name": "HTTP Request",
+                        "title": "Sending payload to SNOW",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "body": "$activity.definition_activity_01UYR7GN8FQDH4bag5kvdmBPHv2M2Za0vMw.output.script_queries.snow_payload$",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "display_name": "Sending payload to SNOW",
+                          "method": "POST",
+                          "relative_url": "/x_cims_cms_api_sui/cms/ve/workflow",
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "use_workflow_target": true
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01UYRIG428OEI1MXeqo8reGJPqLBc0mIKv8",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01UYR7GN8FQDH4bag5kvdmBPHv2M2Za0vMw.output.script_queries.snow_payload$",
+                        "operator": "eq",
+                        "right_operand": "None"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Condition Branch",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
               },
               {
                 "unique_name": "definition_activity_01UVYWGVCIMIL3EWHUYsfGRiV01AC5hVjRp",
