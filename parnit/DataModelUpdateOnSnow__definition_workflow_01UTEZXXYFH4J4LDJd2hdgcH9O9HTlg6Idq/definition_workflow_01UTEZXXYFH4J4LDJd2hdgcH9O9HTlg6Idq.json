@@ -40,12 +40,12 @@
       {
         "unique_name": "definition_activity_01V08GGEG7J832rf0Qf7mxDRbt64ousq5jm",
         "name": "Group",
-        "title": "Access Token \u0026 JWT Token Creation",
+        "title": "JWT Token Creation",
         "type": "logic.group",
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
-          "display_name": "Access Token \u0026 JWT Token Creation",
+          "display_name": "JWT Token Creation",
           "skip_execution": false
         },
         "object_type": "definition_activity",
