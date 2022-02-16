@@ -20,19 +20,6 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "looping counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -46,16 +33,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.secure_string",
         "properties": {
-          "value": "client_credentials",
-          "scope": "static",
-          "name": "grant_type",
-          "type": "datatype.string",
+          "value": "",
+          "scope": "local",
+          "name": "JWT_Token",
+          "type": "datatype.secure_string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UTFZP0QOP0R0sP7tJk1jJAZRi8Si7vg7J",
+        "unique_name": "variable_workflow_01UVIP6U09E101tbivSMPnduiIgnm8CvCvz",
         "object_type": "variable_workflow"
       },
       {
@@ -72,16 +59,29 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.secure_string",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "JWT_Token",
-          "type": "datatype.secure_string",
+          "value": "client_credentials",
+          "scope": "static",
+          "name": "grant_type",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UVIP6U09E101tbivSMPnduiIgnm8CvCvz",
+        "unique_name": "variable_workflow_01UTFZP0QOP0R0sP7tJk1jJAZRi8Si7vg7J",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "looping counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
         "object_type": "variable_workflow"
       }
     ],
@@ -103,131 +103,125 @@
     "object_type": "definition_workflow",
     "actions": [
       {
-        "unique_name": "definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17",
-        "name": "HTTP Request",
-        "title": "Token Request on AMP Visibility Target",
-        "type": "web-service.http_request",
+        "unique_name": "definition_activity_01V08GGEG7J832rf0Qf7mxDRbt64ousq5jm",
+        "name": "Group",
+        "title": "Access Token \u0026 JWT Token Creation",
+        "type": "logic.group",
         "base_type": "activity",
         "properties": {
-          "action_timeout": 30,
-          "allow_auto_redirect": true,
-          "body": "grant_type=client_credentials",
-          "continue_on_error_status_code": false,
           "continue_on_failure": false,
-          "custom_headers": [
-            {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
-            }
-          ],
-          "display_name": "Token Request on AMP Visibility Target",
-          "method": "POST",
-          "relative_url": "/iroh/oauth2/token",
-          "runtime_user": {
-            "target_default": true
-          },
-          "skip_execution": false,
-          "target": {
-            "override_workflow_target": true,
-            "target_id": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q"
-          }
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UTGJS8GLYBU4mFhAY3KtZNhQsAZ0pcgs1",
-        "name": "Execute Python Script",
-        "title": "Set  access_token ",
-        "type": "python3.script",
-        "base_type": "activity",
-        "properties": {
-          "action_timeout": 180,
-          "continue_on_failure": false,
-          "display_name": "Set  access_token ",
-          "script": "output = $activity.definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17.output.response_body$\n#print(output)\naccess_token = output['access_token']\nprint(access_token)",
-          "script_queries": [
-            {
-              "script_query": "access_token",
-              "script_query_name": "access_token",
-              "script_query_type": "secure_string"
-            }
-          ],
+          "display_name": "Access Token \u0026 JWT Token Creation",
           "skip_execution": false
         },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m",
-        "name": "HTTP Request",
-        "title": "JWT Token Request",
-        "type": "web-service.http_request",
-        "base_type": "activity",
-        "properties": {
-          "action_timeout": 30,
-          "allow_auto_redirect": true,
-          "content_type": "text/plain",
-          "continue_on_error_status_code": false,
-          "continue_on_failure": false,
-          "custom_headers": [
-            {
-              "name": "Authorization",
-              "value": "Bearer $activity.definition_activity_01UTGJS8GLYBU4mFhAY3KtZNhQsAZ0pcgs1.output.script_queries.access_token$"
-            }
-          ],
-          "display_name": "JWT Token Request",
-          "method": "POST",
-          "relative_url": "/iroh/ao/gen-jwt",
-          "runtime_user": {
-            "target_default": true
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17",
+            "name": "HTTP Request",
+            "title": "Token Request on AMP Visibility Target",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 30,
+              "allow_auto_redirect": true,
+              "body": "grant_type=client_credentials",
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Content-Type",
+                  "value": "application/x-www-form-urlencoded"
+                }
+              ],
+              "display_name": "Token Request on AMP Visibility Target",
+              "method": "POST",
+              "relative_url": "/oauth2/token",
+              "runtime_user": {
+                "override_target_runtime_user": true,
+                "runtime_user_id": "definition_runtime_user_01NDTZXG9G7M25msWDVbAjcxdTcYKtdvG8b"
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01RX4ZJ0H92PS4f0BjXYMjakrJE8ZaVLA85"
+              }
+            },
+            "object_type": "definition_activity"
           },
-          "skip_execution": false,
-          "target": {
-            "override_workflow_target": true,
-            "target_id": "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2"
+          {
+            "unique_name": "definition_activity_01V07LW3KQV84152WqRK03d5yZLO8w6grs4",
+            "name": "JSONPath Query",
+            "title": "Set Access Token",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Set Access Token",
+              "input_json": "$activity.definition_activity_01UTF0UFLML3I7dhdF9L7Ue8iTGNJJfda17.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$.access_token",
+                  "jsonpath_query_name": "access_token",
+                  "jsonpath_query_type": "secure_string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m",
+            "name": "HTTP Request",
+            "title": "JWT Token Request",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 30,
+              "allow_auto_redirect": true,
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer $activity.definition_activity_01V07LW3KQV84152WqRK03d5yZLO8w6grs4.output.jsonpath_queries.access_token$"
+                }
+              ],
+              "display_name": "JWT Token Request",
+              "method": "POST",
+              "relative_url": "/ao/gen-jwt",
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01RX4ZJ0H92PS4f0BjXYMjakrJE8ZaVLA85"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01V07NS6045YR2iL4WEPiTgpPsBnoanV9vx",
+            "name": "Replace String",
+            "title": "Remove Quotes",
+            "type": "core.replacestring",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Remove Quotes",
+              "input_string": "$activity.definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m.output.response_body$",
+              "replace_list": [
+                {
+                  "replaced_string": "\"",
+                  "replacement_string": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
           }
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UV4WF53AQZQ03fmeMGiaAOwVPoEFgIPqv",
-        "name": "Execute Python Script",
-        "title": "Set JWT Token",
-        "type": "python3.script",
-        "base_type": "activity",
-        "properties": {
-          "action_timeout": 180,
-          "continue_on_failure": false,
-          "display_name": "Set JWT Token",
-          "script": "JWT_Token = $activity.definition_activity_01UTFKS374QNQ0bwGbBypA5QOUDsAQeMQ7m.output.response_body$\nprint(JWT_Token)",
-          "script_queries": [
-            {
-              "script_query": "JWT_Token",
-              "script_query_name": "JWT_Token ",
-              "script_query_type": "secure_string"
-            }
-          ],
-          "skip_execution": false
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UV4NYCWAKO35yiDHPwzgIZn7rOm7wUXAx",
-        "name": "Set Variables",
-        "title": "Set Variables",
-        "type": "core.set_multiple_variables",
-        "base_type": "activity",
-        "properties": {
-          "continue_on_failure": false,
-          "display_name": "Set Variables",
-          "skip_execution": false,
-          "variables_to_update": [
-            {
-              "variable_to_update": "$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVIP6U09E101tbivSMPnduiIgnm8CvCvz$",
-              "variable_value_new": "$activity.definition_activity_01UV4WF53AQZQ03fmeMGiaAOwVPoEFgIPqv.output.script_queries.JWT_Token $"
-            }
-          ]
-        },
-        "object_type": "definition_activity"
+        ]
       },
       {
         "unique_name": "definition_activity_01UV4C8QLBXI72NaQhhUIqIEzGgDXbqVV2q",
@@ -236,7 +230,7 @@
         "type": "web-service.http_request",
         "base_type": "activity",
         "properties": {
-          "action_timeout": 180,
+          "action_timeout": 60,
           "allow_auto_redirect": true,
           "content_type": "application/json",
           "continue_on_error_status_code": false,
@@ -244,7 +238,7 @@
           "custom_headers": [
             {
               "name": "Authorization",
-              "value": "Bearer $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVIP6U09E101tbivSMPnduiIgnm8CvCvz$"
+              "value": "Bearer $activity.definition_activity_01V07NS6045YR2iL4WEPiTgpPsBnoanV9vx.output.result_string$"
             }
           ],
           "description": "This API needs to be done in order to extract the required WFs IDs.",
@@ -257,27 +251,8 @@
           "skip_execution": false,
           "target": {
             "override_workflow_target": true,
-            "target_id": "definition_target_01UV4C1GXD6NY6g49lWnTew67G1E0UXnIdu"
+            "target_id": "definition_target_01EOZMYH25RSG1rDfjUIjQwHEPioIElydk9"
           }
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UV5CTZ20DED5l0bfHP4hdzZ1NDRLHNwaa",
-        "name": "Set Variables",
-        "title": "Save the response for ALL WFs",
-        "type": "core.set_multiple_variables",
-        "base_type": "activity",
-        "properties": {
-          "continue_on_failure": false,
-          "display_name": "Save the response for ALL WFs",
-          "skip_execution": false,
-          "variables_to_update": [
-            {
-              "variable_to_update": "$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UV5CPBXDVPW44yX0fZpfeGNCVcVA8k5hN$",
-              "variable_value_new": "$activity.definition_activity_01UV4C8QLBXI72NaQhhUIqIEzGgDXbqVV2q.output.response_body$"
-            }
-          ]
         },
         "object_type": "definition_activity"
       },
@@ -291,7 +266,7 @@
           "action_timeout": 180,
           "continue_on_failure": false,
           "display_name": "WF to its ID mapping",
-          "script": "import json\ntrue, false = True, False\nWF_ID_mapping = {}\n\nWF_list = ['BGP Neighbor Down WF', 'Call Recording Failure', 'CPU Threshold WF', 'CPU Utilization WF', 'Device Unreachable WF', 'EIGRP Neighbor Down WF', 'EIGRP Neighbor Down HSBC WF',  'Interface Bandwidth WF', 'Interface Down WF', 'Interface Down HSBC WF', 'Interface Errors WF', 'Memory Threshold WF', 'UC Service Down WF', 'Web Services Health Check WF']\n\nresponse = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UV5CPBXDVPW44yX0fZpfeGNCVcVA8k5hN$\n\nprint(f'Total length of list {len(WF_list)}')\n\n\nfor i in response:\n    if i.get('name') in WF_list:\n        WF_ID_mapping[i.get('name')] = i.get('id')\n\nWF_ID_mapping = json.dumps(WF_ID_mapping)\nMapping_length = len(WF_list)\nprint(WF_ID_mapping)",
+          "script": "import json\ntrue, false = True, False\nWF_ID_mapping = {}\n\nWF_list = ['Device Unreachable WF']\n\nresponse = $activity.definition_activity_01UV4C8QLBXI72NaQhhUIqIEzGgDXbqVV2q.output.response_body$\n\nprint(f'Total length of list {len(WF_list)}')\n\n\nfor i in response:\n    if i.get('name') in WF_list:\n        WF_ID_mapping[i.get('name')] = i.get('id')\n\nWF_ID_mapping = json.dumps(WF_ID_mapping)\nMapping_length = len(WF_list)\nprint(WF_ID_mapping)",
           "script_queries": [
             {
               "script_query": "WF_ID_mapping",
@@ -305,25 +280,6 @@
             }
           ],
           "skip_execution": false
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01UVZFW9BKPMG2gh2wUoov5dufDFFKRoHo7",
-        "name": "Set Variables",
-        "title": "Save WF and it's ID Mapping",
-        "type": "core.set_multiple_variables",
-        "base_type": "activity",
-        "properties": {
-          "continue_on_failure": false,
-          "display_name": "Save WF and it's ID Mapping",
-          "skip_execution": false,
-          "variables_to_update": [
-            {
-              "variable_to_update": "$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVY8K735S2L5RmWgsmpI3D2orOdeGP1Nd$",
-              "variable_value_new": "$activity.definition_activity_01UVY6XHM79GE5MxmxV4KKIjNanSxIngfso.output.script_queries.WF_ID_mapping$"
-            }
-          ]
         },
         "object_type": "definition_activity"
       },
@@ -368,7 +324,7 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Get specific WF ID",
-                  "script": "WF_ID_mapping = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVY8K735S2L5RmWgsmpI3D2orOdeGP1Nd$\n\nWF_list = list(WF_ID_mapping.keys())\n\nWF_name = WF_list[$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD$]\nWF_ID = WF_ID_mapping[WF_name]\nprint(WF_name, WF_ID)",
+                  "script": "WF_ID_mapping = $activity.definition_activity_01UVY6XHM79GE5MxmxV4KKIjNanSxIngfso.output.script_queries.WF_ID_mapping$\n\nWF_list = list(WF_ID_mapping.keys())\n\nWF_name = WF_list[$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD$]\nWF_ID = WF_ID_mapping[WF_name]\nprint(WF_name, WF_ID)",
                   "script_queries": [
                     {
                       "script_query": "WF_name",
@@ -399,7 +355,7 @@
                   "custom_headers": [
                     {
                       "name": "Authorization",
-                      "value": "Bearer $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVIP6U09E101tbivSMPnduiIgnm8CvCvz$"
+                      "value": "Bearer $activity.definition_activity_01V07NS6045YR2iL4WEPiTgpPsBnoanV9vx.output.result_string$"
                     }
                   ],
                   "display_name": "Get specific WF details",
@@ -411,27 +367,8 @@
                   "skip_execution": false,
                   "target": {
                     "override_workflow_target": true,
-                    "target_id": "definition_target_01UV4C1GXD6NY6g49lWnTew67G1E0UXnIdu"
+                    "target_id": "definition_target_01EOZMYH25RSG1rDfjUIjQwHEPioIElydk9"
                   }
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01UW143UIJHVB1wYjcbV57yzTFGoZXYexBJ",
-                "name": "Set Variables",
-                "title": "Save specific WF details",
-                "type": "core.set_multiple_variables",
-                "base_type": "activity",
-                "properties": {
-                  "continue_on_failure": false,
-                  "display_name": "Save specific WF details",
-                  "skip_execution": false,
-                  "variables_to_update": [
-                    {
-                      "variable_to_update": "$workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UW13ZXL55BX3sVEfrUTNcHv33ldc2ncYt$",
-                      "variable_value_new": "$activity.definition_activity_01UVYZ62A5JN21t8SfIlRr7vIdmavIaHO9F.output.response_body$"
-                    }
-                  ]
                 },
                 "object_type": "definition_activity"
               },
@@ -445,7 +382,7 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Building Data Model payload for SNOW",
-                  "script": "import json\n\nfalse, true, null = False, True, None\nWF_ID_mapping = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UVY8K735S2L5RmWgsmpI3D2orOdeGP1Nd$\nWF_Details = $workflow.definition_workflow_01UTEZXXYFH4J4LDJd2hdgcH9O9HTlg6Idq.local.variable_workflow_01UW13ZXL55BX3sVEfrUTNcHv33ldc2ncYt$\ntry:\n    wf_id = WF_Details.get('id')\n    for key, value in WF_ID_mapping.items():\n        if value == wf_id:\n            # print(f\" The WF name is : {key} \\n The WF ID is : {wf_id}\")\n            break\n        else:\n            key, value = None, None\n\n    WF_variable_mapping = {\n        \"Device Unreachable WF\":\n                               {\"flow_version\": \"0.0.1\",\n                                \"flow_name\": \"ShuklaJiTestings\", #key #Change for SXO\n                                \"description\": \"The flow for DU for SXO Testings\",\n                                \"variables\": {\n                                    \"count_chronic_events\": {\n                                        \"display_name\": \"count_chronic_events\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"25\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"chronics_time\": {\n                                        \"display_name\": \"chronics_time\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"25\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"chronics_time_unit\": {\n                                        \"display_name\": \"chronics_time_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"closed_review_timer\": {\n                                        \"display_name\": \"closed_review_timer\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"text\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"3600\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"p1_p2_max_check_counter\": {\n                                        \"display_name\": \"p1_p2_max_check_counter\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"10\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"max_check_counter\": {\n                                        \"display_name\": \"max_check_counter\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"10\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Fail_test\": {\n                                        \"display_name\": \"Hold_Timer_Fail_test\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"60\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Fail_test_unit\": {\n                                        \"display_name\": \"Hold_Timer_Fail_test_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Pass_test\": {\n                                        \"display_name\": \"Hold_Timer_Pass_test\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"60\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Pass_test_unit\": {\n                                        \"display_name\": \"Hold_Timer_Pass_test_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"low_pri_device_category_list\": {\n                                        \"display_name\": \"low_pri_device_category_list\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"text\",\n                                        \"choices\": [\"video.*\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    }\n                                            }\n                                }\n                           }\n\n    #now we will get list of variables from our mapping\n    if key in list(WF_variable_mapping.keys()):\n        mapped_variables = list(WF_variable_mapping[key]['variables'].keys())\n        # print(f\"The Mapped variables are: {mapped_variables}\")\n\n\n    #now we will get the list of variables from SXO WF\n    variable_list = []\n    for i in WF_Details.get('variables'):\n        variable_list.append(i.get('properties').get('name'))\n    # print(f\"The variable list from SXO WF : {variable_list}\")\n\n    for variable in mapped_variables:\n        if variable in variable_list:\n            validation_flag = True\n        else:\n            validation_flag = False\n    # print(f\"validation_flag: {validation_flag}\\n\")\n\n\n    #Since WF has all the parameters from our mapping, we are proceeding to build payload and send it out to SNOW.\n    snow_payload = []\n\n    #build Data Model\n    data_model = []\n    for i in list(WF_variable_mapping[key]['variables'].items()):\n        # print(i,'\\n')\n        variable_body = {\n            \"name\": i[0]\n        }\n        for j in i[1]:\n            variable_body[j] = i[1][j]\n\n        #get default values for each item\n        for k in WF_Details.get('variables'):\n            if k.get('properties').get('name') == i[0]:\n                variable_body['default'] =  str(k.get('properties').get('value'))\n        # print(variable_body, '\\n')\n        # variable_body = json.dumps(variable_body)\n        data_model.append(variable_body)\n\n    #build the body for payload\n    body  = {\n        \"workflow_version\": WF_variable_mapping[key]['flow_version'],\n        \"workflow_name\": WF_variable_mapping[key]['flow_name'],\n        \"bpmn_flow_url\": \"https://securex-ao.us.security.cisco.com/orch-ui/workflow/01UTEZXXMKV2C3GwclESbN8L6tNDlEdOMPM/\",\n        \"workflow_source\": \"SXO\",\n        \"short_description\": WF_variable_mapping[key]['description'],\n        \"data_model\": data_model\n             }\n    # body = json.dumps(body)\n    snow_payload.append(body)\n    snow_payload = json.dumps(snow_payload)\n\n    print(snow_payload)\nexcept:\n    import traceback\n    snow_payload = None\n    print(f\" The WF name is : {key} \\n The WF ID is : {wf_id} \\n BYPASSING THIS WF\")\n    traceback.print_exc()",
+                  "script": "import json\n\nfalse, true, null = False, True, None\nWF_ID_mapping = $activity.definition_activity_01UVY6XHM79GE5MxmxV4KKIjNanSxIngfso.output.script_queries.WF_ID_mapping$\nWF_Details = $activity.definition_activity_01UVYZ62A5JN21t8SfIlRr7vIdmavIaHO9F.output.response_body$\ntry:\n    wf_id = WF_Details.get('id')\n    for key, value in WF_ID_mapping.items():\n        if value == wf_id:\n            # print(f\" The WF name is : {key} \\n The WF ID is : {wf_id}\")\n            break\n        else:\n            key, value = None, None\n\n    WF_variable_mapping = {\n        \"Device Unreachable WF\":\n                               {\"flow_version\": \"1.1.1\",\n                                #\"flow_name\": \"ShuklaJiTestings\", #key #Change for SXO\n                                \"flow_name\": key,\n                                \"description\": \"The flow for DU for SXO Testings\",\n                                \"variables\": {\n                                    \"count_chronic_events\": {\n                                        \"display_name\": \"count_chronic_events\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"25\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"chronics_time\": {\n                                        \"display_name\": \"chronics_time\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"25\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"chronics_time_unit\": {\n                                        \"display_name\": \"chronics_time_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"closed_review_timer\": {\n                                        \"display_name\": \"closed_review_timer\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"text\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"3600\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"p1_p2_max_check_counter\": {\n                                        \"display_name\": \"p1_p2_max_check_counter\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"10\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"max_check_counter\": {\n                                        \"display_name\": \"max_check_counter\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"10\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Fail_test\": {\n                                        \"display_name\": \"Hold_Timer_Fail_test\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"60\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Fail_test_unit\": {\n                                        \"display_name\": \"Hold_Timer_Fail_test_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Pass_test\": {\n                                        \"display_name\": \"Hold_Timer_Pass_test\",\n                                        \"type\": \"int\",\n                                        \"input_type\": \"dropdown\",\n                                        \"min_length\": \"0\",\n                                        \"max_length\": \"60\",\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"Hold_Timer_Pass_test_unit\": {\n                                        \"display_name\": \"Hold_Timer_Pass_test_unit\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"dropdown\",\n                                        \"choices\": [\"days\", \"hours\", \"minutes\", \"seconds\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    },\n                                    \"low_pri_device_category_list\": {\n                                        \"display_name\": \"low_pri_device_category_list\",\n                                        \"type\": \"string\",\n                                        \"input_type\": \"text\",\n                                        \"choices\": [\"video.*\"],\n                                        \"required\": True,\n                                        \"help_text\": \"Some random strings for now\"\n                                    }\n                                            }\n                                }\n                           }\n\n    #now we will get list of variables from our mapping\n    if key in list(WF_variable_mapping.keys()):\n        mapped_variables = list(WF_variable_mapping[key]['variables'].keys())\n        # print(f\"The Mapped variables are: {mapped_variables}\")\n\n\n    #now we will get the list of variables from SXO WF\n    variable_list = []\n    for i in WF_Details.get('variables'):\n        variable_list.append(i.get('properties').get('name'))\n    # print(f\"The variable list from SXO WF : {variable_list}\")\n\n    for variable in mapped_variables:\n        if variable in variable_list:\n            validation_flag = True\n        else:\n            validation_flag = False\n    # print(f\"validation_flag: {validation_flag}\\n\")\n\n\n    #Since WF has all the parameters from our mapping, we are proceeding to build payload and send it out to SNOW.\n    snow_payload = []\n\n    #build Data Model\n    data_model = []\n    for i in list(WF_variable_mapping[key]['variables'].items()):\n        # print(i,'\\n')\n        variable_body = {\n            \"name\": i[0]\n        }\n        for j in i[1]:\n            variable_body[j] = i[1][j]\n\n        #get default values for each item\n        for k in WF_Details.get('variables'):\n            if k.get('properties').get('name') == i[0]:\n                variable_body['default'] =  str(k.get('properties').get('value'))\n        # print(variable_body, '\\n')\n        # variable_body = json.dumps(variable_body)\n        data_model.append(variable_body)\n\n    #build the body for payload\n    body  = {\n        \"workflow_version\": WF_variable_mapping[key]['flow_version'],\n        \"workflow_name\": WF_variable_mapping[key]['flow_name'],\n        \"bpmn_flow_url\": \"https://securex-ao.us.security.cisco.com/orch-ui/workflow/$activity.definition_activity_01UVYZX2P9W5D1Tc7khXTBU0hC1ObJVK1Dy.output.script_queries.WF_ID $/\",\n        \"workflow_source\": \"SXO\",\n        \"short_description\": WF_variable_mapping[key]['description'],\n        \"data_model\": data_model\n             }\n    # body = json.dumps(body)\n    snow_payload.append(body)\n    snow_payload = json.dumps(snow_payload)\n\n    print(snow_payload)\nexcept:\n    import traceback\n    snow_payload = None\n    print(f\" The WF name is : {key} \\n The WF ID is : {wf_id} \\n BYPASSING THIS WF\")\n    traceback.print_exc()",
                   "script_queries": [
                     {
                       "script_query": "snow_payload",
@@ -564,6 +501,23 @@
     ]
   },
   "targets": {
+    "definition_target_01RX4ZJ0H92PS4f0BjXYMjakrJE8ZaVLA85": {
+      "unique_name": "definition_target_01RX4ZJ0H92PS4f0BjXYMjakrJE8ZaVLA85",
+      "name": "CTR_API",
+      "title": "CTR API Target",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "Target used to invoke iroh endpoints",
+        "disable_certificate_validation": false,
+        "display_name": "CTR_API",
+        "host": "visibility.amp.cisco.com",
+        "no_runtime_user": true,
+        "path": "/iroh",
+        "protocol": "https"
+      }
+    },
     "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z": {
       "unique_name": "definition_target_01SZ4G12LO9DB2RjFTOseq4YBUJ5uNfOV8Z",
       "name": "Parnit_snow",
@@ -581,59 +535,23 @@
         "path": "/api",
         "protocol": "https"
       }
-    },
-    "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q": {
-      "unique_name": "definition_target_01UTER1LIYGSY2WPRysCMCOQ6KFBMXFbW2q",
-      "name": "AMP visibility Target",
-      "title": "AMP visibility Target",
-      "type": "web-service.endpoint",
-      "base_type": "target",
-      "object_type": "definition_target",
-      "properties": {
-        "default_runtime_user_id": "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek",
-        "description": "Used to create a Bearer Token, which helps in creation of JWT Token",
-        "disable_certificate_validation": false,
-        "display_name": "AMP visibility Target",
-        "host": "visibility.amp.cisco.com",
-        "ignore_proxy": true,
-        "no_runtime_user": false,
-        "protocol": "https"
-      }
-    },
-    "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2": {
-      "unique_name": "definition_target_01UUENP9X7OGC0lpKxw3KOYSN0nIYBAN1m2",
-      "name": "JWT Token Target",
-      "title": "JWT Token Target",
-      "type": "web-service.endpoint",
-      "base_type": "target",
-      "object_type": "definition_target",
-      "properties": {
-        "disable_certificate_validation": false,
-        "display_name": "JWT Token Target",
-        "host": "visibility.amp.cisco.com",
-        "ignore_proxy": true,
-        "no_runtime_user": true,
-        "protocol": "https"
-      }
-    },
-    "definition_target_01UV4C1GXD6NY6g49lWnTew67G1E0UXnIdu": {
-      "unique_name": "definition_target_01UV4C1GXD6NY6g49lWnTew67G1E0UXnIdu",
-      "name": "Get workflow Details",
-      "title": "Get workflow Details",
-      "type": "web-service.endpoint",
-      "base_type": "target",
-      "object_type": "definition_target",
-      "properties": {
-        "disable_certificate_validation": false,
-        "display_name": "Get workflow Details",
-        "host": "securex-ao.us.security.cisco.com",
-        "ignore_proxy": true,
-        "no_runtime_user": true,
-        "protocol": "https"
-      }
     }
   },
   "runtime_users": {
+    "definition_runtime_user_01NDTZXG9G7M25msWDVbAjcxdTcYKtdvG8b": {
+      "unique_name": "definition_runtime_user_01NDTZXG9G7M25msWDVbAjcxdTcYKtdvG8b",
+      "name": "CTR Admin",
+      "title": "CTR Admin",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "CTR Admin"
+      }
+    },
     "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28": {
       "unique_name": "definition_runtime_user_01SZ4EHBD2VTX7YPKzrON3HE6nU25PlSw28",
       "name": "parnit_snow_ve",
@@ -646,21 +564,6 @@
         "basic_password": "*****",
         "basic_username": "*****",
         "display_name": "parnit_snow_ve"
-      }
-    },
-    "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek": {
-      "unique_name": "definition_runtime_user_01UTEP6T0ZLC71sYoIyPFAmbZFYbdLg3pek",
-      "name": "AMP Visibility Endpoint Creds",
-      "title": "AMP Visibility Endpoint Creds",
-      "type": "runtime_user.web-service_basic_credentials",
-      "base_type": "runtime_user",
-      "object_type": "definition_runtime_user",
-      "properties": {
-        "auth_option": "*****",
-        "basic_password": "*****",
-        "basic_username": "*****",
-        "description": "This is used to create a bearer token, which helps in creation of JWT Token",
-        "display_name": "AMP Visibility Endpoint Creds"
       }
     }
   }
