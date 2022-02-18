@@ -9,14 +9,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "Device Unreachable",
           "scope": "local",
-          "name": "snmp_output",
+          "name": "Flow Name",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
+        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
         "object_type": "variable_workflow"
       },
       {
@@ -24,12 +24,25 @@
         "properties": {
           "value": 6,
           "scope": "local",
-          "name": "wait_timer_fail_minute",
+          "name": "chronics_time",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
+        "unique_name": "variable_workflow_01UOLEYSFS9AG54zrfb7eJNXvOypKc4pLqZ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "days",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLFC8ODYKG33ES1N0R1X2Pwg7pvOEiBD",
         "object_type": "variable_workflow"
       },
       {
@@ -37,51 +50,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "icmp_output",
+          "name": "low_pri_device_category_list",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "loop_check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "max_check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait_timer_fail",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLIWBLLQYC40BAZHNtLhF5XC9h1GE35H",
+        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
         "object_type": "variable_workflow"
       },
       {
@@ -100,53 +74,27 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "days",
-          "scope": "local",
-          "name": "chronics_time_unit",
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
           "type": "datatype.string",
-          "is_required": false,
+          "is_required": true,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLFC8ODYKG33ES1N0R1X2Pwg7pvOEiBD",
+        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 300,
           "scope": "local",
-          "name": "wait_timer_pass_minute",
+          "name": "wait_timer_fail",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 2,
-          "scope": "local",
-          "name": "p1_p2_max_check_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4YWU5762R07cAphMPvzIC8p4PaQNokhy",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Device Unreachable",
-          "scope": "local",
-          "name": "Flow Name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa",
+        "unique_name": "variable_workflow_01UOLIWBLLQYC40BAZHNtLhF5XC9h1GE35H",
         "object_type": "variable_workflow"
       },
       {
@@ -167,25 +115,64 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "sshStatus",
+          "name": "snmp_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI",
+        "unique_name": "variable_workflow_01U5QBR3HCSQG21qOAkXsTS2A2n5JkKYFUz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "count_chronic_events",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_pass_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer_pass",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "False",
           "scope": "local",
-          "name": "snmpStatus",
+          "name": "Enrichment",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
         "object_type": "variable_workflow"
       },
       {
@@ -206,168 +193,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "ssh_output",
+          "name": "sshStatus",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "impactingReboot",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "low_pri_device_category_list",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLHHCPUT4L2SLrknuYA0X8BFP11oSx3l",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait_timer_pass",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLJD7X2UD04oCSVVgQD5Q2QmTJPnY4vN",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "low_cat_pri_connectivity",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UUHCST64RWR4Jb5pu3y2Dk9Hz1uMFmjk2",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "company_account",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01V0MQV6XHENZ3bJT2Ba3fqLM1YZqiRamo4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_Pass_test",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "False",
-          "scope": "local",
-          "name": "Enrichment",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U4ZU2BQDVSA03ae6ZqloZOTnYeUKgkNzb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "Hold_Timer_Fail_test",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLG4LMIEGX7JfhoXVqY34KaNXiJyy1mr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 6,
-          "scope": "local",
-          "name": "chronics_time",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLEYSFS9AG54zrfb7eJNXvOypKc4pLqZ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "0",
-          "scope": "local",
-          "name": "closed_review_timer",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "reloadReason",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UOMSL79ELUZ4yr415GRoIPGUd05RwS5t4",
+        "unique_name": "variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI",
         "object_type": "variable_workflow"
       },
       {
@@ -388,12 +219,181 @@
         "properties": {
           "value": 5,
           "scope": "local",
-          "name": "count_chronic_events",
+          "name": "Hold_Timer_Pass_test",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UOLEQN91CXF5W001VwkENgmtSCOKLG8Ks",
+        "unique_name": "variable_workflow_01UOLGRK8EQBX6qqsQpFT8g4I8C05CWXIsB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "0",
+          "scope": "local",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLFKE9KNQZ6x2ZRx0IdgseWbaGM6l2Bj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "max_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "Hold_Timer_Fail_test",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLG4LMIEGX7JfhoXVqY34KaNXiJyy1mr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "low_cat_pri_connectivity",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UUHCST64RWR4Jb5pu3y2Dk9Hz1uMFmjk2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "reloadReason",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QH7KEPIL53fka1fnZlv24XdcJ0RIptX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_fail_minute",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UOLJ62A7MIK1CbRZacn7joArvvD26f37w",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "impactingReboot",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QGLF7CWE20EH8UpTQbvUJATLPUqJ5OY",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "snmpStatus",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "ssh_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QBK4LDFF736SbTkKzJ9D6fFmRjdLGSc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "loop_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4SNYKUUEVK1UOFH4WG4CPtoWApe08FxR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 2,
+          "scope": "local",
+          "name": "p1_p2_max_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U4YWU5762R07cAphMPvzIC8p4PaQNokhy",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "company_account",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01V0MQV6XHENZ3bJT2Ba3fqLM1YZqiRamo4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "icmp_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5QBFPX34GO1BpWbpEqI8FyPkNC0LBiJJ",
         "object_type": "variable_workflow"
       }
     ],
@@ -1038,17 +1038,9 @@
             "base_type": "activity",
             "properties": {
               "condition": {
-                "left_operand": {
-                  "left_operand": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                  "operator": "eq",
-                  "right_operand": "SUCCESS"
-                },
-                "operator": "and",
-                "right_operand": {
-                  "left_operand": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                  "operator": "eq",
-                  "right_operand": "False"
-                }
+                "left_operand": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                "operator": "eq",
+                "right_operand": "SUCCESS"
               },
               "continue_on_failure": false,
               "display_name": "Success",
@@ -1168,74 +1160,6 @@
               },
               {
                 "unique_name": "definition_activity_01UUFSBEIRXQ82xmwUCvUTpRYxDrK89d8X4",
-                "name": "Completed",
-                "title": "END",
-                "type": "logic.completed",
-                "base_type": "activity",
-                "properties": {
-                  "completion_type": "succeeded",
-                  "continue_on_failure": false,
-                  "display_name": "END",
-                  "result_message": "Success",
-                  "skip_execution": false
-                },
-                "object_type": "definition_activity"
-              }
-            ]
-          },
-          {
-            "unique_name": "definition_activity_01UUFZUOA0BT81pNeFa0cHLkEFtxx6xXHka",
-            "name": "Condition Branch",
-            "title": "Else",
-            "type": "logic.condition_block",
-            "base_type": "activity",
-            "properties": {
-              "condition": {
-                "left_operand": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                "operator": "ne",
-                "right_operand": "False"
-              },
-              "continue_on_failure": false,
-              "display_name": "Else",
-              "skip_execution": false
-            },
-            "object_type": "definition_activity",
-            "actions": [
-              {
-                "unique_name": "definition_activity_01UUG08VMVAFO6RdgDksHd2BfD92CN9LfP0",
-                "name": "VE - Snow Incident Escalate to delivery",
-                "title": "VE - Snow Incident Escalate to delivery",
-                "type": "workflow.atomic_workflow",
-                "base_type": "subworkflow",
-                "properties": {
-                  "continue_on_failure": false,
-                  "display_name": "VE - Snow Incident Escalate to delivery",
-                  "input": {
-                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UTQ09N78UE43oudAS2dn2I6xeyuuQKRDW.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                  },
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "use_workflow_target_group": true
-                  },
-                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01UUG0CO6KWKS0UeGzNhdhVh0GbfpBHcVia",
                 "name": "Completed",
                 "title": "END",
                 "type": "logic.completed",
@@ -1755,17 +1679,9 @@
                                             "base_type": "activity",
                                             "properties": {
                                               "condition": {
-                                                "left_operand": {
-                                                  "left_operand": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                  "operator": "eq",
-                                                  "right_operand": "SUCCESS"
-                                                },
-                                                "operator": "and",
-                                                "right_operand": {
-                                                  "left_operand": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                  "operator": "eq",
-                                                  "right_operand": "False"
-                                                }
+                                                "left_operand": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                "operator": "eq",
+                                                "right_operand": "SUCCESS"
                                               },
                                               "continue_on_failure": false,
                                               "display_name": "Success",
@@ -1893,74 +1809,6 @@
                                               },
                                               {
                                                 "unique_name": "definition_activity_01UUGX7JHUQZ87TzogEM1GC11PNrFbDiYrz",
-                                                "name": "Completed",
-                                                "title": "END",
-                                                "type": "logic.completed",
-                                                "base_type": "activity",
-                                                "properties": {
-                                                  "completion_type": "succeeded",
-                                                  "continue_on_failure": false,
-                                                  "display_name": "END",
-                                                  "result_message": "Success",
-                                                  "skip_execution": false
-                                                },
-                                                "object_type": "definition_activity"
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "unique_name": "definition_activity_01UUGX7JHVCX50D5r0mUnXyq6H88LZr5vaE",
-                                            "name": "Condition Branch",
-                                            "title": "Else",
-                                            "type": "logic.condition_block",
-                                            "base_type": "activity",
-                                            "properties": {
-                                              "condition": {
-                                                "left_operand": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                "operator": "ne",
-                                                "right_operand": "False"
-                                              },
-                                              "continue_on_failure": false,
-                                              "display_name": "Else",
-                                              "skip_execution": false
-                                            },
-                                            "object_type": "definition_activity",
-                                            "actions": [
-                                              {
-                                                "unique_name": "definition_activity_01UUGX7JHXH1O48hdPwPN5eMkGjoca68vjZ",
-                                                "name": "VE - Snow Incident Escalate to delivery",
-                                                "title": "VE - Snow Incident Escalate to delivery",
-                                                "type": "workflow.atomic_workflow",
-                                                "base_type": "subworkflow",
-                                                "properties": {
-                                                  "continue_on_failure": false,
-                                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                                  "input": {
-                                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUGX2P7RIMQ1PssObsZZWg1Vw0AtEJVKk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                  },
-                                                  "runtime_user": {
-                                                    "target_default": true
-                                                  },
-                                                  "skip_execution": false,
-                                                  "target": {
-                                                    "use_workflow_target_group": true
-                                                  },
-                                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                },
-                                                "object_type": "definition_activity"
-                                              },
-                                              {
-                                                "unique_name": "definition_activity_01UUGX7JI0C2V5Q2SKLex42MO2dOacq6e1e",
                                                 "name": "Completed",
                                                 "title": "END",
                                                 "type": "logic.completed",
@@ -2276,17 +2124,9 @@
                                                     "base_type": "activity",
                                                     "properties": {
                                                       "condition": {
-                                                        "left_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                          "operator": "eq",
-                                                          "right_operand": "SUCCESS"
-                                                        },
-                                                        "operator": "and",
-                                                        "right_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                          "operator": "eq",
-                                                          "right_operand": "False"
-                                                        }
+                                                        "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                        "operator": "eq",
+                                                        "right_operand": "SUCCESS"
                                                       },
                                                       "continue_on_failure": false,
                                                       "display_name": "Success",
@@ -2414,74 +2254,6 @@
                                                       },
                                                       {
                                                         "unique_name": "definition_activity_01UUJRCVL31026WqAjgWLH7pZon55hj79GN",
-                                                        "name": "Completed",
-                                                        "title": "END",
-                                                        "type": "logic.completed",
-                                                        "base_type": "activity",
-                                                        "properties": {
-                                                          "completion_type": "succeeded",
-                                                          "continue_on_failure": false,
-                                                          "display_name": "END",
-                                                          "result_message": "Success",
-                                                          "skip_execution": false
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "unique_name": "definition_activity_01UUJRCVL3LY44lBPosgEzpBHDYAq9gxfYK",
-                                                    "name": "Condition Branch",
-                                                    "title": "Else",
-                                                    "type": "logic.condition_block",
-                                                    "base_type": "activity",
-                                                    "properties": {
-                                                      "condition": {
-                                                        "left_operand": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                        "operator": "ne",
-                                                        "right_operand": "False"
-                                                      },
-                                                      "continue_on_failure": false,
-                                                      "display_name": "Else",
-                                                      "skip_execution": false
-                                                    },
-                                                    "object_type": "definition_activity",
-                                                    "actions": [
-                                                      {
-                                                        "unique_name": "definition_activity_01UUJRCVL625Q2FLFhzHL5xO04g2GKouHR0",
-                                                        "name": "VE - Snow Incident Escalate to delivery",
-                                                        "title": "VE - Snow Incident Escalate to delivery",
-                                                        "type": "workflow.atomic_workflow",
-                                                        "base_type": "subworkflow",
-                                                        "properties": {
-                                                          "continue_on_failure": false,
-                                                          "display_name": "VE - Snow Incident Escalate to delivery",
-                                                          "input": {
-                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUJR2I773ST0jw0eHwsYrsWvkgp7U41dU.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                          },
-                                                          "runtime_user": {
-                                                            "target_default": true
-                                                          },
-                                                          "skip_execution": false,
-                                                          "target": {
-                                                            "use_workflow_target_group": true
-                                                          },
-                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      },
-                                                      {
-                                                        "unique_name": "definition_activity_01UUJRCVL8Z9J0LIrkkOkS9KUBx8Lpw0YJ6",
                                                         "name": "Completed",
                                                         "title": "END",
                                                         "type": "logic.completed",
@@ -2771,7 +2543,7 @@
                                   "action_timeout": 180,
                                   "continue_on_failure": false,
                                   "display_name": "Set Connectivity Test Result",
-                                  "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = ''\ncustomer = ''\ndevice_name = ''\nincident_number = ''\nevent_message = ''\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
+                                  "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4$'\ncustomer = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$'\ndevice_name = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$'\nincident_number = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$'\nevent_message = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$'\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
                                   "script_queries": [
                                     {
                                       "script_query": "work_notes",
@@ -3045,17 +2817,9 @@
                             "base_type": "activity",
                             "properties": {
                               "condition": {
-                                "left_operand": {
-                                  "left_operand": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                  "operator": "eq",
-                                  "right_operand": "SUCCESS"
-                                },
-                                "operator": "and",
-                                "right_operand": {
-                                  "left_operand": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                  "operator": "eq",
-                                  "right_operand": "False"
-                                }
+                                "left_operand": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                "operator": "eq",
+                                "right_operand": "SUCCESS"
                               },
                               "continue_on_failure": false,
                               "display_name": "Success",
@@ -3203,74 +2967,6 @@
                               },
                               {
                                 "unique_name": "definition_activity_01UUFY1VXVCG863tsYdTXIQvN4oCRDAF4IZ",
-                                "name": "Completed",
-                                "title": "END",
-                                "type": "logic.completed",
-                                "base_type": "activity",
-                                "properties": {
-                                  "completion_type": "succeeded",
-                                  "continue_on_failure": false,
-                                  "display_name": "END",
-                                  "result_message": "Success",
-                                  "skip_execution": false
-                                },
-                                "object_type": "definition_activity"
-                              }
-                            ]
-                          },
-                          {
-                            "unique_name": "definition_activity_01UUG1LHL7BVJ0PUyvsietYoosadBqnDfHS",
-                            "name": "Condition Branch",
-                            "title": "Else",
-                            "type": "logic.condition_block",
-                            "base_type": "activity",
-                            "properties": {
-                              "condition": {
-                                "left_operand": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                "operator": "ne",
-                                "right_operand": "False"
-                              },
-                              "continue_on_failure": false,
-                              "display_name": "Else",
-                              "skip_execution": false
-                            },
-                            "object_type": "definition_activity",
-                            "actions": [
-                              {
-                                "unique_name": "definition_activity_01UUG1XXBGAC15wHC8tk0qm8z26ajHxlUH9",
-                                "name": "VE - Snow Incident Escalate to delivery",
-                                "title": "VE - Snow Incident Escalate to delivery",
-                                "type": "workflow.atomic_workflow",
-                                "base_type": "subworkflow",
-                                "properties": {
-                                  "continue_on_failure": false,
-                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                  "input": {
-                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUFXT3JEXNI3WC0UHGyWFLYy7YaEL4LWD.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                  },
-                                  "runtime_user": {
-                                    "target_default": true
-                                  },
-                                  "skip_execution": false,
-                                  "target": {
-                                    "use_workflow_target_group": true
-                                  },
-                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                },
-                                "object_type": "definition_activity"
-                              },
-                              {
-                                "unique_name": "definition_activity_01UUG20U9LGPT1xHO83p94AwailHSe03NkG",
                                 "name": "Completed",
                                 "title": "END",
                                 "type": "logic.completed",
@@ -3668,17 +3364,9 @@
                                                     "base_type": "activity",
                                                     "properties": {
                                                       "condition": {
-                                                        "left_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                          "operator": "eq",
-                                                          "right_operand": "SUCCESS"
-                                                        },
-                                                        "operator": "and",
-                                                        "right_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                          "operator": "eq",
-                                                          "right_operand": "False"
-                                                        }
+                                                        "left_operand": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                        "operator": "eq",
+                                                        "right_operand": "SUCCESS"
                                                       },
                                                       "continue_on_failure": false,
                                                       "display_name": "Success",
@@ -3826,74 +3514,6 @@
                                                       },
                                                       {
                                                         "unique_name": "definition_activity_01UUH1S46QMNE209JYXW2VwE8XbG2dXmGSV",
-                                                        "name": "Completed",
-                                                        "title": "END",
-                                                        "type": "logic.completed",
-                                                        "base_type": "activity",
-                                                        "properties": {
-                                                          "completion_type": "succeeded",
-                                                          "continue_on_failure": false,
-                                                          "display_name": "END",
-                                                          "result_message": "Success",
-                                                          "skip_execution": false
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "unique_name": "definition_activity_01UUH1S46R7RU4v79Gw9jDSfFoFga7ZLnhf",
-                                                    "name": "Condition Branch",
-                                                    "title": "Else",
-                                                    "type": "logic.condition_block",
-                                                    "base_type": "activity",
-                                                    "properties": {
-                                                      "condition": {
-                                                        "left_operand": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                        "operator": "ne",
-                                                        "right_operand": "False"
-                                                      },
-                                                      "continue_on_failure": false,
-                                                      "display_name": "Else",
-                                                      "skip_execution": false
-                                                    },
-                                                    "object_type": "definition_activity",
-                                                    "actions": [
-                                                      {
-                                                        "unique_name": "definition_activity_01UUH1S46U3IF7G3aoZWRWmwvSUASWoYPh2",
-                                                        "name": "VE - Snow Incident Escalate to delivery",
-                                                        "title": "VE - Snow Incident Escalate to delivery",
-                                                        "type": "workflow.atomic_workflow",
-                                                        "base_type": "subworkflow",
-                                                        "properties": {
-                                                          "continue_on_failure": false,
-                                                          "display_name": "VE - Snow Incident Escalate to delivery",
-                                                          "input": {
-                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUH1KLXQFQW0nkQHyoaSC3YZy2sfeV6f5.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                          },
-                                                          "runtime_user": {
-                                                            "target_default": true
-                                                          },
-                                                          "skip_execution": false,
-                                                          "target": {
-                                                            "use_workflow_target_group": true
-                                                          },
-                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      },
-                                                      {
-                                                        "unique_name": "definition_activity_01UUH1S46XRTZ6jngXk4E6Tj4Hq3gpfyLU4",
                                                         "name": "Completed",
                                                         "title": "END",
                                                         "type": "logic.completed",
@@ -4209,17 +3829,9 @@
                                                             "base_type": "activity",
                                                             "properties": {
                                                               "condition": {
-                                                                "left_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "SUCCESS"
-                                                                },
-                                                                "operator": "and",
-                                                                "right_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "False"
-                                                                }
+                                                                "left_operand": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                                "operator": "eq",
+                                                                "right_operand": "SUCCESS"
                                                               },
                                                               "continue_on_failure": false,
                                                               "display_name": "Success",
@@ -4367,74 +3979,6 @@
                                                               },
                                                               {
                                                                 "unique_name": "definition_activity_01UUH5OFHAFKM0Qf5aoNGLPUbe8NwHTEssP",
-                                                                "name": "Completed",
-                                                                "title": "END",
-                                                                "type": "logic.completed",
-                                                                "base_type": "activity",
-                                                                "properties": {
-                                                                  "completion_type": "succeeded",
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "END",
-                                                                  "result_message": "Success",
-                                                                  "skip_execution": false
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              }
-                                                            ]
-                                                          },
-                                                          {
-                                                            "unique_name": "definition_activity_01UUH5OFHB5052ZUEIOEgBrRADed2fOBYH3",
-                                                            "name": "Condition Branch",
-                                                            "title": "Else",
-                                                            "type": "logic.condition_block",
-                                                            "base_type": "activity",
-                                                            "properties": {
-                                                              "condition": {
-                                                                "left_operand": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                "operator": "ne",
-                                                                "right_operand": "False"
-                                                              },
-                                                              "continue_on_failure": false,
-                                                              "display_name": "Else",
-                                                              "skip_execution": false
-                                                            },
-                                                            "object_type": "definition_activity",
-                                                            "actions": [
-                                                              {
-                                                                "unique_name": "definition_activity_01UUH5OFHDQYM2LdJSZ2f1TMjhRt3vS9FwZ",
-                                                                "name": "VE - Snow Incident Escalate to delivery",
-                                                                "title": "VE - Snow Incident Escalate to delivery",
-                                                                "type": "workflow.atomic_workflow",
-                                                                "base_type": "subworkflow",
-                                                                "properties": {
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                                                  "input": {
-                                                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUH5I487JHY2OhMhzJwR6kSW8DfNXL1Qy.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                                  },
-                                                                  "runtime_user": {
-                                                                    "target_default": true
-                                                                  },
-                                                                  "skip_execution": false,
-                                                                  "target": {
-                                                                    "use_workflow_target_group": true
-                                                                  },
-                                                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              },
-                                                              {
-                                                                "unique_name": "definition_activity_01UUH5OFHI5701fRMmF9TshsXFnNeaHWraZ",
                                                                 "name": "Completed",
                                                                 "title": "END",
                                                                 "type": "logic.completed",
@@ -5002,7 +4546,7 @@
                                   "action_timeout": 180,
                                   "continue_on_failure": false,
                                   "display_name": "Set Connectivity Test Result",
-                                  "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = ''\ncustomer = ''\ndevice_name = ''\nincident_number = ''\nevent_message = ''\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
+                                  "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4$'\ncustomer = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$'\ndevice_name = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$'\nincident_number = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$'\nevent_message = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$'\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
                                   "script_queries": [
                                     {
                                       "script_query": "work_notes",
@@ -5276,17 +4820,9 @@
                             "base_type": "activity",
                             "properties": {
                               "condition": {
-                                "left_operand": {
-                                  "left_operand": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                  "operator": "eq",
-                                  "right_operand": "SUCCESS"
-                                },
-                                "operator": "and",
-                                "right_operand": {
-                                  "left_operand": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                  "operator": "eq",
-                                  "right_operand": "False"
-                                }
+                                "left_operand": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                "operator": "eq",
+                                "right_operand": "SUCCESS"
                               },
                               "continue_on_failure": false,
                               "display_name": "Success",
@@ -5434,74 +4970,6 @@
                               },
                               {
                                 "unique_name": "definition_activity_01UUHEUBMDWXD6AsG6tPm2vDy75DEPugXax",
-                                "name": "Completed",
-                                "title": "END",
-                                "type": "logic.completed",
-                                "base_type": "activity",
-                                "properties": {
-                                  "completion_type": "succeeded",
-                                  "continue_on_failure": false,
-                                  "display_name": "END",
-                                  "result_message": "Success",
-                                  "skip_execution": false
-                                },
-                                "object_type": "definition_activity"
-                              }
-                            ]
-                          },
-                          {
-                            "unique_name": "definition_activity_01UUHEUBMEJIJ0xyrOPwiM8L57WMRTcawqW",
-                            "name": "Condition Branch",
-                            "title": "Else",
-                            "type": "logic.condition_block",
-                            "base_type": "activity",
-                            "properties": {
-                              "condition": {
-                                "left_operand": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                "operator": "ne",
-                                "right_operand": "False"
-                              },
-                              "continue_on_failure": false,
-                              "display_name": "Else",
-                              "skip_execution": false
-                            },
-                            "object_type": "definition_activity",
-                            "actions": [
-                              {
-                                "unique_name": "definition_activity_01UUHEUBMGVIX1SZU9uQ5MZr8rcfqRIuJw1",
-                                "name": "VE - Snow Incident Escalate to delivery",
-                                "title": "VE - Snow Incident Escalate to delivery",
-                                "type": "workflow.atomic_workflow",
-                                "base_type": "subworkflow",
-                                "properties": {
-                                  "continue_on_failure": false,
-                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                  "input": {
-                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUHELN3QDSV33kQJjYhcVJy6teYD3JQEk.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                  },
-                                  "runtime_user": {
-                                    "target_default": true
-                                  },
-                                  "skip_execution": false,
-                                  "target": {
-                                    "use_workflow_target_group": true
-                                  },
-                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                },
-                                "object_type": "definition_activity"
-                              },
-                              {
-                                "unique_name": "definition_activity_01UUHEUBMJTLM5Sgrep7hCh5vchFyDOSOcO",
                                 "name": "Completed",
                                 "title": "END",
                                 "type": "logic.completed",
@@ -5899,17 +5367,9 @@
                                                     "base_type": "activity",
                                                     "properties": {
                                                       "condition": {
-                                                        "left_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                          "operator": "eq",
-                                                          "right_operand": "SUCCESS"
-                                                        },
-                                                        "operator": "and",
-                                                        "right_operand": {
-                                                          "left_operand": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                          "operator": "eq",
-                                                          "right_operand": "False"
-                                                        }
+                                                        "left_operand": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                        "operator": "eq",
+                                                        "right_operand": "SUCCESS"
                                                       },
                                                       "continue_on_failure": false,
                                                       "display_name": "Success",
@@ -6057,74 +5517,6 @@
                                                       },
                                                       {
                                                         "unique_name": "definition_activity_01UUHPG0YMM9N1MGesApaL2bgArQM0XiAEa",
-                                                        "name": "Completed",
-                                                        "title": "END",
-                                                        "type": "logic.completed",
-                                                        "base_type": "activity",
-                                                        "properties": {
-                                                          "completion_type": "succeeded",
-                                                          "continue_on_failure": false,
-                                                          "display_name": "END",
-                                                          "result_message": "Success",
-                                                          "skip_execution": false
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "unique_name": "definition_activity_01UUHPG0YO3UB52q2478OuzzhjNavXpN4Gr",
-                                                    "name": "Condition Branch",
-                                                    "title": "Else",
-                                                    "type": "logic.condition_block",
-                                                    "base_type": "activity",
-                                                    "properties": {
-                                                      "condition": {
-                                                        "left_operand": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                        "operator": "ne",
-                                                        "right_operand": "False"
-                                                      },
-                                                      "continue_on_failure": false,
-                                                      "display_name": "Else",
-                                                      "skip_execution": false
-                                                    },
-                                                    "object_type": "definition_activity",
-                                                    "actions": [
-                                                      {
-                                                        "unique_name": "definition_activity_01UUHPG0YSVNL4EDehHGtZ8T2HQ9eC11zOt",
-                                                        "name": "VE - Snow Incident Escalate to delivery",
-                                                        "title": "VE - Snow Incident Escalate to delivery",
-                                                        "type": "workflow.atomic_workflow",
-                                                        "base_type": "subworkflow",
-                                                        "properties": {
-                                                          "continue_on_failure": false,
-                                                          "display_name": "VE - Snow Incident Escalate to delivery",
-                                                          "input": {
-                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUHP99VQTZU6Od9OxuUoDDg3Qn7c7fBHb.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                          },
-                                                          "runtime_user": {
-                                                            "target_default": true
-                                                          },
-                                                          "skip_execution": false,
-                                                          "target": {
-                                                            "use_workflow_target_group": true
-                                                          },
-                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                        },
-                                                        "object_type": "definition_activity"
-                                                      },
-                                                      {
-                                                        "unique_name": "definition_activity_01UUHPG0YTQF1000GgOx0azF6MCb6z86D8N",
                                                         "name": "Completed",
                                                         "title": "END",
                                                         "type": "logic.completed",
@@ -6440,17 +5832,9 @@
                                                             "base_type": "activity",
                                                             "properties": {
                                                               "condition": {
-                                                                "left_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "SUCCESS"
-                                                                },
-                                                                "operator": "and",
-                                                                "right_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "False"
-                                                                }
+                                                                "left_operand": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                                "operator": "eq",
+                                                                "right_operand": "SUCCESS"
                                                               },
                                                               "continue_on_failure": false,
                                                               "display_name": "Success",
@@ -6598,74 +5982,6 @@
                                                               },
                                                               {
                                                                 "unique_name": "definition_activity_01UUHTL918YTN3OOJcw16Qx16NtpWJm0X4N",
-                                                                "name": "Completed",
-                                                                "title": "END",
-                                                                "type": "logic.completed",
-                                                                "base_type": "activity",
-                                                                "properties": {
-                                                                  "completion_type": "succeeded",
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "END",
-                                                                  "result_message": "Success",
-                                                                  "skip_execution": false
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              }
-                                                            ]
-                                                          },
-                                                          {
-                                                            "unique_name": "definition_activity_01UUHTL919R8V6IrrpSrcH0YMSJXC8YWWmG",
-                                                            "name": "Condition Branch",
-                                                            "title": "Else",
-                                                            "type": "logic.condition_block",
-                                                            "base_type": "activity",
-                                                            "properties": {
-                                                              "condition": {
-                                                                "left_operand": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                "operator": "ne",
-                                                                "right_operand": "False"
-                                                              },
-                                                              "continue_on_failure": false,
-                                                              "display_name": "Else",
-                                                              "skip_execution": false
-                                                            },
-                                                            "object_type": "definition_activity",
-                                                            "actions": [
-                                                              {
-                                                                "unique_name": "definition_activity_01UUHTL91D8JJ5Y7gmeG70uT3rct8ErFhnF",
-                                                                "name": "VE - Snow Incident Escalate to delivery",
-                                                                "title": "VE - Snow Incident Escalate to delivery",
-                                                                "type": "workflow.atomic_workflow",
-                                                                "base_type": "subworkflow",
-                                                                "properties": {
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                                                  "input": {
-                                                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUHTAENBAKU4O9Ka8FyDtfPl3ofU8P2FF.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                                  },
-                                                                  "runtime_user": {
-                                                                    "target_default": true
-                                                                  },
-                                                                  "skip_execution": false,
-                                                                  "target": {
-                                                                    "use_workflow_target_group": true
-                                                                  },
-                                                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              },
-                                                              {
-                                                                "unique_name": "definition_activity_01UUHTL91GZNR0Nj8lJxUSxNq5uTVQuiOJa",
                                                                 "name": "Completed",
                                                                 "title": "END",
                                                                 "type": "logic.completed",
@@ -6955,7 +6271,7 @@
                                           "action_timeout": 180,
                                           "continue_on_failure": false,
                                           "display_name": "Set Connectivity Test Result",
-                                          "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = ''\ncustomer = ''\ndevice_name = ''\nincident_number = ''\nevent_message = ''\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
+                                          "script": "import json\nsshstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J4PFDRB20e8isBtffu8M8WzqfkUecI$'\nsnmpstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50J8LTZ7X82N8cfRRVNuN5LmSdOdMUc5$'\npingstatus = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U50JCTJ62X47l4qENMJqtjVaohRtqmrm5$'\nsshstatus = 'Pass' if sshstatus == \"True\"  else 'Fail'\npingstatus = 'Pass' if pingstatus == \"True\"  else 'Fail'\nsnmpstatus = 'Pass' if snmpstatus == \"True\"  else 'Fail'\nevent_id = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2WNVGIFP6aRjRs4IB5PgljyV7XUlMr$'\n\nconnectivity_result = f\"Connectivity Test Results:\\nSSH - {sshstatus}\\nSNMP - {snmpstatus}\\nICMP - {pingstatus}\\nEvent ID - {event_id}\"\n\n\nmax_check_counter = '$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4YWYC3P2023Gf3aGeLKsDkdJPilpTcf4$'\ncustomer = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$'\ndevice_name = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$'\nincident_number = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$'\nevent_message = '$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$'\ncurrent_status = 'We have determined that the device is currently reachable. We will check the device status again in $workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01UOLJKVUJP391YyuRcGxByusFMBINETSGz$ mins to confirm reachability. '\nnext_steps = f'Additional updates will follow shortly after analysis.'\n\nwork_notes = f'Hello {customer},\\r\\n\\r\\nDevice: {device_name}\\r\\nAlarm: {event_message}\\r\\nTicket Number: {incident_number}\\r\\n\\r\\nCurrent Status: {current_status}\\r\\n\\r\\nNext Steps: {next_steps}\\r\\n\\r\\n{connectivity_result}\\r\\n\\r\\nThank you,\\r\\nVirtual Engineer'\nwork_notes = json.dumps(work_notes).replace('\"','')",
                                           "script_queries": [
                                             {
                                               "script_query": "work_notes",
@@ -7229,17 +6545,9 @@
                                     "base_type": "activity",
                                     "properties": {
                                       "condition": {
-                                        "left_operand": {
-                                          "left_operand": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                          "operator": "eq",
-                                          "right_operand": "SUCCESS"
-                                        },
-                                        "operator": "and",
-                                        "right_operand": {
-                                          "left_operand": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                          "operator": "eq",
-                                          "right_operand": "False"
-                                        }
+                                        "left_operand": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                        "operator": "eq",
+                                        "right_operand": "SUCCESS"
                                       },
                                       "continue_on_failure": false,
                                       "display_name": "Success",
@@ -7387,74 +6695,6 @@
                                       },
                                       {
                                         "unique_name": "definition_activity_01UUHHZZIITR14txAOuHxYCS8f2MjBEA5bT",
-                                        "name": "Completed",
-                                        "title": "END",
-                                        "type": "logic.completed",
-                                        "base_type": "activity",
-                                        "properties": {
-                                          "completion_type": "succeeded",
-                                          "continue_on_failure": false,
-                                          "display_name": "END",
-                                          "result_message": "Success",
-                                          "skip_execution": false
-                                        },
-                                        "object_type": "definition_activity"
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "unique_name": "definition_activity_01UUHHZZIJETN3qkQq7BDch4zwIOd09Y8XH",
-                                    "name": "Condition Branch",
-                                    "title": "Else",
-                                    "type": "logic.condition_block",
-                                    "base_type": "activity",
-                                    "properties": {
-                                      "condition": {
-                                        "left_operand": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                        "operator": "ne",
-                                        "right_operand": "False"
-                                      },
-                                      "continue_on_failure": false,
-                                      "display_name": "Else",
-                                      "skip_execution": false
-                                    },
-                                    "object_type": "definition_activity",
-                                    "actions": [
-                                      {
-                                        "unique_name": "definition_activity_01UUHHZZILIH64qjs8UCs1OFtgKexGFJlLU",
-                                        "name": "VE - Snow Incident Escalate to delivery",
-                                        "title": "VE - Snow Incident Escalate to delivery",
-                                        "type": "workflow.atomic_workflow",
-                                        "base_type": "subworkflow",
-                                        "properties": {
-                                          "continue_on_failure": false,
-                                          "display_name": "VE - Snow Incident Escalate to delivery",
-                                          "input": {
-                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUHHSBEVPV10tr3mRXiYlQ9ScjFgo47xL.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                          },
-                                          "runtime_user": {
-                                            "target_default": true
-                                          },
-                                          "skip_execution": false,
-                                          "target": {
-                                            "use_workflow_target_group": true
-                                          },
-                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                        },
-                                        "object_type": "definition_activity"
-                                      },
-                                      {
-                                        "unique_name": "definition_activity_01UUHHZZIOFEV2yUlc0MzY4BChlhBFHSGGn",
                                         "name": "Completed",
                                         "title": "END",
                                         "type": "logic.completed",
@@ -7799,17 +7039,9 @@
                                                             "base_type": "activity",
                                                             "properties": {
                                                               "condition": {
-                                                                "left_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "SUCCESS"
-                                                                },
-                                                                "operator": "and",
-                                                                "right_operand": {
-                                                                  "left_operand": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                  "operator": "eq",
-                                                                  "right_operand": "False"
-                                                                }
+                                                                "left_operand": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                                "operator": "eq",
+                                                                "right_operand": "SUCCESS"
                                                               },
                                                               "continue_on_failure": false,
                                                               "display_name": "Success",
@@ -7957,74 +7189,6 @@
                                                               },
                                                               {
                                                                 "unique_name": "definition_activity_01UUHZI0SM1DT0IbuWrTzcEiveIEh7N0nZy",
-                                                                "name": "Completed",
-                                                                "title": "END",
-                                                                "type": "logic.completed",
-                                                                "base_type": "activity",
-                                                                "properties": {
-                                                                  "completion_type": "succeeded",
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "END",
-                                                                  "result_message": "Success",
-                                                                  "skip_execution": false
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              }
-                                                            ]
-                                                          },
-                                                          {
-                                                            "unique_name": "definition_activity_01UUHZI0SMN7P2mWTZ2vHqsujNX2k1XBTgy",
-                                                            "name": "Condition Branch",
-                                                            "title": "Else",
-                                                            "type": "logic.condition_block",
-                                                            "base_type": "activity",
-                                                            "properties": {
-                                                              "condition": {
-                                                                "left_operand": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                "operator": "ne",
-                                                                "right_operand": "False"
-                                                              },
-                                                              "continue_on_failure": false,
-                                                              "display_name": "Else",
-                                                              "skip_execution": false
-                                                            },
-                                                            "object_type": "definition_activity",
-                                                            "actions": [
-                                                              {
-                                                                "unique_name": "definition_activity_01UUHZI0SOX033gAja9RQHFf41pW0pq5ir1",
-                                                                "name": "VE - Snow Incident Escalate to delivery",
-                                                                "title": "VE - Snow Incident Escalate to delivery",
-                                                                "type": "workflow.atomic_workflow",
-                                                                "base_type": "subworkflow",
-                                                                "properties": {
-                                                                  "continue_on_failure": false,
-                                                                  "display_name": "VE - Snow Incident Escalate to delivery",
-                                                                  "input": {
-                                                                    "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                                    "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                                    "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                                    "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                                    "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                                    "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                                    "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                                    "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                                    "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                                    "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUHZ4C51PMR62D4yLbRy0GfcPT7kXN1D0.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                    "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                                  },
-                                                                  "runtime_user": {
-                                                                    "target_default": true
-                                                                  },
-                                                                  "skip_execution": false,
-                                                                  "target": {
-                                                                    "use_workflow_target_group": true
-                                                                  },
-                                                                  "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                                },
-                                                                "object_type": "definition_activity"
-                                                              },
-                                                              {
-                                                                "unique_name": "definition_activity_01UUHZI0SRVMP4cNUeB6HrAhN1gFml5X0Eh",
                                                                 "name": "Completed",
                                                                 "title": "END",
                                                                 "type": "logic.completed",
@@ -8340,17 +7504,9 @@
                                                                     "base_type": "activity",
                                                                     "properties": {
                                                                       "condition": {
-                                                                        "left_operand": {
-                                                                          "left_operand": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
-                                                                          "operator": "eq",
-                                                                          "right_operand": "SUCCESS"
-                                                                        },
-                                                                        "operator": "and",
-                                                                        "right_operand": {
-                                                                          "left_operand": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                          "operator": "eq",
-                                                                          "right_operand": "False"
-                                                                        }
+                                                                        "left_operand": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UTK02UWYEZ91x7t5t29cd3CszpF7xZMUU$",
+                                                                        "operator": "eq",
+                                                                        "right_operand": "SUCCESS"
                                                                       },
                                                                       "continue_on_failure": false,
                                                                       "display_name": "Success",
@@ -8498,74 +7654,6 @@
                                                                       },
                                                                       {
                                                                         "unique_name": "definition_activity_01UUI4FIJ57YH1Ad7kLHCXgWNox6QNkDv7t",
-                                                                        "name": "Completed",
-                                                                        "title": "END",
-                                                                        "type": "logic.completed",
-                                                                        "base_type": "activity",
-                                                                        "properties": {
-                                                                          "completion_type": "succeeded",
-                                                                          "continue_on_failure": false,
-                                                                          "display_name": "END",
-                                                                          "result_message": "Success",
-                                                                          "skip_execution": false
-                                                                        },
-                                                                        "object_type": "definition_activity"
-                                                                      }
-                                                                    ]
-                                                                  },
-                                                                  {
-                                                                    "unique_name": "definition_activity_01UUI4FIJ5RG20SD7FutBjN3ngP1bkGBn05",
-                                                                    "name": "Condition Branch",
-                                                                    "title": "Else",
-                                                                    "type": "logic.condition_block",
-                                                                    "base_type": "activity",
-                                                                    "properties": {
-                                                                      "condition": {
-                                                                        "left_operand": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                        "operator": "ne",
-                                                                        "right_operand": "False"
-                                                                      },
-                                                                      "continue_on_failure": false,
-                                                                      "display_name": "Else",
-                                                                      "skip_execution": false
-                                                                    },
-                                                                    "object_type": "definition_activity",
-                                                                    "actions": [
-                                                                      {
-                                                                        "unique_name": "definition_activity_01UUI4FIJ81MI0TXqo7NCdE08U7A4ok78ND",
-                                                                        "name": "VE - Snow Incident Escalate to delivery",
-                                                                        "title": "VE - Snow Incident Escalate to delivery",
-                                                                        "type": "workflow.atomic_workflow",
-                                                                        "base_type": "subworkflow",
-                                                                        "properties": {
-                                                                          "continue_on_failure": false,
-                                                                          "display_name": "VE - Snow Incident Escalate to delivery",
-                                                                          "input": {
-                                                                            "variable_workflow_01TB25YCTYA5S42qWJX6EK8i5bpZjkEKzEA": "$workflow.definition_workflow_01U4SNYKLCMDG70sw8a5czlJ2F30S9tkIkI.local.variable_workflow_01U4SNYKUU7ID4yUTEUSogk9uH6zGPbZcTa$",
-                                                                            "variable_workflow_01TB25YCTYLW62jq2PAXOtLux9qcfVVc68t": "0",
-                                                                            "variable_workflow_01TB25YCTYT7232YNzIMQ0u1UUvF4WiLKRa": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UUF1CRFQIIQ7PmWWRExVzYR30SXv4mkyn$",
-                                                                            "variable_workflow_01TB25YCTZ2LU2SAeQYVgk0zI4fbCJZWbfZ": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J48UFITC56oUtjQMEvh6Dbtxkwx7vdB$",
-                                                                            "variable_workflow_01TB25YCTZB083SXayJhB5pl7rnKL8PpZPd": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UUF16W5UE1R1XJQdzzb1DOYM2yr0MqsPe$",
-                                                                            "variable_workflow_01TB25YCTZKE915Z1vMlrGeukj4KDJACP2B": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
-                                                                            "variable_workflow_01TB25YCTZTGW1oLbAmUMhh3YhYOGgX6tYD": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$",
-                                                                            "variable_workflow_01TB25YCU02RI0AUWoy9FiJGmRpfrSQtxV4": "$activity.definition_activity_01U4SNYSHLVK60nOKy4kwhqPw54o5ZefdoV.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                                                                            "variable_workflow_01TB2BHVHJCMO692kJjB04et3AQSE3PItjd": "",
-                                                                            "variable_workflow_01TB2FRRLKRY906MuTbQ8xG5pggNoQaHQmI": "$activity.definition_activity_01UUI4BL3DC9D7GC4I0FK0JLsJ2Dgf25Vpu.output.variable_workflow_01UUF0ZOIXVJX518dmB0V1dDwHvWQEb3QX8$",
-                                                                            "variable_workflow_01U5XXMA5LO851x8S07sPNuEk9Tld2e1Sg0": ""
-                                                                          },
-                                                                          "runtime_user": {
-                                                                            "target_default": true
-                                                                          },
-                                                                          "skip_execution": false,
-                                                                          "target": {
-                                                                            "use_workflow_target_group": true
-                                                                          },
-                                                                          "workflow_id": "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg"
-                                                                        },
-                                                                        "object_type": "definition_activity"
-                                                                      },
-                                                                      {
-                                                                        "unique_name": "definition_activity_01UUI4FIJAZXW5vnbjELUb5WWjD5PCYyIiL",
                                                                         "name": "Completed",
                                                                         "title": "END",
                                                                         "type": "logic.completed",
@@ -9442,18 +8530,18 @@
     }
   },
   "atomic_workflows": [
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
     "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01U4UUTQVXK1M4uxcyVXvxd5QyU0ZilTbqn",
+    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc"
   ]
 }
