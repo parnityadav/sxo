@@ -247,6 +247,31 @@
         "object_type": "definition_activity"
       },
       {
+        "unique_name": "definition_activity_01VD815YZ55MZ3gKauOaEP9Qw1Lhmh6h37z",
+        "name": "HTTP Request",
+        "title": "Get Workflow Definition details from SNOW",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "Get Workflow Definition details from SNOW",
+          "method": "GET",
+          "relative_url": "/now/table/x_cims_cms_ve_ve_workflow_definition",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "use_workflow_target_group": true
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
         "unique_name": "definition_activity_01UVYQ15GK5LE7BJgXbzQc7g5kxtXe8llT0",
         "name": "While Loop",
         "title": "While Loop",
