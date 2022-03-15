@@ -7,29 +7,29 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
+          "value": 6,
+          "scope": "local",
+          "name": "wait_timer_minute",
+          "type": "datatype.integer",
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USIFR9AQ6YO6nFElXl7OJv2lE5tdqlruF",
+        "unique_name": "variable_workflow_01USIYXOLUEN47IB0O51Cnm2wnROHjYhOEY",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "EIGRP Neighbor Down",
-          "scope": "static",
-          "name": "Flow_name",
+          "value": "days",
+          "scope": "local",
+          "name": "chronics_time_unit",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01TNMEN15V7EP76IejTqMwjsX2JGyyRrU1e",
+        "unique_name": "variable_workflow_01USIMRLCC8R64lmdpxaXYaNzEGAdzV4w1H",
         "object_type": "variable_workflow"
       },
       {
@@ -48,14 +48,40 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 300,
           "scope": "local",
-          "name": "wait_timer_minute",
+          "name": "wait timer",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USIYXOLUEN47IB0O51Cnm2wnROHjYhOEY",
+        "unique_name": "variable_workflow_01USIYMK60SGV2Qaevkt3oSjYHqYVspRks7",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Neighbor IP",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01TZZUWEF0GYH34bRfnpHnK11xkNdbEpZxO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "0",
+          "scope": "local",
+          "name": "closed_review_timer",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USINAMMLB266NMyBwsIdjHxV6aDPix20Q",
         "object_type": "variable_workflow"
       },
       {
@@ -74,14 +100,53 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "minutes",
+          "value": "",
           "scope": "local",
-          "name": "hold_timer_for_loop_unit",
+          "name": "cli_output",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01USIOSOVJCON6hhGfTRO17ErGOrO05lzLh",
+        "unique_name": "variable_workflow_01VN7M8KJJ00E2M3bdkdP3deSISyrnNCZP4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 5,
+          "scope": "local",
+          "name": "hold_timer_for_loop",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01USIOI3D2YW61ue3eSJmH4GG2buy7kunZL",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "company_account",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01V5BJE433WFL0vc6fKHTe8GDh42KQaAwAu",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "EIGRP Neighbor Down",
+          "scope": "static",
+          "name": "Flow_name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01TNMEN15V7EP76IejTqMwjsX2JGyyRrU1e",
         "object_type": "variable_workflow"
       },
       {
@@ -113,14 +178,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "minutes",
           "scope": "local",
-          "name": "cli_output",
+          "name": "hold_timer_for_loop_unit",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01VN7M8KJJ00E2M3bdkdP3deSISyrnNCZP4",
+        "unique_name": "variable_workflow_01USIOSOVJCON6hhGfTRO17ErGOrO05lzLh",
         "object_type": "variable_workflow"
       },
       {
@@ -128,25 +193,12 @@
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "company_account",
+          "name": "result_payload",
           "type": "datatype.string",
           "is_required": true,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01V5BJE433WFL0vc6fKHTe8GDh42KQaAwAu",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 300,
-          "scope": "local",
-          "name": "wait timer",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USIYMK60SGV2Qaevkt3oSjYHqYVspRks7",
+        "unique_name": "variable_workflow_01USIFR9AQ6YO6nFElXl7OJv2lE5tdqlruF",
         "object_type": "variable_workflow"
       },
       {
@@ -160,58 +212,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01TNMFB7ZFOJJ6alpCLIbugdjjdxVLxdUsW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "hold_timer_for_loop",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USIOI3D2YW61ue3eSJmH4GG2buy7kunZL",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Neighbor IP",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01TZZUWEF0GYH34bRfnpHnK11xkNdbEpZxO",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "days",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USIMRLCC8R64lmdpxaXYaNzEGAdzV4w1H",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "0",
-          "scope": "local",
-          "name": "closed_review_timer",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01USINAMMLB266NMyBwsIdjHxV6aDPix20Q",
         "object_type": "variable_workflow"
       }
     ],
@@ -805,32 +805,6 @@
         },
         "object_type": "definition_activity",
         "blocks": [
-          {
-            "unique_name": "definition_activity_01TNNU1SB7H6X1T0vDy43b62vAeBNNXljb7",
-            "name": "Condition Branch",
-            "title": "THEN",
-            "type": "logic.condition_block",
-            "base_type": "activity",
-            "properties": {
-              "condition": {
-                "left_operand": {
-                  "left_operand": "$activity.definition_activity_01VNLBGL639AQ7Z69BPbLAFRz5NvOOwz3l2.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
-                  "operator": "lt",
-                  "right_operand": "$workflow.definition_workflow_01TNMCZZV7D3E5O8XIJc2tqJIjOfKRHxdwa.local.variable_workflow_01USILXVWFQ5E6M5LfyY1kRYRsXlCtlg5zo$-1"
-                },
-                "operator": "and",
-                "right_operand": {
-                  "left_operand": "$activity.definition_activity_01VNLEGPR1ULC1X3v2Kys2XKrfmdOwi3OoM.output.variable_workflow_01U0QD4FYUCOX1X4cvUOmbiqFIIOGnL4e9f$",
-                  "operator": "eq",
-                  "right_operand": "yes"
-                }
-              },
-              "continue_on_failure": false,
-              "display_name": "THEN",
-              "skip_execution": false
-            },
-            "object_type": "definition_activity"
-          },
           {
             "unique_name": "definition_activity_01VNLBIR65J70439ZsKeTYPlWpw3BQUELnJ",
             "name": "Condition Branch",
@@ -1610,17 +1584,17 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
     "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
     "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8"
+    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL"
   ]
 }
