@@ -7,19 +7,6 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "looping counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -30,6 +17,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01VD1R2BEW5M077jsGfOWu7HqqvXVm8pHkJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "looping counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UVYPUUWT8IP2SsJlN24XbIqn6vQ9xWzrD",
         "object_type": "variable_workflow"
       },
       {
@@ -358,7 +358,7 @@
                   {
                     "unique_name": "definition_activity_01VN9XHD86MVE5tfkhMyvYDDqANis1P6fHw",
                     "name": "Condition Branch",
-                    "title": "Condition Branch",
+                    "title": "Then",
                     "type": "logic.condition_block",
                     "base_type": "activity",
                     "properties": {
@@ -368,7 +368,7 @@
                         "right_operand": ""
                       },
                       "continue_on_failure": false,
-                      "display_name": "Condition Branch",
+                      "display_name": "Then",
                       "skip_execution": false
                     },
                     "object_type": "definition_activity",
@@ -483,46 +483,10 @@
                                 "object_type": "definition_activity"
                               }
                             ]
-                          },
-                          {
-                            "unique_name": "definition_activity_01UYRIG428OEI1MXeqo8reGJPqLBc0mIKv8",
-                            "name": "Condition Branch",
-                            "title": "Condition Branch",
-                            "type": "logic.condition_block",
-                            "base_type": "activity",
-                            "properties": {
-                              "condition": {
-                                "left_operand": "$activity.definition_activity_01UYR7GN8FQDH4bag5kvdmBPHv2M2Za0vMw.output.script_queries.snow_payload$",
-                                "operator": "eq",
-                                "right_operand": "None"
-                              },
-                              "continue_on_failure": false,
-                              "display_name": "Condition Branch",
-                              "skip_execution": false
-                            },
-                            "object_type": "definition_activity"
                           }
                         ]
                       }
                     ]
-                  },
-                  {
-                    "unique_name": "definition_activity_01VN9XHDKSKXQ1ke5CqqZVsaLgfZB3wbK06",
-                    "name": "Condition Branch",
-                    "title": "Condition Branch",
-                    "type": "logic.condition_block",
-                    "base_type": "activity",
-                    "properties": {
-                      "condition": {
-                        "left_operand": "$activity.definition_activity_01UVYZX2P9W5D1Tc7khXTBU0hC1ObJVK1Dy.output.script_queries.WF_ID $",
-                        "operator": "eq",
-                        "right_operand": ""
-                      },
-                      "continue_on_failure": false,
-                      "display_name": "Condition Branch",
-                      "skip_execution": false
-                    },
-                    "object_type": "definition_activity"
                   }
                 ]
               },
