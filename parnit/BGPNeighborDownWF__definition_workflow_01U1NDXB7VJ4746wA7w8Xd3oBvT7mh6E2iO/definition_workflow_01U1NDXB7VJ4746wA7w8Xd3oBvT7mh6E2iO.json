@@ -7,42 +7,29 @@
     "base_type": "workflow",
     "variables": [
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "minutes",
+          "scope": "local",
+          "name": "hold_timer_for_loop_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEFNSZO7BA0tLq7zO08EUCAYOAIM8aMN",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 0,
+          "value": 5,
           "scope": "local",
-          "name": "bgp_check_counter",
+          "name": "hold_timer_for_loop",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U5PD6PDU8DE4uvMJnNBv8Bzk92qKN6bLr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "bgp_neighbor_ip",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "days",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEEU269L8U16LpiNWFO5PEAhpObXtTcX",
+        "unique_name": "variable_workflow_01UZEFFMSKP3R5BqtHTyd0Kle2WHD9iSXJd",
         "object_type": "variable_workflow"
       },
       {
@@ -61,40 +48,14 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 3,
           "scope": "local",
-          "name": "wait_timer_minute",
+          "name": "bgp_check_counter_threshold",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEJHD8CZG40gW837g4i5IqyhgZ9YQKQ9",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "command_output",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01VO18OCHA3PN0mm0POXZRdqeIoPtkWfYYo",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "minutes",
-          "scope": "local",
-          "name": "hold_timer_for_loop_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEFNSZO7BA0tLq7zO08EUCAYOAIM8aMN",
+        "unique_name": "variable_workflow_01UZEF8E9GGQU7GwswogMNbo8KRNckTjbyT",
         "object_type": "variable_workflow"
       },
       {
@@ -111,68 +72,29 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEOW09TNQ313EGClS3uHz1GSXqlZfZcG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "company_account",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01VN8ILKYPDD72qztE6SSOQzos0GMi9KqeT",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 8,
+          "value": 6,
           "scope": "local",
-          "name": "chronics_time",
+          "name": "wait_timer_minute",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEELT7UV3C0umvxDr9qRdRfYhJQrgUzo",
+        "unique_name": "variable_workflow_01UZEJHD8CZG40gW837g4i5IqyhgZ9YQKQ9",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "1.0.0",
           "scope": "local",
-          "name": "bgp_state",
+          "name": "wf_version",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U1NFRQ8M2KI0HX9t2RG4KyCUbbAbMQyXg",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 3,
-          "scope": "local",
-          "name": "bgp_check_counter_threshold",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEF8E9GGQU7GwswogMNbo8KRNckTjbyT",
+        "unique_name": "variable_workflow_01VO6RUVGP8GJ5nTpQihdpOtc20v0hsykxA",
         "object_type": "variable_workflow"
       },
       {
@@ -189,29 +111,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "hold_timer_for_loop",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEFFMSKP3R5BqtHTyd0Kle2WHD9iSXJd",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "1.0.0",
+          "value": "",
           "scope": "local",
-          "name": "wf_version",
+          "name": "bgp_neighbor_ip",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01VO6RUVGP8GJ5nTpQihdpOtc20v0hsykxA",
+        "unique_name": "variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG",
         "object_type": "variable_workflow"
       },
       {
@@ -232,12 +141,103 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "command_output",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01VO18OCHA3PN0mm0POXZRdqeIoPtkWfYYo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "company_account",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01VN8ILKYPDD72qztE6SSOQzos0GMi9KqeT",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bgp_state",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U1NFRQ8M2KI0HX9t2RG4KyCUbbAbMQyXg",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 8,
+          "scope": "local",
+          "name": "chronics_time",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEELT7UV3C0umvxDr9qRdRfYhJQrgUzo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "bgp_check_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5PD6PDU8DE4uvMJnNBv8Bzk92qKN6bLr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEOW09TNQ313EGClS3uHz1GSXqlZfZcG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
           "name": "alarm_status",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01U5OZMMGYK9O0cJW5MKaJ08rh5kHRsSEYW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "days",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEEU269L8U16LpiNWFO5PEAhpObXtTcX",
         "object_type": "variable_workflow"
       }
     ],
@@ -851,29 +851,43 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_01U29XUJ2QF9B3LrKmdpdFCatygQkUYFqu8",
-                "name": "VE - Snow add internal notes",
-                "title": "VE - Snow add internal notes",
-                "type": "workflow.atomic_workflow",
-                "base_type": "subworkflow",
+                "unique_name": "definition_activity_01U5OMBOSACD15wtDE7dNI3B8FvRe6bg70w",
+                "name": "Execute Python Script",
+                "title": "Parse Event Message",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Parse Event Message",
+                  "script": "import re\n\ntry:\n    bgp_neighbor_ip = ''\n    # fetching bgp_neighbor_ip from event message\n    event_msg = \"$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$\"\n    pattern = r\"(\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3})\"\n    match = re.search(pattern, event_msg)\n    if match:\n      bgp_neighbor_ip = match.group(1)\n    if not bgp_neighbor_ip:\n      print('Failed to find neighbor IP from the Event message %M - Pattern not matched!')\n    bgp_neighbor_ip = str(bgp_neighbor_ip)\nexcept Exception as e:\n    print('Failed to find neighbor IP from the Event message %M - Exception: ', e)\n    bgp_neighbor_ip = ''",
+                  "script_queries": [
+                    {
+                      "script_query": "bgp_neighbor_ip",
+                      "script_query_name": "bgp_neighbor_ip",
+                      "script_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01VNEBYCNZKG840pLUsjXZN8vbXCAmXA05g",
+                "name": "Set Variables",
+                "title": "Set Neighbor IP",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
                 "properties": {
                   "continue_on_failure": false,
-                  "display_name": "VE - Snow add internal notes",
-                  "input": {
-                    "variable_workflow_01TB2WDU4FWY70cnYhNGvgpVDVcNj9EtW3E": "5",
-                    "variable_workflow_01TB2WDU4GAL53oKrE0BnPDj8sYq6HsGHi0": "Number of previously discovered incidents: $activity.definition_activity_01U29RNXK1TBH76sOHVX9qn9o8i4Aesdogh.output.variable_workflow_01TDL9UTU7HC24Q3P5Q2z9ycX2mG6vBuAdr$",
-                    "variable_workflow_01TB2WDU4GK4A12BsSUEll3LBfiqc743GIu": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J2GZRBUXQ0NV384mVMop7xvM5kQnnWZ$",
-                    "variable_workflow_01TB2WDU4GSBY6G3FKHuOa62qYT1CDOy2ys": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.static.variable_workflow_01U1NFEOCP0A83MMjQXN5SnoM2KoQ3nR2BB$"
-                  },
-                  "runtime_user": {
-                    "target_default": true
-                  },
+                  "display_name": "Set Neighbor IP",
                   "skip_execution": false,
-                  "target": {
-                    "target_type": "web-service.endpoint",
-                    "use_workflow_target": true
-                  },
-                  "workflow_id": "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$",
+                      "variable_value_new": "$activity.definition_activity_01U5OMBOSACD15wtDE7dNI3B8FvRe6bg70w.output.script_queries.bgp_neighbor_ip$"
+                    }
+                  ]
                 },
                 "object_type": "definition_activity"
               }
@@ -950,47 +964,6 @@
             ]
           }
         ]
-      },
-      {
-        "unique_name": "definition_activity_01U5OMBOSACD15wtDE7dNI3B8FvRe6bg70w",
-        "name": "Execute Python Script",
-        "title": "Parse Event Message",
-        "type": "python3.script",
-        "base_type": "activity",
-        "properties": {
-          "action_timeout": 180,
-          "continue_on_failure": false,
-          "display_name": "Parse Event Message",
-          "script": "import re\n\ntry:\n    bgp_neighbor_ip = ''\n    # fetching bgp_neighbor_ip from event message\n    event_msg = \"$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J5AW9TZ8B3smDvtFSz2OUPWibgZcQvh$\"\n    pattern = r\"(\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3})\"\n    match = re.search(pattern, event_msg)\n    if match:\n      bgp_neighbor_ip = match.group(1)\n    if not bgp_neighbor_ip:\n      print('Failed to find neighbor IP from the Event message %M - Pattern not matched!')\n    bgp_neighbor_ip = str(bgp_neighbor_ip)\nexcept Exception as e:\n    print('Failed to find neighbor IP from the Event message %M - Exception: ', e)\n    bgp_neighbor_ip = ''",
-          "script_queries": [
-            {
-              "script_query": "bgp_neighbor_ip",
-              "script_query_name": "bgp_neighbor_ip",
-              "script_query_type": "string"
-            }
-          ],
-          "skip_execution": false
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_01VNEBYCNZKG840pLUsjXZN8vbXCAmXA05g",
-        "name": "Set Variables",
-        "title": "Set Neighbor IP",
-        "type": "core.set_multiple_variables",
-        "base_type": "activity",
-        "properties": {
-          "continue_on_failure": false,
-          "display_name": "Set Neighbor IP",
-          "skip_execution": false,
-          "variables_to_update": [
-            {
-              "variable_to_update": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$",
-              "variable_value_new": "$activity.definition_activity_01U5OMBOSACD15wtDE7dNI3B8FvRe6bg70w.output.script_queries.bgp_neighbor_ip$"
-            }
-          ]
-        },
-        "object_type": "definition_activity"
       },
       {
         "unique_name": "definition_activity_01U5PAZS3XR5G67UQnPXZ5HUdsV4Ddaug6r",
@@ -1603,7 +1576,7 @@
                       "condition": {
                         "left_operand": {
                           "left_operand": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U1NFRQ8M2KI0HX9t2RG4KyCUbbAbMQyXg$",
-                          "operator": "eq",
+                          "operator": "eqi",
                           "right_operand": "established"
                         },
                         "operator": "or",
@@ -1871,7 +1844,7 @@
           "continue_on_failure": false,
           "display_name": "VE - Coral Connector - Fetch BGP CLI Outputs",
           "input": {
-            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_neighbor_status\",\n\"command\": \"show ip bgp neighbors [$$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$ i BGP state\"\n},\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_summary\",\n\"command\": \"show ip bgp summary | b [$$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$\n},\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_neighbors\",\n\"command\": \"show ip bgp neighbors [$$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$\n}\n]",
+            "variable_workflow_01UTJ9UWUHYIM5DSCtbMAbKNuyi0vcBO6h2": "[\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_neighbor_status\",\n\"command\": \"show ip bgp neighbors $workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$ | i BGP state\"\n},\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_summary\",\n\"command\": \"show ip bgp summary | b $workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$\"\n},\n{\n\"task_type\": \"Commands\",\n\"command_label\": \"bgp_neighbors\",\n\"command\": \"show ip bgp neighbors $workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG$\"\n}\n]",
             "variable_workflow_01UTJA87IYM5N2mZMrNrnMPipBkTKca6vys": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J32GQ7KRP5oKHUhjMHhUbYd38AcM8SF$",
             "variable_workflow_01UTJAD267YYE3ZGpplTzdt3rkSrLZyo6Ml": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J2NKM4SDG4TPOUwQVSxosg4USKZi5DL$",
             "variable_workflow_01UTJOKQKGG2F5HCLYBzk1vR5w2TmwuZa6S": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J5L8NJ0SU30pyz5taVDnOxyN6YpCafT$",
@@ -1941,7 +1914,7 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Prepare Escalation Note",
-                  "script": "import re\ntry:\n    current_note_message = technical_details = ve_reason_for_escalation = bgp_state = ''\n    # parsing ssh data\n    task_output = $activity.definition_activity_01VO1XLPGRX4H7BaphuwfNq6529ViP8KFLW.output.variable_workflow_01UTK0DDWWW5C0KAKyevB4TFdxEfG4vUp8a$\n    command_results = task_output[\"TASK_RESULT\"][0][\"command_results\"]\n    bgp_neighbor_status = command_results['bgp_neighbor_status']['output']\n    bgp_summary = command_results['bgp_summary']['output']\n    bgp_neighbors = command_results['bgp_neighbors']['output']\n\n    command_pattern = \"BGP state = (\\w*)\"\n    command_output = re.sub(' +', ' ', bgp_neighbor_status)\n    match = re.search(command_pattern, command_output)\n    if match: \n        bgp_state = match.group(1)\n        print(\"bgp state: \", bgp_state)\n        if bgp_state.lower() == 'connect':\n            current_note_message = f\"We have determined that the neighborship has remained in a {bgp_state} state.\"\n        elif bgp_state.lower() == 'established':\n            match = re.search(\"BGP state = Established, up for (.*)\", command_output)\n            uptime = match.group(1)\n            current_note_message = f\"We have determined that the neighborship has remained in an Established state for {uptime}.\"\n        else:\n            current_note_message = f\"We have determined that the neighborship has remained in an {bgp_state} state.\"\n        technical_details = f\"[code]\u003cpre\u003e{bgp_summary}\u003c/pre\u003e[/code]\\r\\n[code]\u003cpre\u003e{bgp_neighbors}\u003c/pre\u003e[/code]\"\n        ve_reason_for_escalation = \"VE Unable to Clear Event\"\n    else:\n        print('Could not parse BGP uptime/state as command_output has NO PATTERN MATCH')\n        current_note_message = f\"We were unable to parse the CLI output to get BGP State and Uptime.\"\n        technical_details = f\"Could not parse BGP uptime/state.\"\n        ve_reason_for_escalation = \"VE CLI Parse Failure\"\n\nexcept Exception as e:\n    print('Exception occurred: Failed to determine BGP uptime/state, Could NOT PARSE: ', e)\n    current_note_message = \"This issue has not cleared during VE active remediation.\"\n    technical_details = \"Could not parse BGP uptime/state.\"\n    ve_reason_for_escalation = \"VE Unable to Clear Event\"",
+                  "script": "import re, json\ntry:\n    current_note_message = technical_details = ve_reason_for_escalation = bgp_state = ''\n    # parsing ssh data\n    task_output = $activity.definition_activity_01VO1XLPGRX4H7BaphuwfNq6529ViP8KFLW.output.variable_workflow_01UTK0DDWWW5C0KAKyevB4TFdxEfG4vUp8a$\n    command_results = task_output[\"TASK_RESULT\"][0][\"command_results\"]\n    bgp_neighbor_status = command_results['bgp_neighbor_status']['output']\n    bgp_summary = command_results['bgp_summary']['output']\n    bgp_neighbors = command_results['bgp_neighbors']['output']\n\n    bgp_summary = repr(bgp_summary)[1:-1]\n    bgp_neighbors = repr(bgp_neighbors)[1:-1]\n\n    command_pattern = \"BGP state = (\\w*)\"\n    command_output = re.sub(' +', ' ', bgp_neighbor_status)\n    match = re.search(command_pattern, command_output)\n    if match:\n        bgp_state = match.group(1)\n        print(\"bgp state: \", bgp_state)\n        if bgp_state.lower() == 'connect':\n            current_note_message = f\"We have determined that the neighborship has remained in a {bgp_state} state.\"\n        elif bgp_state.lower() == 'established':\n            match = re.search(\"BGP state = Established, up for (.*)\", command_output)\n            uptime = match.group(1)\n            current_note_message = f\"We have determined that the neighborship has remained in an Established state for {uptime}.\"\n        else:\n            current_note_message = f\"We have determined that the neighborship has remained in an {bgp_state} state.\"\n        technical_details = f\"[code]\u003cpre\u003e{bgp_summary}\u003c/pre\u003e[/code]\\\\r\\\\n[code]\u003cpre\u003e{bgp_neighbors}\u003c/pre\u003e[/code]\"\n        ve_reason_for_escalation = \"VE Unable to Clear Event\"\n    else:\n        print('Could not parse BGP uptime/state as command_output has NO PATTERN MATCH')\n        current_note_message = f\"We were unable to parse the CLI output to get BGP State and Uptime.\"\n        technical_details = f\"Could not parse BGP uptime/state.\"\n        ve_reason_for_escalation = \"VE CLI Parse Failure\"\n\nexcept Exception as e:\n    print('Exception occurred: Failed to determine BGP uptime/state, Could NOT PARSE: ', e)\n    current_note_message = \"This issue has not cleared during VE active remediation.\"\n    technical_details = \"Could not parse BGP uptime/state.\"\n    ve_reason_for_escalation = \"VE Unable to Clear Event\"",
                   "script_queries": [
                     {
                       "script_query": "current_note_message",
@@ -2189,17 +2162,17 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
-    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
     "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
-    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82"
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
+    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
+    "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
+    "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
   ]
 }
