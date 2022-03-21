@@ -11,32 +11,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "bgp_neighbor_ip",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 5,
-          "scope": "local",
-          "name": "hold_timer_for_loop",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEFFMSKP3R5BqtHTyd0Kle2WHD9iSXJd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "command_output",
           "type": "datatype.string",
           "is_required": false,
@@ -46,55 +20,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 3,
-          "scope": "local",
-          "name": "bgp_check_counter_threshold",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEF8E9GGQU7GwswogMNbo8KRNckTjbyT",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "bgp_state",
+          "scope": "input",
+          "name": "company_account",
           "type": "datatype.string",
-          "is_required": false,
+          "is_required": true,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01U1NFRQ8M2KI0HX9t2RG4KyCUbbAbMQyXg",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "days",
-          "scope": "local",
-          "name": "chronics_time_unit",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEEU269L8U16LpiNWFO5PEAhpObXtTcX",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 6,
-          "scope": "local",
-          "name": "count_chronic_events",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01UZEEFJ82RJM4ZEZ2BfspNoHBWWewEdvFu",
+        "unique_name": "variable_workflow_01VN8ILKYPDD72qztE6SSOQzos0GMi9KqeT",
         "object_type": "variable_workflow"
       },
       {
@@ -108,6 +43,32 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01UZEFNSZO7BA0tLq7zO08EUCAYOAIM8aMN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 300,
+          "scope": "local",
+          "name": "wait_timer",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEJC72VAHE2z32eAZ6kzEA5rogdlrEsA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "days",
+          "scope": "local",
+          "name": "chronics_time_unit",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEEU269L8U16LpiNWFO5PEAhpObXtTcX",
         "object_type": "variable_workflow"
       },
       {
@@ -126,6 +87,45 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
+          "value": 6,
+          "scope": "local",
+          "name": "count_chronic_events",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEEFJ82RJM4ZEZ2BfspNoHBWWewEdvFu",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "result_payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01UZEOW09TNQ313EGClS3uHz1GSXqlZfZcG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bgp_neighbor_ip",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U5OZWLA925M1ufFtmNd0PHD9mubw2w5tG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
           "value": 0,
           "scope": "local",
           "name": "bgp_check_counter",
@@ -139,27 +139,27 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 6,
+          "value": 3,
           "scope": "local",
-          "name": "wait_timer_minute",
+          "name": "bgp_check_counter_threshold",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEJHD8CZG40gW837g4i5IqyhgZ9YQKQ9",
+        "unique_name": "variable_workflow_01UZEF8E9GGQU7GwswogMNbo8KRNckTjbyT",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 8,
+          "value": 5,
           "scope": "local",
-          "name": "chronics_time",
+          "name": "hold_timer_for_loop",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEELT7UV3C0umvxDr9qRdRfYhJQrgUzo",
+        "unique_name": "variable_workflow_01UZEFFMSKP3R5BqtHTyd0Kle2WHD9iSXJd",
         "object_type": "variable_workflow"
       },
       {
@@ -176,29 +176,29 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "company_account",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01VN8ILKYPDD72qztE6SSOQzos0GMi9KqeT",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 300,
+          "value": 6,
           "scope": "local",
-          "name": "wait_timer",
+          "name": "wait_timer_minute",
           "type": "datatype.integer",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEJC72VAHE2z32eAZ6kzEA5rogdlrEsA",
+        "unique_name": "variable_workflow_01UZEJHD8CZG40gW837g4i5IqyhgZ9YQKQ9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bgp_state",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01U1NFRQ8M2KI0HX9t2RG4KyCUbbAbMQyXg",
         "object_type": "variable_workflow"
       },
       {
@@ -228,16 +228,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "result_payload",
-          "type": "datatype.string",
-          "is_required": true,
+          "value": 8,
+          "scope": "local",
+          "name": "chronics_time",
+          "type": "datatype.integer",
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01UZEOW09TNQ313EGClS3uHz1GSXqlZfZcG",
+        "unique_name": "variable_workflow_01UZEELT7UV3C0umvxDr9qRdRfYhJQrgUzo",
         "object_type": "variable_workflow"
       }
     ],
@@ -772,7 +772,8 @@
             "variable_workflow_01TDLAJEN9P1O1Z7DmWMegi0srkHu8BFR00": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J3FDV8G4K7hiRvLwfY8kcRCvvkMa6XR$",
             "variable_workflow_01TDLOGJQU18F12thiDhm7IMVBijhvqSoTy": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J4101VZO00tOfbL77JWPtyC6dppMuI5$",
             "variable_workflow_01TDLOO9HZJPY1hF5kSDGPOrBzXG27X4qIS": "$activity.definition_activity_01U1NG6UBXSD34C4QQU16dc2zkCu80ZjXPz.output.variable_workflow_01T8J3VUQ6QCL4rfkAMVLnGTdNKRyODQR9q$",
-            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01UZEEFJ82RJM4ZEZ2BfspNoHBWWewEdvFu$"
+            "variable_workflow_01TDR8YVKH1BC3i2JfdfcVEw52vDFIBQOLl": "$workflow.definition_workflow_01U1NDXB7VJ4746wA7w8Xd3oBvT7mh6E2iO.local.variable_workflow_01UZEEFJ82RJM4ZEZ2BfspNoHBWWewEdvFu$",
+            "variable_workflow_01VSDT0JXXMJ15RZUExQdTgloBQcipbEumc": "BGP neighbor"
           },
           "runtime_user": {
             "target_default": true
@@ -2145,17 +2146,17 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
-    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
-    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
-    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
-    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
-    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
-    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
     "definition_workflow_01T52VB1UY7OO6sl82ayYah9BksT7dlyr82",
-    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K",
+    "definition_workflow_01TB1L9GL3PG12td3QH76kwluB2A4Qcb0N0",
+    "definition_workflow_01TB16P6SG9I75mGZ6VXnBBCrlhvkCDhjAL",
+    "definition_workflow_01TB38GT3VV0D3me8sMs3q1MEmmnv5nRZ7s",
+    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl",
+    "definition_workflow_01TDL3QWTSCE600Yc7HPWlQb4YgUN7fdhtc",
     "definition_workflow_01T8JAWB47MIO6RtAbyMbYUnJNBkD9cZ3Xf",
+    "definition_workflow_01TCT9HCBQOEV3nAoFZ5wpqTIrHiapcOaek",
     "definition_workflow_01U0PMDRCLD2Q6zWsLf67TQdkKBjBkmjiI8",
-    "definition_workflow_01TB2WDTWCQAW5QId4VUCPivHzg6b7H6xzl"
+    "definition_workflow_01TB25YCM92XV5z0bKAwavNNob6C3vBhWhg",
+    "definition_workflow_01UTJ6AMQ5JXU6drEXQDBvv0afBvsaTSh7R",
+    "definition_workflow_01T8IJEKV2LD95uZJckmx4hxTDhDJqs8s7K"
   ]
 }
